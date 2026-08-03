@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner Child Healing — Level 2 | Sacred Wisdom School</title>
+  <meta name="description" content="Inner Child Healing at Sacred Wisdom School is a compassionate Level 2 journey of reconnecting with early emotional patterns, releasing past wounds, and reclaiming wholeness — guided by Reverend Dr. Rain Lim.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Inner Child Healing — Level 2 | Sacred Wisdom School">
+  <meta property="og:description" content="Inner Child Healing at Sacred Wisdom School is a compassionate journey of reconnecting with early emotional patterns and reclaiming wholeness — guided by Reverend Dr. Rain Lim.">
+  <meta property="og:site_name" content="Sacred Wisdom School">
+  <link rel="canonical" href="https://sacredwisdomschool.com/sacred-healing/inner-child-healing">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --cream:       #ece0ef;
+  --cream-alt:   #ffffff;
+  --white:       #ffffff;
+  --parchment:   #f8edd8;
+  --ink:         #1e1040;
+  --text:        #3c2952;
+  --muted:       #7d6d90;
+  --gold:        #C8A55A;
+  --gold-warm:   #D4AE5A;
+  --gold-light:  #F0DBA8;
+  --gold-faint:  rgba(187,162,123,0.18);
+  --gold-mid:    rgba(150,100,180,0.2);
+  --gold-rule:   rgba(150,100,180,0.25);
+  --purple:      #5b2d8e;
+  --amethyst:    #7b4fa8;
+  --hero-bg:     #4a2080;
+  --footer-bg:   #1a0e38;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--white); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(150,100,180,0.2); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
+.nav.scrolled .nav-brand { color: var(--ink); }
+.nav-links { display: none; gap: 28px; position: relative; }
+.nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; white-space: nowrap; }
+.nav.scrolled .nav-links a { color: var(--muted); }
+.nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold-warm); }
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 20px); left: 50%; transform: translateX(-50%); background: var(--cream); border: 1px solid var(--gold-faint); padding: 8px 0; min-width: 260px; box-shadow: 0 16px 40px rgba(30,16,64,0.1); z-index: 100; }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a { display: block; padding: 10px 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted) !important; }
+.nav-dropdown-menu a:hover { color: var(--purple) !important; background: var(--gold-light); }
+.nav-explore { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; color: rgba(255,255,255,0.85); white-space: nowrap; transition: all 0.2s; }
+.nav.scrolled .nav-explore { border-color: var(--purple); color: var(--white); background: var(--purple); }
+.nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
+.nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 36px; overflow-y: auto; padding: 80px 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer.open { opacity: 1; pointer-events: all; }
+.drawer a { font-family: "Cormorant Garamond", serif; font-size: 34px; font-weight: 300; color: var(--ink); }
+.drawer-sub a { font-size: 22px; color: var(--amethyst); }
+.drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+
+/* TYPE */
+.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label-light { color: var(--gold-light); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 7vw, 76px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4.5vw, 48px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.6vw, 26px); font-weight: 400; line-height: 1.18; color: var(--ink); }
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
+.btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
+.btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.tlink { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-warm); display: inline-flex; align-items: center; gap: 6px; }
+.tlink::after { content: '→'; }
+
+/* PAGE HERO */
+.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.4), transparent), linear-gradient(148deg, #2e1a5e 0%, var(--hero-bg) 50%, #6b35a8 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
+.page-hero h1 { max-width: 820px; }
+.page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(16px, 2.2vw, 22px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.55); margin-top: 14px; max-width: 620px; line-height: 1.6; }
+.breadcrumb { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.breadcrumb a { color: rgba(255,255,255,0.35); }
+.breadcrumb a:hover { color: var(--gold); }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.btn-ghost { background: transparent; color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.28); border-radius: 1px; }
+
+/* SECTIONS */
+.section     { padding: 100px 72px; background: var(--cream); }
+.section-alt { background: var(--cream-alt); }
+.border-top  { border-top: 1px solid var(--gold-faint); }
+.border-bottom { border-bottom: 1px solid var(--gold-faint); }
+
+/* OPENING PROSE — elegant editorial */
+.prose-section { max-width: 760px; margin: 0 auto; }
+.prose-section p { font-size: 16px; color: var(--text); line-height: 1.9; margin-bottom: 20px; }
+.prose-section p:last-child { margin-bottom: 0; }
+.pull-quote { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 28px; line-height: 1.35; margin: 40px 0; max-width: 640px; }
+
+/* IMPACT — editorial list grid */
+.impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 860px; margin: 48px auto 0; }
+.impact-item { padding: 20px 40px 20px 0; border-bottom: 1px solid var(--gold-faint); }
+.impact-item:nth-child(even) { padding-right: 0; padding-left: 40px; border-left: 1px solid var(--gold-faint); }
+.impact-item:nth-child(1), .impact-item:nth-child(2) { border-top: 1px solid var(--gold-faint); }
+.impact-title { font-family: "Cormorant Garamond", serif; font-size: 20px; font-weight: 400; color: var(--ink); display: block; margin-bottom: 6px; }
+.impact-item p { font-size: 14px; color: var(--muted); line-height: 1.72; }
+
+/* EXPERIENCE LIST */
+.experience-list { list-style: none; max-width: 600px; margin: 28px auto 0; display: grid; gap: 0; }
+.experience-list li { display: flex; align-items: flex-start; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--gold-faint); font-size: 16px; color: var(--text); line-height: 1.65; }
+.experience-list li:first-child { border-top: 1px solid var(--gold-faint); }
+.experience-list li::before { content: ''; display: block; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; margin-top: 11px; flex-shrink: 0; }
+
+/* WHAT MAKES UNIQUE — editorial rows */
+.unique-rows { max-width: 760px; margin: 40px auto 0; }
+.unique-row { padding: 28px 0; border-top: 1px solid var(--gold-faint); display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+.unique-row:last-child { border-bottom: 1px solid var(--gold-faint); }
+.unique-row h3 { font-size: 20px; }
+.unique-row p  { font-size: 16px; color: var(--muted); line-height: 1.82; }
+
+/* WHO */
+.who-list { list-style: none; max-width: 620px; margin: 32px auto 0; display: grid; gap: 0; }
+.who-list li { padding: 16px 0; border-bottom: 1px solid var(--gold-faint); font-size: 16px; color: var(--text); display: flex; align-items: flex-start; gap: 14px; line-height: 1.65; }
+.who-list li:first-child { border-top: 1px solid var(--gold-faint); }
+.who-list li::before { content: '·'; color: var(--gold-warm); font-size: 18px; flex-shrink: 0; line-height: 1.6; }
+
+/* PROGRAM DETAILS */
+.details-card { max-width: 720px; margin: 0 auto; border: 1px solid var(--gold-faint); background: var(--white); }
+.details-header { background: var(--ink); color: var(--white); padding: 24px 36px; }
+.details-header span { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 4px; }
+.details-header h3 { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 300; color: var(--white); }
+.details-body { padding: 0 36px; }
+.details-row { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--gold-faint); align-items: baseline; }
+.details-row:last-child { border-bottom: none; }
+.details-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-warm); }
+.details-value { font-size: 16px; color: var(--ink); line-height: 1.6; }
+.details-value small { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+.details-footer { background: var(--cream-alt); padding: 28px 36px; border-top: 1px solid var(--gold-faint); }
+
+/* CTA */
+.cta-section { background: var(--cream-alt); padding: 100px 72px; text-align: center; border-top: 1px solid var(--gold-faint); }
+.cta-section h2 { max-width: 640px; margin: 16px auto 20px; font-style: italic; }
+.cta-section p  { max-width: 480px; margin: 0 auto 32px; font-size: 16px; color: var(--muted); line-height: 1.85; }
+
+/* FOOTER */
+.footer { background: var(--footer-bg); padding: 80px 72px 48px; }
+.footer-top { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-wordmark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 400; color: var(--white); display: block; margin-bottom: 10px; }
+.footer-tagline { font-family: "Cormorant Garamond", serif; font-size: 15px; font-style: italic; color: rgba(187,162,123,0.55); max-width: 240px; line-height: 1.5; }
+.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(187,162,123,0.6); margin-bottom: 18px; }
+.footer-col nav { display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-col a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 36px; }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a, .footer-bottom > span { font-size: 11px; color: rgba(255,255,255,0.22); }
+
+/* RESPONSIVE */
+@media (min-width: 1040px) { .nav-links { display: flex; } .nav-menu-btn { display: none; } }
+@media (max-width: 1039px) {
+  .nav, .page-hero, .section, .cta-section, .footer { padding-left: 40px; padding-right: 40px; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-item { padding-right: 0; padding-left: 0 !important; border-left: none !important; }
+  .impact-item:nth-child(2) { border-top: none; }
+  .unique-row { grid-template-columns: 1fr; gap: 10px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 767px) {
+  .nav { padding: 0 20px; height: 60px; }
+  .page-hero, .section, .cta-section, .footer { padding-left: 24px; padding-right: 24px; }
+  .page-hero { padding-top: 96px; padding-bottom: 56px; }
+  .details-row { grid-template-columns: 1fr; gap: 4px; }
+  .details-body { padding: 0 20px; }
+  .details-header, .details-footer { padding: 20px; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+
+/* SCROLL REVEAL */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+.btn { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(91,45,142,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+body { min-width: 320px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="home-v4.html">Sacred Wisdom School</a>
+  <nav class="nav-links">
+    <a href="#">About</a>
+    <a href="#">Sacred Teachings</a>
+    <div class="nav-dropdown">
+      <a href="#" style="color:rgba(255,255,255,0.9)">Sacred Healing ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="healing-v4.html">Sacred Healing Overview</a>
+        <a href="foundation-v4.html">Level 1 — Foundation</a>
+        <a href="inner-child-v4.html">Level 2 — Inner Child Healing</a>
+        <a href="#">Level 3 — Advanced Healing</a>
+        <a href="#">Sacred Breathwork</a>
+        <a href="#">Sacred Spirit Dance</a>
+        <a href="#">Sacred Integrative Constellations</a>
+      </div>
+    </div>
+    <a href="#">Sacred Journeys</a>
+    <a href="#">Dr. Rain Lim</a>
+    <a href="#">Upcoming Programs</a>
+    <a href="#">Contact</a>
+  </nav>
+  <a class="nav-explore btn" href="#">Explore Programs</a>
+  <button class="nav-menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">Close</button>
+  <a href="#">About</a>
+  <a href="#">Sacred Teachings</a>
+  <a href="#">Sacred Healing</a>
+  <div class="drawer-sub" style="display:grid;gap:16px;text-align:center">
+    <a href="healing-v4.html">Overview</a>
+    <a href="foundation-v4.html">Foundation</a>
+    <a href="inner-child-v4.html">Inner Child Healing</a>
+    <a href="#">Advanced Modules</a>
+  </div>
+  <a href="#">Sacred Journeys</a>
+  <a href="#">Dr. Rain Lim</a>
+  <a href="#">Contact</a>
+</div>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="home-v4.html">Sacred Wisdom School</a>
+    <span>/</span>
+    <a href="healing-v4.html" style="color:rgba(255,255,255,0.35)">Sacred Healing</a>
+    <span>/</span>
+    <span style="color:rgba(255,255,255,0.55)">Inner Child Healing</span>
+  </div>
+  <span class="label label-light" style="margin-bottom:16px">Level 2 · Intermediate</span>
+  <h1>Inner Child Healing</h1>
+  <p class="page-hero-sub">Reconnecting with the Heart Within</p>
+  <div class="hero-btns">
+    <a class="btn" href="#program-details" style="background:var(--gold);color:var(--ink);border-color:var(--gold)">Join the Waitlist</a>
+    <a class="btn btn-ghost" href="foundation-v4.html">Begin with Foundation First</a>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section class="section border-top">
+  <span class="label" style="margin-bottom:24px;text-align:center;display:block">Level 2 — Intermediate</span>
+  <div class="prose-section">
+    <p>The Inner Child Healing program at Sacred Wisdom School invites participants to reconnect with the younger parts of themselves that still live within their emotional world.</p>
+    <p>Every person carries within them the memories, emotions, and experiences formed during early childhood. These experiences shape how we see ourselves, how we relate to others, and how we respond to life.</p>
+    <div class="pull-quote">When childhood needs for love, safety, acceptance, or understanding are unmet, the emotional impact can remain present long into adulthood.</div>
+    <p>These early wounds often express themselves through recurring emotional patterns, relationship challenges, self-doubt, or limiting beliefs.</p>
+    <p>Inner Child Healing offers a compassionate path to acknowledge these experiences and reconnect with the parts of ourselves that may still be seeking understanding, care, and healing.</p>
+  </div>
+</section>
+
+<!-- UNDERSTANDING THE INNER CHILD -->
+<section class="section section-alt border-top border-bottom">
+  <span class="label" style="margin-bottom:24px">Understanding the Inner Child</span>
+  <h2 style="max-width:680px;margin-bottom:28px">The emotional foundation of who we became — and who we are still becoming.</h2>
+  <div class="prose-section" style="margin:0">
+    <p>The inner child represents the emotional memories and experiences formed during the early stages of life. These experiences often become the foundation of our emotional patterns and belief systems.</p>
+    <p>While many childhood experiences are joyful and nurturing, others may involve moments of misunderstanding, rejection, fear, or emotional pain. Even when these experiences are forgotten consciously, their emotional imprint may continue to influence how we think, feel, and respond to life.</p>
+    <p>By becoming aware of the inner child, individuals begin to understand how early experiences shape their current emotional world.</p>
+  </div>
+</section>
+
+<!-- THE IMPACT OF EARLY EXPERIENCES -->
+<section class="section border-bottom">
+  <span class="label" style="margin-bottom:20px;text-align:center;display:block">The Impact of Early Experiences</span>
+  <h2 style="max-width:600px;margin:0 auto 16px;text-align:center">Childhood experiences shape how we move through every dimension of adult life.</h2>
+  <p style="text-align:center;max-width:500px;margin:0 auto;font-size:16px;color:var(--muted);line-height:1.85">When these patterns are brought into awareness, individuals gain the opportunity to respond to life with greater understanding and freedom.</p>
+  <div class="impact-grid">
+    <div class="impact-item">
+      <span class="impact-title">Self-Worth and Confidence</span>
+      <p>How we hold ourselves — our sense of value, worthiness, and the right to take up space in the world.</p>
+    </div>
+    <div class="impact-item">
+      <span class="impact-title">Emotional Responses</span>
+      <p>How we respond to stress, conflict, and emotional difficulty — the patterns that activate before we have time to think.</p>
+    </div>
+    <div class="impact-item">
+      <span class="impact-title">Relationship Patterns</span>
+      <p>The dynamics we attract and repeat in intimate relationships, friendships, and professional life.</p>
+    </div>
+    <div class="impact-item">
+      <span class="impact-title">Safety and Belonging</span>
+      <p>Our underlying sense of whether the world is safe, whether we belong, and whether we are truly welcome as we are.</p>
+    </div>
+    <div class="impact-item" style="border-bottom:none">
+      <span class="impact-title">Trust in Oneself and Others</span>
+      <p>The ability to trust our own perceptions, instincts, and feelings — and to trust others with what we carry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY OF RECONNECTION -->
+<section class="section section-alt border-bottom">
+  <span class="label" style="margin-bottom:20px">The Journey of Reconnection</span>
+  <h2 style="max-width:680px;margin-bottom:28px">Meeting the inner child with compassion, not analysis.</h2>
+  <div class="prose-section" style="margin:0">
+    <p>Inner Child Healing is about creating a compassionate relationship with the parts of ourselves that were shaped during early life experiences.</p>
+    <p>Through guided exercises and reflective practices, participants reconnect with the emotional memories held within the inner child. This process often brings greater self-understanding and opens the possibility for emotional release and healing.</p>
+    <p>As individuals reconnect with the inner child, many begin to experience greater self-compassion, emotional clarity, and a renewed sense of wholeness.</p>
+    <p>Healing the inner child involves acknowledging emotional experiences that may have been overlooked or suppressed. Participants learn how to approach these memories with compassion.</p>
+    <p>Through this process, individuals gradually shift their relationship with past experiences and develop a deeper sense of emotional resilience and inner peace. Inner Child Healing creates space for emotional healing while strengthening the connection with one's authentic self.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU WILL EXPERIENCE -->
+<section class="section border-bottom" style="text-align:center">
+  <span class="label" style="display:block;margin-bottom:16px">What You Will Experience</span>
+  <h2 style="max-width:560px;margin:0 auto 12px">A deeply experiential journey of emotional awareness and personal transformation.</h2>
+  <p style="max-width:500px;margin:0 auto 8px;font-size:16px;color:var(--muted);line-height:1.85">Each participant's journey unfolds in a unique way, guided by their own readiness and personal experiences.</p>
+  <ul class="experience-list">
+    <li>Deeper awareness of childhood emotional patterns</li>
+    <li>Greater understanding of how early experiences influence adult life</li>
+    <li>Emotional release and healing of past wounds</li>
+    <li>Increased self-compassion and self-acceptance</li>
+    <li>Greater emotional freedom and resilience</li>
+    <li>A renewed sense of connection with oneself</li>
+  </ul>
+</section>
+
+<!-- WHAT MAKES THIS UNIQUE -->
+<section class="section section-alt border-bottom">
+  <span class="label" style="margin-bottom:20px">What Makes This Program Unique</span>
+  <h2 style="max-width:640px;margin-bottom:12px">Emotional healing held within a spiritual and experiential container.</h2>
+  <p style="max-width:580px;font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:0">The Inner Child Healing program at Sacred Wisdom School integrates emotional healing with spiritual awareness and direct experiential practices.</p>
+  <div class="unique-rows">
+    <div class="unique-row">
+      <h3>Holistic Healing Approach</h3>
+      <p>The program recognizes that emotional healing involves the body, mind, and spirit — not the mind alone. Healing moves through all layers.</p>
+    </div>
+    <div class="unique-row">
+      <h3>Experiential Learning</h3>
+      <p>Participants learn through guided exercises, reflective practices, and direct healing experiences — not through passive instruction or theory alone.</p>
+    </div>
+    <div class="unique-row">
+      <h3>Compassion-Based Healing</h3>
+      <p>The journey emphasizes self-compassion and emotional understanding as the foundation of healing. Nothing is forced. The pace is yours.</p>
+    </div>
+    <div class="unique-row">
+      <h3>Integration with Spiritual Awareness</h3>
+      <p>Inner child healing is approached as both emotional healing and a path toward deeper self-awareness and spiritual growth — they are not separate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="section border-bottom" style="text-align:center">
+  <span class="label" style="display:block;margin-bottom:16px">Who This Program Is For</span>
+  <h2 style="max-width:540px;margin:0 auto 12px">All are welcome — wherever you are on your journey.</h2>
+  <p style="max-width:500px;margin:0 auto;font-size:16px;color:var(--muted);line-height:1.85">The program welcomes individuals from all backgrounds.</p>
+  <ul class="who-list">
+    <li>Those who notice repeating emotional patterns in their life</li>
+    <li>Those who wish to understand their emotional responses more deeply</li>
+    <li>Those who desire greater self-compassion and emotional freedom</li>
+    <li>Those exploring personal healing and self-discovery</li>
+    <li>Those who feel drawn to reconnect with their authentic self</li>
+  </ul>
+</section>
+
+<!-- CLOSING — JOURNEY BACK TO WHOLENESS -->
+<section class="section section-alt border-bottom">
+  <div class="prose-section" style="text-align:center;margin:0 auto">
+    <span class="label" style="display:block;text-align:center;margin-bottom:20px">A Journey Back to Wholeness</span>
+    <h2 style="margin-bottom:24px">Healing is a journey of remembering and reconnecting.</h2>
+    <p style="font-size:16px">By meeting the inner child with compassion and awareness, individuals rediscover parts of themselves that may have been hidden beneath years of life experience. Through this journey, many find greater emotional freedom, deeper self-understanding, and a renewed connection with their true nature.</p>
+  </div>
+</section>
+
+<!-- PROGRAM DETAILS -->
+<section class="section border-bottom" id="program-details">
+  <span class="label" style="margin-bottom:20px;text-align:center;display:block">Program at a Glance</span>
+  <h2 style="max-width:560px;margin:0 auto 48px;text-align:center">Sacred Healing Program — Level 2 Inner Child Healing</h2>
+  <div class="details-card">
+    <div class="details-header">
+      <span>Level 2 · Intermediate</span>
+      <h3>Inner Child Healing</h3>
+    </div>
+    <div class="details-body">
+      <div class="details-row">
+        <span class="details-label">Program</span>
+        <span class="details-value">Sacred Healing Program — Level 2 Intermediate (Inner Child Healing)</span>
+      </div>
+      <div class="details-row">
+        <span class="details-label">Prerequisite</span>
+        <span class="details-value">Level 1 Foundation Program<small>Complete Level 1 before joining the Inner Child Healing program</small></span>
+      </div>
+      <div class="details-row">
+        <span class="details-label">Status</span>
+        <span class="details-value">Coming soon<small>Join the waitlist below to be notified when registration opens</small></span>
+      </div>
+      <div class="details-row">
+        <span class="details-label">Format</span>
+        <span class="details-value">In-person (Malaysia · Canada) · Online options available</span>
+      </div>
+    </div>
+    <div class="details-footer">
+      <div class="btns">
+        <a class="btn btn-dark" href="#">Join the Waitlist</a>
+        <a class="tlink" href="foundation-v4.html">Begin with the Foundation Program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <span class="label" style="display:block;text-align:center;margin-bottom:16px">Your next step</span>
+  <h2>Begin with the Foundation. The rest unfolds from there.</h2>
+  <p>The Foundation Program is the prerequisite for Inner Child Healing. It is the recommended beginning for all students, and a profound journey in its own right.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn btn-dark"    href="foundation-v4.html">Begin with Level 1 Foundation</a>
+    <a class="btn btn-outline" href="#">Join Level 2 Waitlist</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="footer-wordmark">Sacred Wisdom School</span>
+      <p class="footer-tagline">"Wisdom already lives within you. We simply create the space for it to be heard."</p>
+    </div>
+    <div class="footer-col">
+      <h4>School</h4>
+      <nav><a href="#">About the School</a><a href="#">Reverend Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Healing</h4>
+      <nav><a href="healing-v4.html">Sacred Healing Overview</a><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="#">Advanced Modules</a><a href="#">Sacred Breathwork</a><a href="#">Sacred Spirit Dance</a><a href="#">Constellations</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Teachings</h4>
+      <nav><a href="#">Sacred Teachings</a><a href="#">Consciousness</a><a href="#">Intuition</a><a href="#">Self-Realization</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Journeys</h4>
+      <nav><a href="#">Sacred Journeys</a><a href="#">Retreats</a><a href="#">Pilgrimages</a></nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Malaysia · Canada · Selected Online Programs</span>
+    <div class="footer-legal">
+      <a href="#">© 2025 Sacred Wisdom School</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  var sel = '.impact-item, .unique-row, .section h2';
+  var dly = ['d1','d2','d3','d4'], n = 0;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll(sel).forEach(function(el){
+    if(el.getBoundingClientRect().top > window.innerHeight){
+      el.classList.add('reveal', dly[n++ % 4]);
+      obs.observe(el);
+    }
+  });
+})();
+</script>
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 56); }, { passive: true });
+  const drawer = document.getElementById('drawer');
+  const menuBtn = document.getElementById('menuBtn');
+  const closeBtn = document.getElementById('drawerClose');
+  menuBtn.addEventListener('click', () => drawer.classList.add('open'));
+  closeBtn.addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+</script>
+</body>
+</html>

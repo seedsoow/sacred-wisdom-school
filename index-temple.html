@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Wisdom School | Spiritual Teachings, Healing, Breathwork & Sacred Journeys</title>
+  <meta name="description" content="Sacred Wisdom School is a home for spiritual teachings, sacred healing, sacred breathwork, sacred journeys, and conscious living founded by Dr. Rain Lim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --ink: #1a1020;
+  --text: #3d2e4a;
+  --muted: #786088;
+  --purple: #4a236f;
+  --gold: #BBA27B;
+  --gold-hair: rgba(187, 162, 123, 0.38);
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+a { color: inherit; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gold-hair);
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  text-decoration: none;
+  display: grid;
+  gap: 3px;
+  line-height: 1;
+}
+
+.brand small {
+  font-family: Inter, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.menu-button {
+  border: 1px solid var(--gold-hair);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  padding: 9px 14px;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.site-nav {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 100%;
+  display: none;
+  background: var(--white);
+  border: 1px solid var(--gold-hair);
+  border-top: none;
+  padding: 8px 0;
+  z-index: 20;
+}
+
+.site-nav.open { display: grid; }
+
+.site-nav a {
+  padding: 14px 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+main > section {
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.section-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 24px;
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+}
+
+.section-rule::before,
+.section-rule::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 72px;
+  background: var(--gold-hair);
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.06;
+  color: var(--ink);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(52px, 13vw, 94px);
+  max-width: 900px;
+  margin: 0 auto;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(38px, 8vw, 66px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h3 { font-size: 26px; }
+
+p { margin: 0 auto; max-width: 620px; }
+
+.text-flow { display: grid; gap: 20px; margin-top: 28px; }
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 44px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 32px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 1px;
+  border: 1px solid var(--ink);
+}
+
+.button.primary { background: var(--ink); color: var(--white); }
+.button.secondary { background: transparent; color: var(--ink); }
+
+/* Hero */
+.hero { padding: 130px 24px; }
+.hero > p { font-size: 18px; line-height: 1.78; margin-top: 28px; }
+
+/* Step grid */
+.step-grid {
+  display: grid;
+  gap: 48px;
+  margin: 60px auto 0;
+  max-width: 960px;
+}
+
+.step-grid article { background: none; border: none; box-shadow: none; padding: 0; }
+.step-grid span { display: block; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; margin-bottom: 14px; }
+.step-grid h3 { margin-bottom: 12px; }
+.step-grid p { font-size: 15px; color: var(--muted); line-height: 1.72; }
+
+/* Pillar grid */
+.pillar-grid {
+  display: grid;
+  gap: 0;
+  margin: 56px auto 0;
+  max-width: 960px;
+}
+
+.pillar-grid article { background: none; border: none; box-shadow: none; padding: 36px 24px; border-top: 1px solid var(--gold-hair); }
+.pillar-grid article:last-child { border-bottom: 1px solid var(--gold-hair); }
+.pillar-grid p { margin-top: 12px; font-size: 15px; color: var(--muted); }
+.pillar-grid a, .text-link {
+  display: inline-block;
+  color: var(--purple);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  margin-top: 16px;
+}
+
+/* Program list */
+.healing-programs { background: var(--white); }
+.section-intro { display: grid; gap: 16px; }
+
+.program-list {
+  display: grid;
+  gap: 0;
+  margin: 56px auto 0;
+  max-width: 720px;
+  text-align: left;
+}
+
+.program-list article { background: none; border: none; box-shadow: none; padding: 28px 0; border-top: 1px solid var(--gold-hair); }
+.program-list article:last-child { border-bottom: 1px solid var(--gold-hair); }
+.program-list h3 { font-size: 22px; margin-bottom: 8px; }
+.program-list p { font-size: 15px; color: var(--muted); margin: 0; max-width: 100%; }
+
+/* Founder */
+.image-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid var(--gold-hair);
+  max-width: 420px;
+  margin: 48px auto 0;
+}
+
+.image-card span { color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+.image-card strong { font-family: "Cormorant Garamond", serif; font-size: 26px; color: var(--ink); }
+.image-card p { font-size: 13px; line-height: 1.6; margin: 0; max-width: 100%; }
+
+/* Future grid */
+.future-grid {
+  display: grid;
+  gap: 0;
+  margin: 56px auto 0;
+  max-width: 960px;
+}
+
+.future-grid article { background: none; border: none; box-shadow: none; padding: 28px 16px; border-top: 1px solid var(--gold-hair); }
+.future-grid h3 { font-size: 22px; margin-bottom: 8px; }
+.future-grid p { font-size: 15px; color: var(--muted); margin-top: 8px; }
+
+/* Contact */
+.contact-section { text-align: center; }
+.contact-section p { margin-top: 20px; }
+
+/* Footer */
+.site-footer {
+  padding: 72px 24px;
+  text-align: center;
+  border-top: 1px solid var(--gold-hair);
+  display: grid;
+  gap: 28px;
+}
+
+.site-footer strong { font-family: "Cormorant Garamond", serif; font-size: 26px; color: var(--ink); }
+.site-footer p { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.site-footer a {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: 720px) {
+  main > section { padding-left: 48px; padding-right: 48px; }
+  .hero { padding-left: 48px; padding-right: 48px; }
+  .section-rule { padding: 0 48px; }
+  .actions { flex-direction: row; }
+  .step-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pillar-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pillar-grid article { border-bottom: none; }
+  .pillar-grid article:last-child { border-bottom: none; }
+  .future-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .program-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1040px) {
+  .menu-button { display: none; }
+  .site-header {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 32px;
+    padding-left: max(40px, calc((100vw - 1200px) / 2));
+    padding-right: max(40px, calc((100vw - 1200px) / 2));
+  }
+  .site-nav {
+    position: static;
+    display: flex !important;
+    justify-content: flex-end;
+    gap: 36px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .site-nav a { padding: 0; white-space: nowrap; }
+  main > section, .hero, .site-footer {
+    padding-left: max(72px, calc((100vw - 1200px) / 2));
+    padding-right: max(72px, calc((100vw - 1200px) / 2));
+  }
+  .section-rule {
+    padding-left: max(72px, calc((100vw - 1200px) / 2));
+    padding-right: max(72px, calc((100vw - 1200px) / 2));
+  }
+  .step-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .program-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .future-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Sacred Wisdom School home">
+      <span>Sacred Wisdom School</span>
+      <small>Teachings · Healing · Sacred Journeys</small>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#">About</a>
+      <a href="#">Teachings</a>
+      <a href="#">Healing</a>
+      <a href="#">Journeys</a>
+      <a href="#">Community</a>
+      <a href="#">Enquire</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">A sanctuary for inner wisdom</p>
+      <h1>Awaken your inner wisdom. Walk the path of healing, spirit, and conscious living.</h1>
+      <p>Sacred Wisdom School is a home for spiritual teachings, sacred healing, sacred breathwork, sacred journeys, and the living practices that return us to the wisdom already within.</p>
+      <div class="actions">
+        <a class="button primary" href="#">Explore the path</a>
+        <a class="button secondary" href="#">Enquire now</a>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- THE QUIET QUESTION -->
+    <section>
+      <p class="eyebrow">The quiet question</p>
+      <h2>Many spiritual journeys begin with a question that will not go away.</h2>
+      <div class="text-flow">
+        <p>Why do certain patterns repeat in my life? What is the deeper purpose of my existence? Is there more to life than what I can see on the surface?</p>
+        <p>These questions often arise during change, challenge, or reflection. They are invitations to look inward, listen more deeply, and reconnect with the wisdom that already lives within.</p>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- THE PATH -->
+    <section id="path">
+      <p class="eyebrow">The Sacred Wisdom Path</p>
+      <h2>A living path of awakening, healing, integration, and embodiment.</h2>
+      <div class="step-grid">
+        <article>
+          <span>01</span>
+          <h3>Awakening</h3>
+          <p>The beginning of inner inquiry, spiritual curiosity, and a deeper listening to life.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Healing</h3>
+          <p>Meeting emotional wounds, energetic imbalances, and inherited patterns with presence.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Integration</h3>
+          <p>Bringing spiritual awareness into relationships, choices, body, work, and everyday life.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Embodiment</h3>
+          <p>Living with wisdom, compassion, and the steadiness to serve from inner truth.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- THREE PILLARS -->
+    <section>
+      <p class="eyebrow">Three pillars</p>
+      <h2>One school, three doorways.</h2>
+      <div class="pillar-grid">
+        <article>
+          <h3>Sacred Teachings</h3>
+          <p>Teachings on consciousness, self-realization, intuition, inner guidance, and the soul's journey.</p>
+          <a href="#">Explore teachings</a>
+        </article>
+        <article>
+          <h3>Sacred Healing</h3>
+          <p>A progressive healing path including Foundation, Inner Child Healing, Sacred Breathwork, Sacred Spirit Dance, Sacred Integrative Constellations, and Intuitive Development.</p>
+          <a href="#">View healing path</a>
+        </article>
+        <article>
+          <h3>Sacred Journeys</h3>
+          <p>Retreats, pilgrimages, and spiritual travel designed for reflection, healing, and embodied wisdom.</p>
+          <a href="#">Explore journeys</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- HEALING PROGRAMS -->
+    <section class="healing-programs">
+      <div class="section-intro">
+        <p class="eyebrow">Sacred Healing</p>
+        <h2>Healing is a path of remembering, not only a set of techniques.</h2>
+        <p>Each program deepens awareness of the emotional, energetic, somatic, and spiritual dimensions of human life.</p>
+      </div>
+      <div class="program-list">
+        <article>
+          <h3>Foundation Program</h3>
+          <p>Core principles, energetic awareness, self-trust, discernment, and the foundation for healing practice.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+        <article>
+          <h3>Inner Child Healing</h3>
+          <p>A gentle path for meeting younger parts of the self and restoring safety, tenderness, and wholeness.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+        <article>
+          <h3>Sacred Breathwork</h3>
+          <p>Breath as a sacred doorway into the body, emotional release, inner listening, and spiritual connection.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+        <article>
+          <h3>Sacred Spirit Dance</h3>
+          <p>Movement, embodiment, and expressive practice for reconnecting with life force and inner freedom.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+        <article>
+          <h3>Sacred Integrative Constellations</h3>
+          <p>Systemic and multidimensional healing that brings hidden family, ancestral, and life patterns into awareness.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+        <article>
+          <h3>Intuitive Development</h3>
+          <p>Practices for strengthening inner guidance, energetic sensitivity, and trust in spiritual awareness.</p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- FOUNDER -->
+    <section>
+      <p class="eyebrow">Founder</p>
+      <h2>Founded by Dr. Rain Lim.</h2>
+      <div class="text-flow">
+        <p>Reverend Dr. Rain Lim is an international spiritual teacher, intuitive healer, speaker, and founder whose work bridges spirituality, healing, personal transformation, and conscious living.</p>
+        <p>Through Sacred Wisdom School, Rain shares spiritual teachings and healing practices that explore consciousness, emotional healing, intuition, sacred breathwork, and spiritual awakening.</p>
+      </div>
+      <div class="image-card">
+        <span>Founder image</span>
+        <strong>Dr. Rain Lim</strong>
+        <p>A calm portrait of Rain in natural light or a teaching setting.</p>
+      </div>
+      <div class="actions" style="margin-top:40px">
+        <a class="button secondary" href="#">About Dr. Rain Lim</a>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- GROWING SCHOOL -->
+    <section id="school-community">
+      <p class="eyebrow">Growing school</p>
+      <h2>Built to welcome future teachers, certified practitioners, and offerings.</h2>
+      <div class="future-grid">
+        <article>
+          <h3>Co-founders and teachers</h3>
+          <p>The school can later introduce co-founders and teachers with photos, bios, and the programs they hold.</p>
+        </article>
+        <article>
+          <h3>Certified practitioners</h3>
+          <p>Space is reserved for future graduates and certified practitioners once the certification pathway is ready.</p>
+        </article>
+        <article>
+          <h3>Products</h3>
+          <p>Space is reserved for future courses, recordings, meditations, healing tools, and digital resources.</p>
+        </article>
+        <article>
+          <h3>Community</h3>
+          <p>The school can grow into events, circles, retreats, and ongoing student pathways.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-rule">·</div>
+
+    <!-- CTA -->
+    <section class="contact-section">
+      <p class="eyebrow">Begin here</p>
+      <h2>Enquire about Sacred Wisdom School.</h2>
+      <p>For programs, sacred breathwork, journeys, or future offerings — send a short note and the office can guide you to the right next step.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:office@drrainlim.com?subject=Sacred%20Wisdom%20School%20Enquiry">Email the office</a>
+        <a class="button secondary" href="#">Go to contact page</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Sacred Wisdom School</strong>
+      <p>Spiritual teachings, sacred healing, sacred breathwork, sacred journeys, and conscious living.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#">About</a>
+      <a href="#">Teachings</a>
+      <a href="#">Healing</a>
+      <a href="#">Journeys</a>
+      <a href="#">Community</a>
+      <a href="mailto:office@drrainlim.com">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+const menuButton = document.querySelector('.menu-button');
+const siteNav = document.querySelector('#site-nav');
+if (menuButton && siteNav) {
+  menuButton.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+  });
+  siteNav.addEventListener('click', (e) => {
+    if (e.target instanceof HTMLAnchorElement) {
+      siteNav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+  </script>
+</body>
+</html>

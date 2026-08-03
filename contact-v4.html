@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sacred Wisdom School to enquire about programs, sacred journeys, or certified healer training. Reach Dr. Rain Lim and the team via email, WhatsApp, or phone.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Sacred Wisdom School">
+  <meta property="og:description" content="Contact Sacred Wisdom School to enquire about programs, sacred journeys, or certified healer training. Reach Dr. Rain Lim and the team.">
+  <meta property="og:site_name" content="Sacred Wisdom School">
+  <link rel="canonical" href="https://sacredwisdomschool.com/contact">
+  <title>Contact | Sacred Wisdom School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --cream:       #ece0ef;
+  --white:       #ffffff;
+  --parchment:   #f8edd8;
+  --ink:         #1e1040;
+  --text:        #3c2952;
+  --muted:       #7d6d90;
+  --gold:        #C8A55A;
+  --gold-warm:   #D4AE5A;
+  --gold-light:  #F0DBA8;
+  --gold-faint:  rgba(187,162,123,0.18);
+  --purple:      #5b2d8e;
+  --amethyst:    #7b4fa8;
+  --hero-bg:     #4a2080;
+  --footer-bg:   #1a0e38;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--white); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(150,100,180,0.2); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
+.nav.scrolled .nav-brand { color: var(--ink); }
+.nav-links { display: none; gap: 28px; }
+.nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.nav.scrolled .nav-links a { color: var(--muted); }
+.nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold); }
+.nav-explore { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; color: rgba(255,255,255,0.85); white-space: nowrap; transition: all 0.2s; }
+.nav.scrolled .nav-explore { border-color: var(--purple); color: var(--white); background: var(--purple); }
+.nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
+.nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--white); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer.open { opacity: 1; pointer-events: all; }
+.drawer a { font-family: "Cormorant Garamond", serif; font-size: 36px; font-weight: 300; color: var(--ink); }
+.drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+
+.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(44px, 7vw, 80px); font-weight: 300; line-height: 1.04; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4vw, 44px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
+.btn-gold    { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
+.btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.page-hero {
+  min-height: 50vh;
+  background:
+    radial-gradient(ellipse 55% 45% at 25% 65%, rgba(91,45,142,0.5), transparent),
+    radial-gradient(ellipse 40% 35% at 75% 25%, rgba(123,79,168,0.35), transparent),
+    linear-gradient(148deg, #1a0e38 0%, #3a1870 40%, var(--hero-bg) 70%, #6535a0 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 100px 72px 64px;
+}
+.page-hero h1 { max-width: 480px; }
+.page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(16px, 2vw, 22px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.5); margin-top: 14px; max-width: 480px; line-height: 1.55; }
+.breadcrumb { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); }
+.breadcrumb span { color: rgba(255,255,255,0.15); }
+
+.s-white  { background: var(--white); padding: 100px 72px; }
+.s-cream  { background: var(--cream); padding: 100px 72px; }
+.s-purple { background: var(--purple); padding: 96px 72px; }
+.inner { max-width: 1060px; margin: 0 auto; }
+
+/* CONTACT LAYOUT */
+.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+
+/* CONTACT INFO */
+.contact-info h2 { margin: 16px 0 24px; }
+.contact-info > p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 40px; }
+.contact-items { display: grid; gap: 0; margin-bottom: 40px; }
+.contact-item { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--gold-faint); align-items: flex-start; }
+.contact-item:first-child { border-top: 1px solid var(--gold-faint); }
+.contact-item-icon { width: 36px; height: 36px; border: 1px solid var(--gold-faint); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-item-icon svg { width: 16px; height: 16px; }
+.contact-item dt { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amethyst); margin-bottom: 4px; }
+.contact-item dd { font-size: 14px; color: var(--text); line-height: 1.6; }
+.contact-note { background: var(--cream); padding: 28px 32px; border-top: 3px solid var(--gold); }
+.contact-note p { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--ink); line-height: 1.5; }
+
+/* FORM */
+.form-card { background: var(--white); border: 1px solid var(--gold-faint); padding: 48px; }
+.form-row { margin-bottom: 20px; }
+.form-row-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.form-group input,
+.form-group select,
+.form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid rgba(150,100,180,0.2); background: var(--white); font-family: Inter, sans-serif; font-size: 14px; color: var(--text); outline: none; transition: border-color 0.2s; appearance: none; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--amethyst); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237d6d90' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+.form-contact-pref { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.pref-btn { padding: 11px 8px; border: 1px solid rgba(150,100,180,0.2); background: none; font-family: Inter, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+.pref-btn.selected, .pref-btn:hover { background: var(--cream); border-color: var(--amethyst); color: var(--purple); }
+.form-submit { margin-top: 28px; }
+.form-submit .btn { width: 100%; justify-content: center; min-height: 52px; font-size: 11px; }
+.form-privacy { margin-top: 12px; text-align: center; font-size: 12px; color: var(--muted); }
+
+.cta-center { max-width: 560px; margin: 0 auto; text-align: center; }
+.cta-center h2 { color: var(--white); font-style: italic; margin: 16px 0 20px; }
+.cta-center p { font-size: 16px; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 36px; }
+
+.footer { background: var(--footer-bg); padding: 72px 48px 40px; }
+.footer-brand { margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-wordmark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 400; color: var(--white); display: block; margin-bottom: 8px; }
+.footer-tagline { font-family: "Cormorant Garamond", serif; font-size: 14px; font-style: italic; color: rgba(187,162,123,0.55); }
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(187,162,123,0.6); margin-bottom: 14px; }
+.footer-col nav { display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-col a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; font-size: 11px; color: rgba(255,255,255,0.2); }
+
+@media (min-width: 1040px) { .nav-links { display: flex; } .nav-menu-btn { display: none; } }
+@media (max-width: 1039px) {
+  .page-hero { padding: 80px 32px 56px; }
+  .s-white, .s-cream, .s-purple { padding: 80px 32px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  .footer-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .nav { padding: 0 20px; height: 60px; }
+  .page-hero { padding: 72px 20px 48px; }
+  .s-white, .s-cream, .s-purple { padding: 72px 24px; }
+  .form-card { padding: 32px 24px; }
+  .form-row-two { grid-template-columns: 1fr; }
+  .form-contact-pref { grid-template-columns: 1fr; }
+  .footer { padding: 56px 24px 32px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+}
+/* SCROLL REVEAL */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+.btn { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(91,45,142,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+body { min-width: 320px; }
+.form-success { display: none; text-align: center; padding: 32px; }
+.form-success h3 { font-family: "Cormorant Garamond", serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 12px; }
+.form-success p { color: var(--muted); }
+.field-error { border-color: rgba(180,40,40,0.5) !important; }
+.field-msg { font-size: 11px; color: rgba(180,40,40,0.8); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#">Sacred Wisdom School</a>
+  <nav class="nav-links">
+    <a href="#">Sacred Teachings</a>
+    <a href="#">Sacred Healing</a>
+    <a href="#">Sacred Journeys</a>
+    <a href="#">About</a>
+    <a href="#">Dr. Rain Lim</a>
+    <a href="#">Upcoming Programs</a>
+    <a href="#">Contact</a>
+  </nav>
+  <a class="nav-explore btn btn-dark" href="#">Explore Programs</a>
+  <button class="nav-menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">Close</button>
+  <a href="#">Sacred Teachings</a>
+  <a href="#">Sacred Healing</a>
+  <a href="#">Sacred Journeys</a>
+  <a href="#">About</a>
+  <a href="#">Dr. Rain Lim</a>
+  <a href="#">Upcoming Programs</a>
+  <a href="#">Contact</a>
+</div>
+
+<main>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="#">Home</a><span>/</span>Contact</div>
+  <h1>Get in Touch</h1>
+  <p class="page-hero-sub">We are here to help you find the right path. Reach out and we will respond with care.</p>
+</section>
+
+<section class="s-white">
+  <div class="inner">
+    <div class="contact-layout">
+
+      <!-- INFO COLUMN -->
+      <div class="contact-info">
+        <span class="label">Reach Out</span>
+        <h2>We Would Love to Hear from You</h2>
+        <p>Whether you have a question about a program, a Sacred Journey, or are not yet sure where to begin — we are happy to help guide you.</p>
+
+        <dl class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="var(--amethyst)" stroke-width="1.2"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 4l7 5 7-5"/></svg>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>rainheartwisdom@gmail.com</dd>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="var(--amethyst)" stroke-width="1.2"><circle cx="8" cy="7" r="3"/><path d="M8 1C4.686 1 2 3.686 2 7c0 3.6 6 9 6 9s6-5.4 6-9c0-3.314-2.686-6-6-6z"/></svg>
+            </div>
+            <div>
+              <dt>Locations</dt>
+              <dd>Malaysia (Kuala Lumpur) · Canada · Online</dd>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="var(--amethyst)" stroke-width="1.2"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l2.5 2.5"/></svg>
+            </div>
+            <div>
+              <dt>Response Time</dt>
+              <dd>We aim to respond within 2–3 business days</dd>
+            </div>
+          </div>
+        </dl>
+
+        <div class="contact-note">
+          <p>"Every journey begins with a conversation. We are here to help you find your way."</p>
+        </div>
+      </div>
+
+      <!-- FORM COLUMN -->
+      <div class="form-card">
+        <div class="form-success"></div>
+        <form>
+          <div class="form-row-two">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-row-two">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="" disabled selected>Select your country</option>
+                <option>Malaysia</option>
+                <option>Canada</option>
+                <option>Singapore</option>
+                <option>Australia</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Indonesia</option>
+                <option>Thailand</option>
+                <option>Philippines</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="program">Program Interest</label>
+              <select id="program" name="program">
+                <option value="" disabled selected>Select a program</option>
+                <option>Level 1 — Foundation Program</option>
+                <option>Level 2 — Inner Child Healing</option>
+                <option>Level 3 — Advanced Modules</option>
+                <option>Sacred Breathwork</option>
+                <option>Sacred Spirit Dance</option>
+                <option>Sacred Integrative Constellations</option>
+                <option>Sacred Journeys — Bali</option>
+                <option>Sacred Journeys — Malaysia</option>
+                <option>Sacred Journeys — Nepal</option>
+                <option>Sacred Teachings</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about yourself and what you are looking for…" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Contact Method</label>
+              <div class="form-contact-pref">
+                <button type="button" class="pref-btn selected" onclick="selectPref(this)">Email</button>
+                <button type="button" class="pref-btn" onclick="selectPref(this)">WhatsApp</button>
+                <button type="button" class="pref-btn" onclick="selectPref(this)">Phone Call</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-dark">Send Your Message</button>
+          </div>
+          <p class="form-privacy">Your information is kept private and never shared. <a href="#" style="color:var(--amethyst)">Privacy Policy</a></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="s-purple">
+  <div class="cta-center">
+    <span class="label" style="color:var(--gold-light)">Not Sure Where to Start?</span>
+    <h2>Explore the Programs</h2>
+    <p>Browse all upcoming programs and Sacred Journeys — from the Foundation Program to Level 3 Advanced Modules and beyond.</p>
+    <div class="btns btns-c">
+      <a class="btn btn-gold" href="#">View Upcoming Programs</a>
+      <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.75)" href="#">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="footer-wordmark">Sacred Wisdom School</span>
+    <p class="footer-tagline">"Every journey begins with a single step inward."</p>
+  </div>
+  <div class="footer-cols">
+    <div class="footer-col"><h4>School</h4><nav><a href="#">About the School</a><a href="#">Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav></div>
+    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="#">Foundation Program</a><a href="#">Inner Child Healing</a><a href="#">Advanced Modules</a></nav></div>
+    <div class="footer-col"><h4>Offerings</h4><nav><a href="#">Sacred Teachings</a><a href="#">Sacred Journeys</a><a href="#">Breathwork</a><a href="#">Spirit Dance</a><a href="#">Constellations</a></nav></div>
+    <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
+  </div>
+  <div class="footer-bottom">
+    <span>Malaysia · Canada · Selected Online Programs</span>
+    <span>© 2026 Sacred Wisdom School</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+    var sel = '.s-white h2, .s-cream h2';
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    },{threshold:0.08});
+    document.querySelectorAll(sel).forEach(function(el){
+      if(el.getBoundingClientRect().top > window.innerHeight){ el.classList.add('reveal','d1'); obs.observe(el); }
+    });
+  })();
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 56), { passive: true });
+  const drawer = document.getElementById('drawer');
+  document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+  function selectPref(btn) {
+    btn.closest('.form-contact-pref').querySelectorAll('.pref-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  }
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+    ['name','email','message'].forEach(function(id) {
+      var el = document.getElementById(id);
+      var msg = el.parentElement.querySelector('.field-msg');
+      if (!el.value.trim()) {
+        el.classList.add('field-error');
+        if (!msg) { var m = document.createElement('span'); m.className='field-msg'; m.textContent='This field is required.'; el.parentElement.appendChild(m); }
+        valid = false;
+      } else {
+        el.classList.remove('field-error');
+        if (msg) msg.remove();
+        if (id==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
+          el.classList.add('field-error');
+          var m = document.createElement('span'); m.className='field-msg'; m.textContent='Please enter a valid email.'; el.parentElement.appendChild(m);
+          valid = false;
+        }
+      }
+    });
+    if (valid) {
+      this.style.display='none';
+      var s = document.querySelector('.form-success');
+      s.style.display='block';
+      s.innerHTML='<h3>Thank you</h3><p>Your message has been received. We will respond with care within 2–3 business days.</p>';
+    }
+  });
+</script>
+</body>
+</html>
