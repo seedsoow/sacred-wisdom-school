@@ -16,31 +16,31 @@
   <style>
 
 :root {
-  --cream:      #ece0ef;
-  --cream-alt:  #ffffff;
-  --white:      #ffffff;
-  --parchment:  #f8edd8;
-  --ink:        #1e1040;
-  --text:       #3c2952;
-  --muted:      #7d6d90;
-  --gold:       #C8A55A;
-  --gold-warm:  #D4AE5A;
-  --gold-light: #F0DBA8;
-  --gold-faint: rgba(187,162,123,0.18);
-  --gold-mid:   rgba(150,100,180,0.2);
-  --gold-rule:  rgba(150,100,180,0.25);
-  --purple:     #5b2d8e;
-  --amethyst:   #7b4fa8;
-  --hero-bg:    #4a2080;
-  --footer-bg:  #1a0e38;
+  --cream:      #0d1530;
+  --cream-alt:  #162040;
+  --white:      #e8edf5;
+  --parchment:  #06091a;
+  --ink:        #e8edf5;
+  --text:       #b0bcd8;
+  --muted:      #7a8aaa;
+  --gold:       #c8a55a;
+  --gold-warm:  #d4ae5a;
+  --gold-light: #f0dba8;
+  --gold-faint: rgba(200,165,90,0.15);
+  --gold-mid:   rgba(74,155,170,0.15);
+  --gold-rule:  rgba(74,155,170,0.2);
+  --purple:     #3d1a6e;
+  --amethyst:   #4a9baa;
+  --hero-bg:    #06091a;
+  --footer-bg:  #030611;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--white); overflow-x: hidden; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
-.nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(150,100,180,0.2); }
+.nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
 .nav-links { display: none; gap: 28px; }
