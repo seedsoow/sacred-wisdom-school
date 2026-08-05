@@ -53,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 .nav.scrolled .nav-explore { border-color: var(--purple); color: var(--white); background: var(--purple); }
 .nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
 .nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
-.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--white); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--parchment); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
 .drawer.open { opacity: 1; pointer-events: all; }
 .drawer a { font-family: "Cormorant Garamond", serif; font-size: 36px; font-weight: 300; color: var(--ink); }
 .drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
@@ -67,11 +67,11 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 
 /* BUTTONS */
 .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
-.btn-gold    { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.btn-gold    { background: var(--gold); color: #06091a; border-color: var(--gold); }
 .btn-ghost   { background: transparent; color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.28); }
 .btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
 .btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
-.btn-white   { background: var(--white); color: var(--ink); }
+.btn-white   { background: var(--cream-alt); color: var(--ink); }
 .btns  { display: flex; flex-wrap: wrap; gap: 12px; }
 .btns-c { justify-content: center; }
 .tlink { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-warm); display: inline-flex; align-items: center; gap: 6px; }
@@ -113,7 +113,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 /* ═══════════════════════════════════
    3. INTRO SPLIT — questions + Rain
 ═══════════════════════════════════ */
-.intro-split { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); }
+.intro-split { display: grid; grid-template-columns: 1fr 1fr; background: var(--cream-alt); }
 .intro-left { padding: 100px 72px; border-right: 1px solid var(--gold-faint); }
 .intro-left h2 { margin: 16px 0 40px; font-size: clamp(28px, 3.5vw, 46px); }
 .intro-q { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--amethyst); padding: 22px 0; border-bottom: 1px solid var(--gold-faint); line-height: 1.3; }
@@ -133,7 +133,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 }
 .intro-portrait-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
 .intro-portrait h3 { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.55); }
-.intro-quote-box { padding: 48px 56px; background: var(--white); border-top: 1px solid var(--gold-faint); }
+.intro-quote-box { padding: 48px 56px; background: var(--cream-alt); border-top: 1px solid var(--gold-faint); }
 .intro-pull { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 20px; line-height: 1.35; margin-bottom: 20px; }
 .intro-sig { font-family: "Cormorant Garamond", serif; font-size: 18px; font-style: italic; color: var(--gold-warm); margin-bottom: 24px; display: block; }
 
@@ -221,7 +221,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 /* ═══════════════════════════════════
    6. SACRED HEALING PROGRAMS
 ═══════════════════════════════════ */
-.programs { padding: 100px 48px; background: var(--white); }
+.programs { padding: 100px 48px; background: var(--cream-alt); }
 .programs-head { max-width: 1060px; margin: 0 auto 72px; }
 .programs-head h2 { margin-top: 16px; max-width: 600px; }
 .programs-head p  { margin-top: 20px; max-width: 560px; font-size: 16px; color: var(--muted); line-height: 1.85; }
@@ -283,7 +283,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 /* ═══════════════════════════════════
    9. MEET THE FOUNDER
 ═══════════════════════════════════ */
-.founder { padding: 100px 48px; background: var(--white); }
+.founder { padding: 100px 48px; background: var(--cream-alt); }
 .founder-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; }
 .founder-portrait {
   background:
@@ -314,7 +314,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .who-head p { font-size: 16px; color: var(--muted); line-height: 1.85; }
 .who-grid { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
 .who-card {
-  background: var(--white);
+  background: var(--cream-alt);
   padding: 40px 36px;
   transition: background 0.3s;
 }
@@ -342,7 +342,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .journeys-visual p { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.45); font-style: italic; }
 .dest-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .dest { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); background: rgba(187,162,123,0.1); border: 1px solid rgba(187,162,123,0.22); padding: 6px 12px; border-radius: 1px; }
-.journeys-text { background: var(--white); display: flex; flex-direction: column; justify-content: center; padding: 80px 72px; border-top: 1px solid var(--gold-faint); }
+.journeys-text { background: var(--cream-alt); display: flex; flex-direction: column; justify-content: center; padding: 80px 72px; border-top: 1px solid var(--gold-faint); }
 .journeys-text h2 { margin: 16px 0 24px; font-size: clamp(28px, 3.5vw, 48px); }
 .journeys-text p { font-size: 16px; color: var(--muted); line-height: 1.85; max-width: 440px; }
 .journeys-text p + p { margin-top: 14px; }
@@ -355,7 +355,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .upcoming-head h2 { margin-top: 16px; max-width: 420px; }
 .program-grid { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .program-card {
-  background: var(--white);
+  background: var(--cream-alt);
   border: 1px solid var(--gold-faint);
   overflow: hidden;
   transition: box-shadow 0.3s;
