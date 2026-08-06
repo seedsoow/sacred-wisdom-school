@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Family Constellations with Dr. Rain Lim at Sacred Wisdom School — explore generational healing, restore family soul order, and free yourself from inherited patterns.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sacred Integrative Constellations | Sacred Wisdom School">
+  <meta property="og:description" content="Family Constellations with Dr. Rain Lim — explore generational healing, restore family soul order, and free yourself from inherited patterns.">
+  <meta property="og:site_name" content="Sacred Wisdom School">
+  <link rel="canonical" href="https://sacredwisdomschool.com/sacred-integrative-constellations">
+  <title>Sacred Integrative Constellations | Sacred Wisdom School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --cream:       #0d1530;
+  --cream-alt:   #162040;
+  --white:       #e8edf5;
+  --parchment:   #06091a;
+  --ink:         #e8edf5;
+  --text:        #b0bcd8;
+  --muted:       #7a8aaa;
+  --gold:        #c8a55a;
+  --gold-warm:   #d4ae5a;
+  --gold-light:  #f0dba8;
+  --gold-faint:  rgba(200,165,90,0.15);
+  --gold-mid:    rgba(74,155,170,0.15);
+  --gold-rule:   rgba(74,155,170,0.2);
+  --purple:      #3d1a6e;
+  --amethyst:    #4a9baa;
+  --hero-bg:     #06091a;
+  --footer-bg:   #030611;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
+.nav.scrolled .nav-brand { color: var(--ink); }
+.nav-links { display: none; gap: 28px; }
+.nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.nav.scrolled .nav-links a { color: var(--muted); }
+.nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold); }
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dd-trigger { cursor: default; }
+.nav-dd-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(6,9,26,0.97);
+  border: 1px solid rgba(200,165,90,0.15);
+  backdrop-filter: blur(14px);
+  min-width: 270px;
+  padding: 14px 0;
+  z-index: 250;
+}
+.nav-dropdown:hover .nav-dd-menu { display: block; }
+.nav-dd-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-dd-menu a:hover { color: var(--gold); }
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+.nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
+.nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--parchment); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer.open { opacity: 1; pointer-events: all; }
+.drawer a { font-family: "Cormorant Garamond", serif; font-size: 36px; font-weight: 300; color: var(--ink); }
+.drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+
+.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label-light { color: var(--gold-light); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(44px, 8vw, 86px); font-weight: 300; line-height: 1.04; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(32px, 5vw, 54px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 400; line-height: 1.15; color: var(--ink); }
+
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
+.btn-gold    { background: var(--gold); color: #06091a; border-color: var(--gold); }
+.btn-ghost   { background: transparent; color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.28); }
+.btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
+.btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btns-c { justify-content: center; }
+
+.page-hero {
+  min-height: 72vh;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(91,45,142,0.5), transparent),
+    radial-gradient(ellipse 40% 35% at 78% 22%, rgba(123,79,168,0.35), transparent),
+    linear-gradient(148deg, rgba(14,8,32,0.45) 0%, rgba(42,20,88,0.45) 38%, rgba(74,32,128,0.45) 65%, rgba(101,53,160,0.45) 100%),
+    url('https://images.unsplash.com/photo-1498611291069-aa296192f1e4?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 100px 72px 72px; position: relative; overflow: hidden;
+}
+.page-hero::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); top: 50%; right: 10%; transform: translateY(-50%); }
+.page-hero::after { content: ''; position: absolute; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(200,165,90,0.04); top: 50%; right: 12%; transform: translateY(-50%); }
+.page-hero-badge { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+.page-hero-badge::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.5; }
+.page-hero h1 { max-width: 840px; }
+.page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.55); margin-top: 16px; max-width: 640px; line-height: 1.5; }
+.breadcrumb { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb span { color: rgba(255,255,255,0.15); }
+
+.s-white     { background: var(--cream-alt); padding: 100px 72px; }
+.s-cream     { background: var(--cream); padding: 100px 72px; }
+.s-purple    { background: var(--purple); padding: 96px 72px; }
+.s-parchment { background: var(--parchment); padding: 100px 72px; }
+.s-dark { background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(91,45,142,0.2), transparent), var(--footer-bg); padding: 100px 72px; }
+.inner { max-width: 1060px; margin: 0 auto; }
+
+.open-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.open-split h2 { margin: 16px 0 28px; }
+.open-split p { font-size: 16px; color: var(--muted); line-height: 1.85; }
+.open-split p + p { margin-top: 16px; }
+.open-tagline { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; font-style: italic; color: var(--amethyst); border-left: 2px solid var(--gold); padding-left: 24px; line-height: 1.4; margin-bottom: 32px; }
+
+/* WHAT HAPPENS SECTION */
+.happens-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.happens-card { padding: 40px 32px; background: var(--cream-alt); border-top: 3px solid var(--amethyst); }
+.happens-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--ink); font-weight: 400; }
+.happens-card p { font-size: 14px; color: var(--muted); line-height: 1.78; }
+
+/* APPROACH — split with pull */
+.approach-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.approach-split h2 { margin: 16px 0 24px; }
+.approach-split p { font-size: 16px; color: var(--muted); line-height: 1.85; }
+.approach-split p + p { margin-top: 16px; }
+.expand-card { background: var(--cream-alt); border-top: 3px solid var(--gold); padding: 36px 40px; }
+.expand-card h3 { font-size: 22px; color: var(--ink); margin-bottom: 16px; font-weight: 400; }
+.expand-card p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.expand-card p + p { margin-top: 14px; }
+
+.exp-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+.exp-head h2 { color: var(--white); margin-top: 16px; }
+.exp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1060px; margin: 0 auto; }
+.exp-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,165,90,0.14); padding: 36px 32px; transition: background 0.3s, border-color 0.3s; }
+.exp-card:hover { background: rgba(200,165,90,0.07); border-color: rgba(200,165,90,0.28); }
+.exp-card h3 { font-size: 20px; color: var(--white); font-weight: 300; margin-bottom: 12px; }
+.exp-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.75; }
+
+.unique-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.unique-card { padding: 44px 40px; background: var(--cream); border-top: 3px solid var(--gold); }
+.unique-card h3 { font-size: 20px; margin-bottom: 12px; }
+.unique-card p { font-size: 14px; color: var(--muted); line-height: 1.78; }
+
+.who-two { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.who-two h2 { margin: 16px 0 28px; }
+.who-list { list-style: none; }
+.who-list li { padding: 18px 0; border-bottom: 1px solid var(--gold-faint); font-size: 15px; color: var(--text); display: flex; gap: 14px; align-items: flex-start; }
+.who-list li:first-child { border-top: 1px solid var(--gold-faint); }
+.who-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; font-family: "Cormorant Garamond", serif; margin-top: 2px; }
+
+.details-card { max-width: 820px; margin: 0 auto; border: 1px solid var(--gold-faint); overflow: hidden; }
+.details-header { background: var(--purple); padding: 28px 40px; }
+.details-header h3 { font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 300; color: var(--white); margin-bottom: 4px; }
+.details-header p { font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; }
+.details-row { display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--gold-faint); }
+.details-row:last-child { border-bottom: none; }
+.details-row dt { padding: 18px 24px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); background: rgba(150,100,180,0.05); border-right: 1px solid var(--gold-faint); display: flex; align-items: center; }
+.details-row dd { padding: 18px 24px; font-size: 14px; color: var(--text); display: flex; align-items: center; }
+
+.cta-center { max-width: 600px; margin: 0 auto; text-align: center; }
+.cta-center h2 { color: var(--white); font-style: italic; margin: 16px 0 20px; }
+.cta-center p { font-size: 16px; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 36px; }
+
+.footer { background: var(--footer-bg); padding: 72px 48px 40px; }
+.footer-brand { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-wordmark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 400; color: var(--white); display: block; margin-bottom: 8px; }
+.footer-tagline { font-family: "Cormorant Garamond", serif; font-size: 14px; font-style: italic; color: rgba(187,162,123,0.55); max-width: 280px; line-height: 1.5; }
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(187,162,123,0.6); margin-bottom: 14px; }
+.footer-col nav { display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-col a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; font-size: 11px; color: rgba(255,255,255,0.2); }
+
+@media (min-width: 1040px) { .nav-links { display: flex; } .nav-menu-btn { display: none; } }
+@media (max-width: 1039px) {
+  .page-hero { padding: 80px 32px 56px; }
+  .s-white, .s-cream, .s-purple, .s-parchment, .s-dark { padding: 80px 32px; }
+  .open-split, .who-two, .approach-split { grid-template-columns: 1fr; gap: 40px; }
+  .exp-grid, .unique-grid { grid-template-columns: 1fr; }
+  .happens-grid { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .nav { padding: 0 20px; height: 60px; }
+  .page-hero { padding: 72px 20px 48px; min-height: 60vh; }
+  .s-white, .s-cream, .s-purple, .s-parchment, .s-dark { padding: 72px 24px; }
+  .details-row { grid-template-columns: 1fr; }
+  .details-row dt { border-right: none; border-bottom: 1px solid var(--gold-faint); }
+  .footer { padding: 56px 24px 32px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+}
+/* SCROLL REVEAL */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+.btn { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(91,45,142,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+body { min-width: 320px; }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <nav class="nav-links">
+    <a href="teachings-v4.html">Sacred Teachings</a>
+    <div class="nav-dropdown">
+      <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
+      <div class="nav-dd-menu">
+        <a href="foundation-v4.html">Sacred Healing Foundation</a>
+        <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
+        <a href="breathwork-v4.html">Sacred Breathwork</a>
+        <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
+        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+      </div>
+    </div>
+    <a href="journeys-v4.html">Sacred Journeys</a>
+    <a href="about-school-v4.html">About</a>
+    <a href="about-v4.html">Dr. Rain Lim</a>
+    <a href="upcoming-v4.html">Upcoming Programs</a>
+    <a href="certified-healers-v4.html">Certified Healers</a>
+    <a href="contact-v4.html">Contact</a>
+  </nav>
+  <button class="nav-menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">Close</button>
+  <a href="teachings-v4.html">Sacred Teachings</a>
+  <a href="healing-v4.html">Sacred Healing</a>
+  <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
+  <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
+  <a href="advanced-v4.html" style="font-size:22px">Advanced</a>
+  <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
+  <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
+  <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="journeys-v4.html">Sacred Journeys</a>
+  <a href="about-school-v4.html">About</a>
+  <a href="about-v4.html">Dr. Rain Lim</a>
+  <a href="upcoming-v4.html">Upcoming Programs</a>
+  <a href="certified-healers-v4.html">Certified Healers</a>
+  <a href="contact-v4.html">Contact</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="breadcrumb"><a href="#">Home</a><span>/</span><a href="#">Sacred Healing</a><span>/</span>Sacred Integrative Constellations</div>
+  <p class="page-hero-badge">Level 3 Advanced Healing Art</p>
+  <h1>Sacred Integrative Constellations</h1>
+  <p class="page-hero-sub">We arrive in this life connected — to family, to lineage, to those who came before. What has been carried can be set down.</p>
+</section>
+
+<!-- EDITORIAL OPENING -->
+<section class="s-white">
+  <div class="inner">
+    <div class="open-split">
+      <div>
+        <span class="label">What Constellations Work Is</span>
+        <h2>Revealing the Hidden Patterns That Shape Our Lives</h2>
+        <p>Sacred Integrative Constellations is a powerful healing modality that reveals and transforms hidden dynamics within family systems, ancestral lineages, and unconscious emotional patterns.</p>
+        <p>Many of the challenges people experience in relationships, emotional well-being, and life decisions are connected to unresolved dynamics within the wider family system — events such as loss, trauma, exclusion, or unresolved conflicts that echo through generations.</p>
+      </div>
+      <div>
+        <p class="open-tagline">"By acknowledging what has been unseen or unspoken within a family system, the natural movement toward balance and healing can begin."</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.85">Sacred Integrative Constellations creates a space where these deeper systemic influences can be observed, understood, and released — bringing a quality of clarity and freedom that can transform the trajectory of a life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS IN A CONSTELLATION -->
+<section class="s-cream">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">How It Works</span>
+      <h2 style="margin-top:16px">What Happens in a Constellation</h2>
+    </div>
+    <div class="happens-grid">
+      <div class="happens-card">
+        <h3>A Question Is Brought Forward</h3>
+        <p>A participant brings a specific question, pattern, or dynamic they wish to explore — a relationship challenge, a recurring life situation, a sense of being stuck, or a desire to understand a family influence.</p>
+      </div>
+      <div class="happens-card">
+        <h3>The System Is Revealed</h3>
+        <p>Through a carefully facilitated process, the hidden dynamics within the family or ancestral system are brought to light — often revealing connections and influences that were not consciously visible before.</p>
+      </div>
+      <div class="happens-card">
+        <h3>Healing and Resolution</h3>
+        <p>As the dynamics are acknowledged and honored, a natural movement toward balance, resolution, and release becomes possible — allowing what has been carried unconsciously to be set down with awareness and compassion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DR. RAIN'S EXPANDED APPROACH — dark -->
+<section class="s-dark">
+  <div class="inner">
+    <div class="approach-split">
+      <div>
+        <span class="label label-light">Expanding the Tradition</span>
+        <h2 style="color:var(--white)">Sacred Integrative Constellations — Dr. Rain Lim's Approach</h2>
+        <p style="color:rgba(255,255,255,0.58)">Sacred Integrative Constellations is inspired by the foundational work of German psychotherapist Bert Hellinger. Dr. Rain Lim expands upon this tradition by weaving in emotional release, somatic awareness, and multidimensional exploration.</p>
+        <p style="color:rgba(255,255,255,0.58);margin-top:16px">Participants are supported to both understand the dynamics within their system and to release the emotional and energetic imprints still held within the body — moving beyond intellectual insight into genuine, embodied transformation.</p>
+      </div>
+      <div class="expand-card">
+        <h3>Expanded Dimensions of Exploration</h3>
+        <p>Sacred Integrative Constellations allows space for deeper exploration beyond classical family systems work — including ancestral influences, past life experiences, health or illness patterns, and multidimensional aspects of the self.</p>
+        <p>These explorations are approached with openness, curiosity, and deep respect — honoring the complexity and mystery of each person's unique system and story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU EXPERIENCE -->
+<section class="s-white">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">The Experience</span>
+      <h2 style="margin-top:16px">What Participants Often Experience</h2>
+    </div>
+    <div class="exp-grid" style="max-width:100%; margin:0">
+      <div class="exp-card" style="background:var(--cream); border-color:var(--gold-faint);">
+        <h3 style="color:var(--ink)">Clarity on Hidden Patterns</h3>
+        <p style="color:var(--muted)">Dynamics that have been operating invisibly in relationships, career, and life decisions become visible — often bringing immediate relief and a sense of finally understanding what has been happening.</p>
+      </div>
+      <div class="exp-card" style="background:var(--cream); border-color:var(--gold-faint);">
+        <h3 style="color:var(--ink)">Ancestral Healing</h3>
+        <p style="color:var(--muted)">What was carried from previous generations — unspoken grief, inherited trauma, unresolved loyalties — can be acknowledged, honored, and consciously released from the body and the lineage.</p>
+      </div>
+      <div class="exp-card" style="background:var(--cream); border-color:var(--gold-faint);">
+        <h3 style="color:var(--ink)">Emotional Freedom</h3>
+        <p style="color:var(--muted)">As hidden dynamics are witnessed and resolved, participants often experience a profound sense of emotional relief, lightness, and freedom — as if something long carried has finally been set down.</p>
+      </div>
+      <div class="exp-card" style="background:var(--cream); border-color:var(--gold-faint);">
+        <h3 style="color:var(--ink)">Renewed Sense of Self</h3>
+        <p style="color:var(--muted)">Many participants leave with a clearer sense of who they are outside the patterns of their family system — and a greater capacity to live, love, and choose from their own authentic truth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES IT UNIQUE -->
+<section class="s-parchment">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">What Sets It Apart</span>
+      <h2 style="margin-top:16px">What Makes Sacred Integrative Constellations Unique</h2>
+    </div>
+    <div class="unique-grid">
+      <div class="unique-card">
+        <h3>Somatic and Emotional Integration</h3>
+        <p>Unlike purely cognitive approaches, Sacred Integrative Constellations works with both the understanding of systemic dynamics and the emotional and energetic release held within the body — creating transformation that is felt, not just understood.</p>
+      </div>
+      <div class="unique-card">
+        <h3>Multidimensional Exploration</h3>
+        <p>Dr. Rain Lim's approach opens space for ancestral patterns, past life influences, and multidimensional aspects of the self — honoring the full depth and mystery of each person's unique healing journey.</p>
+      </div>
+      <div class="unique-card">
+        <h3>Beyond Bert Hellinger</h3>
+        <p>Rooted in the foundational work of Bert Hellinger, Sacred Integrative Constellations expands this tradition with spiritual awareness and somatic healing — honoring the original teaching while going deeper.</p>
+      </div>
+      <div class="unique-card">
+        <h3>A Sacred Container</h3>
+        <p>The work is held within a space of deep reverence, care, and spiritual awareness — honoring both the individual and the wider systems they belong to with compassion and respect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="s-cream">
+  <div class="inner">
+    <div class="who-two">
+      <div>
+        <span class="label">Is This for You?</span>
+        <h2>Who Sacred Integrative Constellations Is For</h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:16px">Sacred Integrative Constellations welcomes anyone who senses that deeper systemic or ancestral influences are at play in their life — and who is ready to see and release them.</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:32px">This module is part of the Level 3 Advanced Healing program. Completion of the Foundation Program (Level 1) is required.</p>
+        <div class="btns">
+          <a class="btn btn-dark" href="#">Register for Level 3</a>
+          <a class="btn btn-outline" href="#">Begin with Level 1</a>
+        </div>
+      </div>
+      <ul class="who-list">
+        <li>Those noticing repeating patterns in relationships or life situations</li>
+        <li>Individuals who feel influenced by unresolved family dynamics</li>
+        <li>Those wishing to explore deeper emotional or ancestral influences</li>
+        <li>Anyone curious about systemic, ancestral, or multidimensional healing</li>
+        <li>Those who have tried other approaches and sense something deeper at work</li>
+        <li>Healing practitioners wishing to expand their understanding of systemic work</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM DETAILS -->
+<section class="s-parchment">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">Program Details</span>
+      <h2 style="margin-top:16px">Sacred Integrative Constellations at a Glance</h2>
+    </div>
+    <div class="details-card">
+      <div class="details-header">
+        <h3>Sacred Integrative Constellations — Level 3 Advanced Module</h3>
+        <p>Part of the Sacred Healing Advanced Modules · Offered with Sacred Breathwork and Sacred Spirit Dance</p>
+      </div>
+      <dl class="details-body">
+        <div class="details-row"><dt>Program</dt><dd>Sacred Healing Program — Level 3 (Advanced Modules)</dd></div>
+        <div class="details-row"><dt>Prerequisite</dt><dd>Level 1 Foundation Program</dd></div>
+        <div class="details-row"><dt>Format</dt><dd>In-person (Malaysia · Canada) · Selected online formats</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Open for registration</dd></div>
+        <div class="details-row"><dt>Group Size</dt><dd>Limited — intimate group setting</dd></div>
+        <div class="details-row"><dt>Bundled With</dt><dd>Sacred Breathwork · Sacred Spirit Dance</dd></div>
+      </dl>
+    </div>
+    <div class="btns btns-c" style="margin-top:36px">
+      <a class="btn btn-dark" href="#">Register for Level 3</a>
+      <a class="btn btn-outline" href="#">Ask a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="s-purple">
+  <div class="cta-center">
+    <span class="label label-light">Begin the Journey</span>
+    <h2>Ready to Explore Sacred Integrative Constellations?</h2>
+    <p>Sacred Integrative Constellations is offered as part of the Level 3 Advanced Healing program alongside Sacred Breathwork and Sacred Spirit Dance. Begin with the Foundation Program if you are new to the sacred healing path.</p>
+    <div class="btns btns-c">
+      <a class="btn btn-gold" href="#">Register for Level 3</a>
+      <a class="btn btn-ghost" href="#">Explore the Full Healing Path</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div>
+      <span class="footer-wordmark">Sacred Wisdom School</span>
+      <p class="footer-tagline">"What has been carried can be set down."</p>
+    </div>
+  </div>
+  <div class="footer-cols">
+    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="#">Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav></div>
+    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="#">Overview</a><a href="#">Foundation Program</a><a href="#">Inner Child Healing</a><a href="#">Advanced Modules</a></nav></div>
+    <div class="footer-col"><h4>Advanced Arts</h4><nav><a href="#">Sacred Breathwork</a><a href="#">Sacred Spirit Dance</a><a href="#">Constellations</a></nav></div>
+    <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
+  </div>
+  <div class="footer-bottom">
+    <span>Malaysia · Canada · Selected Online Programs</span>
+    <span>© 2026 Sacred Wisdom School</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+    var sel = '.s-white h2, .s-cream h2, .s-parchment h2, .s-dark h2, .exp-card, .unique-card, .happens-card, .expand-card';
+    var dly = ['d1','d2','d3','d4'];
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+    var n = 0;
+    document.querySelectorAll(sel).forEach(function(el){
+      if(el.getBoundingClientRect().top > window.innerHeight){
+        el.classList.add('reveal', dly[n++ % 4]);
+        obs.observe(el);
+      }
+    });
+  })();
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 56), { passive: true });
+  const drawer = document.getElementById('drawer');
+  document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+</script>
+</body>
+</html>

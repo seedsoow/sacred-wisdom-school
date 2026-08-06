@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download the free Sacred Breathwork guide from Dr. Rain Lim — discover the four stages of transformational healing and how breathwork can unlock your deepest healing potential.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Guide: The Four Stages of Spiritual Awakening | Sacred Wisdom School">
+  <meta property="og:description" content="Download the free guide from Dr. Rain Lim — discover the four stages of transformational healing and how to unlock your deepest healing potential.">
+  <meta property="og:site_name" content="Sacred Wisdom School">
+  <link rel="canonical" href="https://sacredwisdomschool.com/free-guide">
+  <title>Free Guide: The Four Stages of Spiritual Awakening | Sacred Wisdom School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --cream:       #0d1530;
+  --white:       #e8edf5;
+  --parchment:   #06091a;
+  --ink:         #e8edf5;
+  --text:        #b0bcd8;
+  --muted:       #7a8aaa;
+  --gold:        #c8a55a;
+  --gold-warm:   #d4ae5a;
+  --gold-light:  #f0dba8;
+  --gold-faint:  rgba(200,165,90,0.15);
+  --purple:      #3d1a6e;
+  --amethyst:    #4a9baa;
+  --hero-bg:     #06091a;
+  --footer-bg:   #030611;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
+.nav.scrolled .nav-brand { color: var(--ink); }
+.nav-links { display: none; gap: 28px; }
+.nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.nav.scrolled .nav-links a { color: var(--muted); }
+.nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold); }
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dd-trigger { cursor: default; }
+.nav-dd-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(6,9,26,0.97);
+  border: 1px solid rgba(200,165,90,0.15);
+  backdrop-filter: blur(14px);
+  min-width: 270px;
+  padding: 14px 0;
+  z-index: 250;
+}
+.nav-dropdown:hover .nav-dd-menu { display: block; }
+.nav-dd-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-dd-menu a:hover { color: var(--gold); }
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+.nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
+.nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--parchment); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer.open { opacity: 1; pointer-events: all; }
+.drawer a { font-family: "Cormorant Garamond", serif; font-size: 36px; font-weight: 300; color: var(--ink); }
+.drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+
+.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label-light { color: var(--gold-light); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 7vw, 80px); font-weight: 300; line-height: 1.04; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4vw, 48px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 400; line-height: 1.15; color: var(--ink); }
+
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
+.btn-gold    { background: var(--gold); color: #06091a; border-color: var(--gold); }
+.btn-ghost   { background: transparent; color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.28); }
+.btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
+.btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btns-c { justify-content: center; }
+
+/* HERO — full landing style */
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 60% 55% at 25% 60%, rgba(91,45,142,0.55), transparent),
+    radial-gradient(ellipse 45% 40% at 75% 25%, rgba(123,79,168,0.4), transparent),
+    radial-gradient(ellipse 35% 30% at 55% 80%, rgba(187,162,123,0.06), transparent),
+    linear-gradient(148deg, #0e0820 0%, #2a1458 35%, #4a2080 65%, #7040b0 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 120px 72px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before { content: ''; position: absolute; width: 560px; height: 560px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); top: 50%; right: 5%; transform: translateY(-50%); }
+.hero-text { position: relative; }
+.hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.hero-eyebrow span { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); opacity: 0.6; }
+.hero h1 { margin-bottom: 20px; }
+.hero-sub { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 40px; }
+
+/* FORM CARD */
+.form-card {
+  background: rgba(255,255,255,0.97);
+  padding: 48px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(200,165,90,0.15);
+  position: relative;
+}
+.form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--amethyst)); }
+.form-card-title { font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 300; color: var(--ink); margin-bottom: 6px; }
+.form-card-sub { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.form-group input { width: 100%; padding: 13px 16px; border: 1px solid rgba(150,100,180,0.2); background: var(--cream-alt); font-family: Inter, sans-serif; font-size: 14px; color: var(--text); outline: none; transition: border-color 0.2s; }
+.form-group input:focus { border-color: var(--amethyst); }
+.form-submit { margin-top: 20px; }
+.form-submit .btn { width: 100%; justify-content: center; min-height: 52px; }
+.form-privacy { margin-top: 12px; text-align: center; font-size: 12px; color: var(--muted); }
+.form-guarantee { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-size: 12px; color: var(--muted); }
+.form-guarantee svg { flex-shrink: 0; }
+
+.s-white     { background: var(--cream-alt); padding: 100px 72px; }
+.s-cream     { background: var(--cream); padding: 100px 72px; }
+.s-parchment { background: var(--parchment); padding: 100px 72px; }
+.s-purple    { background: var(--purple); padding: 96px 72px; }
+.s-dark { background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(91,45,142,0.2), transparent), var(--footer-bg); padding: 100px 72px; }
+.inner { max-width: 1060px; margin: 0 auto; }
+
+/* WHAT'S INSIDE */
+.inside-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.inside-card { padding: 40px; background: var(--cream); border-top: 3px solid var(--amethyst); }
+.inside-card h3 { font-size: 22px; margin-bottom: 10px; }
+.inside-card p { font-size: 14px; color: var(--muted); line-height: 1.78; }
+
+/* STAGES */
+.stages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stage-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,165,90,0.14); padding: 36px 24px; text-align: left; transition: background 0.3s; }
+.stage-card:hover { background: rgba(200,165,90,0.07); border-color: rgba(200,165,90,0.28); }
+.stage-num { font-family: "Cormorant Garamond", serif; font-size: 38px; font-weight: 300; color: rgba(200,165,90,0.2); line-height: 1; margin-bottom: 12px; display: block; }
+.stage-card h3 { font-size: 20px; color: var(--white); font-weight: 300; margin-bottom: 10px; }
+.stage-card p { font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.75; }
+
+/* ABOUT DR. RAIN */
+.about-rain { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.rain-portrait { min-height: 440px; background:
+  radial-gradient(ellipse 65% 55% at 40% 55%, rgba(91,45,142,0.55), transparent),
+  linear-gradient(148deg, #2e1a5e 0%, #4a2080 50%, #7040a8 100%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 36px; }
+.rain-portrait blockquote { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--white); line-height: 1.4; }
+.rain-portrait cite { display: block; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 16px; }
+.rain-text h2 { margin: 16px 0 24px; }
+.rain-text p { font-size: 16px; color: var(--muted); line-height: 1.85; }
+.rain-text p + p { margin-top: 14px; }
+
+/* BOTTOM FORM */
+.bottom-form { max-width: 560px; margin: 0 auto; text-align: center; }
+.bottom-form h2 { margin: 16px 0 12px; }
+.bottom-form > p { font-size: 16px; color: var(--muted); margin-bottom: 36px; }
+.form-inline { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.form-inline input { padding: 13px 16px; border: 1px solid rgba(150,100,180,0.25); background: var(--cream-alt); font-family: Inter, sans-serif; font-size: 14px; color: var(--text); outline: none; }
+.form-inline input:focus { border-color: var(--amethyst); }
+
+.footer { background: var(--footer-bg); padding: 72px 48px 40px; }
+.footer-brand { margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-wordmark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 400; color: var(--white); display: block; margin-bottom: 8px; }
+.footer-tagline { font-family: "Cormorant Garamond", serif; font-size: 14px; font-style: italic; color: rgba(187,162,123,0.55); }
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(187,162,123,0.6); margin-bottom: 14px; }
+.footer-col nav { display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-col a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; font-size: 11px; color: rgba(255,255,255,0.2); }
+
+@media (min-width: 1040px) { .nav-links { display: flex; } .nav-menu-btn { display: none; } }
+@media (max-width: 1039px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 100px 32px 64px; }
+  .s-white, .s-cream, .s-parchment, .s-purple, .s-dark { padding: 80px 32px; }
+  .inside-grid { grid-template-columns: 1fr; }
+  .stages-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-rain { grid-template-columns: 1fr; gap: 40px; }
+  .form-inline { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .nav { padding: 0 20px; height: 60px; }
+  .hero { padding: 88px 24px 56px; }
+  .s-white, .s-cream, .s-parchment, .s-purple, .s-dark { padding: 72px 24px; }
+  .form-card { padding: 32px 24px; }
+  .stages-grid { grid-template-columns: 1fr; }
+  .footer { padding: 56px 24px 32px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+}
+/* SCROLL REVEAL */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+.btn { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(91,45,142,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+body { min-width: 320px; }
+.form-success-msg { display:none; text-align:center; padding: 20px 0; }
+.form-success-msg h3 { font-family:"Cormorant Garamond",serif; font-size:24px; font-weight:300; color:var(--ink); margin-bottom:8px; }
+.form-success-msg p { color:var(--muted); font-size:14px; }
+.field-error { border-color: rgba(180,40,40,0.5) !important; }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <nav class="nav-links">
+    <a href="teachings-v4.html">Sacred Teachings</a>
+    <div class="nav-dropdown">
+      <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
+      <div class="nav-dd-menu">
+        <a href="foundation-v4.html">Sacred Healing Foundation</a>
+        <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
+        <a href="breathwork-v4.html">Sacred Breathwork</a>
+        <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
+        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+      </div>
+    </div>
+    <a href="journeys-v4.html">Sacred Journeys</a>
+    <a href="about-school-v4.html">About</a>
+    <a href="about-v4.html">Dr. Rain Lim</a>
+    <a href="upcoming-v4.html">Upcoming Programs</a>
+    <a href="certified-healers-v4.html">Certified Healers</a>
+    <a href="contact-v4.html">Contact</a>
+  </nav>
+  <button class="nav-menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">Close</button>
+  <a href="teachings-v4.html">Sacred Teachings</a>
+  <a href="healing-v4.html">Sacred Healing</a>
+  <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
+  <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
+  <a href="advanced-v4.html" style="font-size:22px">Advanced</a>
+  <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
+  <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
+  <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="journeys-v4.html">Sacred Journeys</a>
+  <a href="about-school-v4.html">About</a>
+  <a href="about-v4.html">Dr. Rain Lim</a>
+  <a href="upcoming-v4.html">Upcoming Programs</a>
+  <a href="certified-healers-v4.html">Certified Healers</a>
+  <a href="contact-v4.html">Contact</a>
+</div>
+
+<main>
+
+<!-- HERO / LANDING -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow"><span>Free Guide — Sacred Wisdom School</span></div>
+    <h1>The Four Stages of Spiritual Awakening</h1>
+    <p class="hero-sub">A guide to understanding where you are on the inner journey — and what becomes possible at each stage.</p>
+    <div class="btns" style="display:none"><!-- mobile CTA scrolls to form below hero --></div>
+  </div>
+
+  <div class="form-card">
+    <p class="form-card-title">Receive Your Free Guide</p>
+    <p class="form-card-sub">Enter your name and email below. Your guide will be sent to your inbox.</p>
+    <form>
+      <div class="form-group">
+        <label for="h-name">First Name</label>
+        <input id="h-name" type="text" placeholder="Your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="h-email">Email Address</label>
+        <input id="h-email" type="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-gold">Send Me the Free Guide</button>
+      </div>
+      <p class="form-privacy">No spam, ever. Unsubscribe at any time.</p>
+      <div class="form-guarantee">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L9 5h4L9.5 8l1.5 4L7 10 3 12l1.5-4L1 5h4z" stroke="var(--gold)" stroke-width="1" fill="rgba(200,165,90,0.1)"/></svg>
+        <span>A free gift from Dr. Rain Lim — shared with love</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="s-white">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">What You Will Receive</span>
+      <h2 style="margin-top:16px">What's Inside the Guide</h2>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <h3>The Four Stages Explained</h3>
+        <p>A clear, compassionate map of the four stages of spiritual awakening — Awakening, Healing, Integration, and Embodiment — and how each stage unfolds in daily life.</p>
+      </div>
+      <div class="inside-card">
+        <h3>Where You Are Now</h3>
+        <p>Guidance to help you recognize which stage you are currently moving through — and what this means for your healing journey and spiritual growth.</p>
+      </div>
+      <div class="inside-card">
+        <h3>What Each Stage Asks of You</h3>
+        <p>Practical and spiritual insights into what is needed at each stage — the practices, the inner qualities, and the kind of support that helps each stage unfold with grace.</p>
+      </div>
+      <div class="inside-card">
+        <h3>A Path Forward</h3>
+        <p>An invitation to understand your journey as a whole — and a gentle introduction to the teachings and healing work of Sacred Wisdom School as a companion on your path.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FOUR STAGES — dark -->
+<section class="s-dark">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label label-light">A Map of the Journey</span>
+      <h2 style="color:var(--white); margin-top:16px">The Four Stages of Spiritual Awakening</h2>
+    </div>
+    <div class="stages-grid">
+      <div class="stage-card">
+        <span class="stage-num">01</span>
+        <h3>Awakening</h3>
+        <p>The beginning of inner inquiry — noticing that there is more to life than what appears on the surface. A quiet question arises that changes everything.</p>
+      </div>
+      <div class="stage-card">
+        <span class="stage-num">02</span>
+        <h3>Healing</h3>
+        <p>Transforming emotional wounds, energetic imbalances, and inherited patterns that have shaped the experience of life. The inner work of becoming whole.</p>
+      </div>
+      <div class="stage-card">
+        <span class="stage-num">03</span>
+        <h3>Integration</h3>
+        <p>Bringing spiritual awareness into relationships, choices, and everyday life — wisdom becoming lived experience rather than knowledge held in the mind.</p>
+      </div>
+      <div class="stage-card">
+        <span class="stage-num">04</span>
+        <h3>Embodiment</h3>
+        <p>Living with wisdom, presence, and compassion — the full expression of a life aligned with one's deeper nature. Not a destination, but a way of being.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DR. RAIN -->
+<section class="s-cream">
+  <div class="inner">
+    <div class="about-rain">
+      <div class="rain-portrait">
+        <blockquote>"The wisdom is ancient. The remembering is yours. Everything I teach began as something I needed to learn."</blockquote>
+        <cite>— Reverend Dr. Rain Lim</cite>
+      </div>
+      <div class="rain-text">
+        <span class="label">About the Author</span>
+        <h2>Dr. Rain Lim</h2>
+        <p>Reverend Dr. Rain Lim is an international spiritual teacher, intuitive healer, and the founder of Sacred Wisdom School. She has guided thousands of individuals across Asia, Canada, and beyond on their healing and spiritual journeys.</p>
+        <p>This guide is a distillation of wisdom she has gathered across decades of her own healing journey, spiritual study, sacred pilgrimage, and direct transmission — offered freely as a starting point for anyone who feels called to look inward.</p>
+        <div class="btns" style="margin-top:28px">
+          <a class="btn btn-dark" href="about-v4.html">Meet Dr. Rain Lim</a>
+          <a class="btn btn-outline" href="index.html">Explore the School</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM FORM -->
+<section class="s-parchment">
+  <div class="inner">
+    <div class="bottom-form">
+      <span class="label" style="text-align:center; display:block">Free Gift from Dr. Rain Lim</span>
+      <h2>Receive Your Free Guide</h2>
+      <p>The Four Stages of Spiritual Awakening — sent directly to your inbox.</p>
+      <form>
+        <div class="form-inline">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-dark">Send the Guide</button>
+        </div>
+        <p class="form-privacy" style="margin-top:12px">No spam, ever. Unsubscribe at any time. <a href="#" style="color:var(--amethyst)">Privacy Policy</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="s-purple">
+  <div style="max-width:560px; margin:0 auto; text-align:center;">
+    <span class="label label-light">Ready to Go Deeper?</span>
+    <h2 style="color:var(--white); font-style:italic; margin:16px 0 20px">Explore the Sacred Healing Programs</h2>
+    <p style="font-size:16px; color:rgba(255,255,255,0.58); line-height:1.85; margin-bottom:36px">Sacred Wisdom School offers a progressive path of healing and spiritual development — from the Foundation Program through to the Advanced Sacred Arts. Begin wherever you are.</p>
+    <div class="btns btns-c">
+      <a class="btn btn-gold" href="healing-v4.html">Explore Programs</a>
+      <a class="btn btn-ghost" href="contact-v4.html">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="footer-wordmark">Sacred Wisdom School</span>
+    <p class="footer-tagline">"Wisdom already lives within you. We simply create the space for it to be heard."</p>
+  </div>
+  <div class="footer-cols">
+    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav></div>
+    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a></nav></div>
+    <div class="footer-col"><h4>Offerings</h4><nav><a href="teachings-v4.html">Sacred Teachings</a><a href="journeys-v4.html">Sacred Journeys</a><a href="breathwork-v4.html">Breathwork</a><a href="spirit-dance-v4.html">Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav></div>
+    <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
+  </div>
+  <div class="footer-bottom">
+    <span>Malaysia · Canada · Selected Online Programs</span>
+    <span>© 2026 Sacred Wisdom School</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+    var sel = '.s-white h2, .s-cream h2, .s-parchment h2, .s-dark h2, .inside-card, .stage-card';
+    var dly = ['d1','d2','d3','d4'];
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+    var n = 0;
+    document.querySelectorAll(sel).forEach(function(el){
+      if(el.getBoundingClientRect().top > window.innerHeight){
+        el.classList.add('reveal', dly[n++ % 4]);
+        obs.observe(el);
+      }
+    });
+  })();
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 56), { passive: true });
+  const drawer = document.getElementById('drawer');
+  document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+  function handleGuideForm(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var emailEl = form.querySelector('input[type="email"]');
+      if (!emailEl || !emailEl.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+        if(emailEl) emailEl.classList.add('field-error');
+        return;
+      }
+      form.style.display = 'none';
+      var s = document.createElement('div');
+      s.className = 'form-success-msg';
+      s.style.display = 'block';
+      s.innerHTML = '<h3>Thank you</h3><p>Your free guide is on its way to your inbox.</p>';
+      form.parentElement.appendChild(s);
+    });
+  }
+  document.querySelectorAll('form').forEach(handleGuideForm);
+</script>
+</body>
+</html>
