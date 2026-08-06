@@ -85,11 +85,11 @@ a { color: inherit; text-decoration: none; }
 .drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
 
 /* TYPE */
-.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold-warm); }
 .label-light { color: var(--gold-light); }
-h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(56px, 10vw, 100px); font-weight: 300; font-style: italic; line-height: 1.0; letter-spacing: -0.01em; color: var(--white); }
-h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(38px, 6vw, 66px); font-weight: 300; line-height: 1.08; color: var(--ink); }
-h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px); font-weight: 400; line-height: 1.12; color: var(--ink); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(56px, 10vw, 100px); font-weight: 400; font-style: italic; line-height: 1.0; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(44px, 6vw, 66px); font-weight: 400; line-height: 1.08; color: var(--ink); }
+h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px); font-weight: 500; line-height: 1.12; color: var(--ink); }
 
 /* BUTTONS */
 .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
@@ -125,8 +125,6 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .hero-inner { position: relative; z-index: 1; padding: 0 72px; max-width: 1060px; }
 .hero h1 { margin: 16px 0 10px; }
 .hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-.hero-copy { font-size: 16px; color: rgba(255,255,255,0.52); max-width: 520px; line-height: 1.8; margin-bottom: 36px; }
-.hero-note { margin-top: 8px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.32); }
 .scroll-cue { position: absolute; bottom: 32px; right: 72px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; color: rgba(255,255,255,0.28); font-size: 9px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; z-index: 1; }
 .scroll-cue-bar { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(187,162,123,0.5), transparent); }
 
@@ -138,34 +136,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .quote-strip cite { display: block; font-style: normal; font-family: Inter, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-warm); margin-top: 24px; }
 
 /* ═══════════════════════════════════
-   3. INTRO SPLIT — questions + Rain
-═══════════════════════════════════ */
-.intro-split { display: grid; grid-template-columns: 1fr 1fr; background: var(--cream-alt); }
-.intro-left { padding: 100px 72px; border-right: 1px solid var(--gold-faint); }
-.intro-left h2 { margin: 16px 0 40px; font-size: clamp(28px, 3.5vw, 46px); }
-.intro-q { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--amethyst); padding: 22px 0; border-bottom: 1px solid var(--gold-faint); line-height: 1.3; }
-.intro-q:first-of-type { border-top: 1px solid var(--gold-faint); }
-.intro-body { margin-top: 32px; font-size: 16px; color: var(--muted); line-height: 1.85; }
-.intro-right { display: flex; flex-direction: column; }
-.intro-portrait {
-  flex: 1;
-  background:
-    radial-gradient(ellipse 70% 55% at 55% 40%, rgba(123,79,168,0.5), transparent),
-    linear-gradient(155deg, #2e1a5e 0%, var(--hero-bg) 55%, #6b35a8 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 48px;
-  min-height: 340px;
-}
-.intro-portrait-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
-.intro-portrait h3 { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.55); }
-.intro-quote-box { padding: 48px 56px; background: var(--cream-alt); border-top: 1px solid var(--gold-faint); }
-.intro-pull { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 20px; line-height: 1.35; margin-bottom: 20px; }
-.intro-sig { font-family: "Cormorant Garamond", serif; font-size: 18px; font-style: italic; color: var(--gold-warm); margin-bottom: 24px; display: block; }
-
-/* ═══════════════════════════════════
-   4. PATHWAY IMAGE CARDS
+   3. PATHWAY IMAGE CARDS
 ═══════════════════════════════════ */
 .pathways { display: grid; grid-template-columns: repeat(3, 1fr); }
 .pathway-card { position: relative; min-height: 520px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
@@ -175,7 +146,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .pathway-card:hover .pathway-card-overlay { opacity: 0.85; }
 .pathway-card-content { position: relative; z-index: 1; padding: 44px 40px; }
 .pathway-card-num { font-family: "Cormorant Garamond", serif; font-size: 13px; color: var(--gold); letter-spacing: 0.18em; display: block; margin-bottom: 12px; }
-.pathway-card h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(26px, 3vw, 34px); font-weight: 300; color: var(--white); margin-bottom: 12px; }
+.pathway-card h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(26px, 3vw, 34px); font-weight: 400; color: var(--white); margin-bottom: 12px; }
 .pathway-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 24px; max-width: 300px; }
 .pathway-link { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(200,165,90,0.3); padding-bottom: 2px; }
 .pathway-card-bg-teachings {
@@ -201,7 +172,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 }
 
 /* ═══════════════════════════════════
-   5. SACRED WISDOM PATH — dark cosmic
+   4. SACRED WISDOM PATH — dark cosmic
 ═══════════════════════════════════ */
 .path-dark {
   background:
@@ -245,11 +216,11 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .path-stage:hover { background: rgba(200,165,90,0.06); border-color: rgba(200,165,90,0.28); }
 .path-stage-icon { font-size: 28px; margin-bottom: 20px; display: block; opacity: 0.7; }
 .path-stage-num { font-family: "Cormorant Garamond", serif; font-size: 42px; font-weight: 300; color: rgba(200,165,90,0.15); line-height: 1; margin-bottom: 12px; display: block; }
-.path-stage h3 { font-size: 20px; color: var(--white); margin-bottom: 10px; font-weight: 300; }
+.path-stage h3 { font-size: 20px; color: var(--white); margin-bottom: 10px; font-weight: 500; }
 .path-stage p  { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.75; }
 
 /* ═══════════════════════════════════
-   6. SACRED HEALING PROGRAMS
+   5. SACRED HEALING PROGRAMS
 ═══════════════════════════════════ */
 .programs { padding: 100px 48px; background: var(--cream-alt); }
 .programs-head { max-width: 1060px; margin: 0 auto 72px; }
@@ -264,54 +235,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .chapter-modalities { font-size: 12px; color: var(--gold-warm); letter-spacing: 0.06em; line-height: 1.7; margin-bottom: 24px; opacity: 0.8; }
 
 /* ═══════════════════════════════════
-   7. A WORD FROM RAIN — 50/50 split
-═══════════════════════════════════ */
-.rain-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; }
-.rain-visual {
-  background:
-    radial-gradient(ellipse 70% 55% at 55% 40%, rgba(123,79,168,0.5), transparent),
-    linear-gradient(155deg, #2e1a5e 0%, var(--hero-bg) 55%, #6b35a8 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 56px;
-}
-.rain-visual .label { margin-bottom: 8px; }
-.rain-visual p { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.45); }
-.rain-text { background: var(--cream); display: flex; flex-direction: column; justify-content: center; padding: 80px 72px; }
-.rain-text h2 { margin: 16px 0 28px; font-size: clamp(30px, 3.5vw, 48px); }
-.rain-pull { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 20px; margin-bottom: 28px; line-height: 1.35; }
-.rain-text p { font-size: 16px; color: var(--muted); line-height: 1.85; max-width: 440px; }
-.rain-text p + p { margin-top: 14px; }
-.rain-sig { font-family: "Cormorant Garamond", serif; font-size: 20px; font-style: italic; color: var(--gold-warm); margin-top: 18px; }
-
-/* ═══════════════════════════════════
-   8. WISDOM BANNER — atmospheric dark
-═══════════════════════════════════ */
-.wisdom-banner {
-  background:
-    radial-gradient(ellipse 60% 70% at 50% 50%, rgba(91,45,142,0.4), transparent),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(200,165,90,0.08), transparent),
-    linear-gradient(160deg, #1a0e38 0%, #2e1a5e 50%, #1a0e38 100%);
-  padding: 120px 48px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.wisdom-banner-ornament {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 32px;
-  position: relative;
-}
-.wisdom-banner-ornament svg { opacity: 0.4; }
-.wisdom-banner h2 { color: var(--white); max-width: 760px; margin: 0 auto 28px; font-style: italic; }
-.wisdom-banner p { max-width: 560px; margin: 0 auto; font-size: 16px; color: rgba(255,255,255,0.48); line-height: 1.85; }
-.wisdom-banner p + p { margin-top: 16px; }
-.wisdom-rule { width: 48px; height: 1px; background: var(--gold); margin: 36px auto 0; opacity: 0.5; }
-
-/* ═══════════════════════════════════
-   9. MEET THE FOUNDER
+   6. MEET THE FOUNDER
 ═══════════════════════════════════ */
 .founder { padding: 100px 48px; background: var(--cream-alt); }
 .founder-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; }
@@ -332,11 +256,9 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .founder-text h2 { margin: 16px 0 6px; font-size: clamp(28px, 3.5vw, 44px); }
 .founder-title { font-size: 13px; font-weight: 500; color: var(--gold-warm); letter-spacing: 0.06em; margin-bottom: 28px; display: block; }
 .founder-text p { font-size: 16px; color: var(--muted); line-height: 1.85; max-width: 520px; }
-.founder-text p + p { margin-top: 14px; }
-.founder-quote { font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 18px; margin: 28px 0; line-height: 1.35; max-width: 480px; }
 
 /* ═══════════════════════════════════
-   10. WHO IT'S FOR — icon grid
+   7. WHO IT'S FOR — icon grid
 ═══════════════════════════════════ */
 .who { padding: 100px 48px; background: var(--cream); }
 .who-head { max-width: 1060px; margin: 0 auto 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
@@ -351,11 +273,11 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .who-card:hover { background: var(--parchment); }
 .who-icon { width: 48px; height: 48px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
 .who-icon svg { opacity: 0.6; }
-.who-card h3 { font-size: 22px; color: var(--ink); margin-bottom: 10px; font-weight: 400; }
+.who-card h3 { font-size: 22px; color: var(--ink); margin-bottom: 10px; font-weight: 500; }
 .who-card p  { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
 /* ═══════════════════════════════════
-   11. SACRED JOURNEYS — large panel
+   8. SACRED JOURNEYS — large panel
 ═══════════════════════════════════ */
 .journeys { display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; }
 .journeys-visual {
@@ -376,10 +298,9 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .journeys-text { background: var(--cream-alt); display: flex; flex-direction: column; justify-content: center; padding: 80px 72px; border-top: 1px solid var(--gold-faint); }
 .journeys-text h2 { margin: 16px 0 24px; font-size: clamp(28px, 3.5vw, 48px); }
 .journeys-text p { font-size: 16px; color: var(--muted); line-height: 1.85; max-width: 440px; }
-.journeys-text p + p { margin-top: 14px; }
 
 /* ═══════════════════════════════════
-   12. UPCOMING PROGRAMS
+   9. UPCOMING PROGRAMS
 ═══════════════════════════════════ */
 .upcoming { padding: 100px 48px; background: var(--parchment); }
 .upcoming-head { max-width: 1060px; margin: 0 auto 56px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
@@ -437,7 +358,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .btn-sm { min-height: 38px; padding: 0 18px; font-size: 9px; }
 
 /* ═══════════════════════════════════
-   13. FREE GUIDE
+   10. FREE GUIDE
 ═══════════════════════════════════ */
 .guide { background: var(--purple); padding: 100px 48px; text-align: center; position: relative; overflow: hidden; }
 .guide::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(187,162,123,0.08), transparent); pointer-events: none; }
@@ -450,13 +371,6 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
 .guide-form input::placeholder { color: rgba(255,255,255,0.38); }
 .guide-form .btn-gold { width: 100%; justify-content: center; }
 .guide-note { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 14px; letter-spacing: 0.04em; }
-
-/* ═══════════════════════════════════
-   14. CLOSING
-═══════════════════════════════════ */
-.closing { padding: 120px 48px; text-align: center; background: var(--cream); border-top: 1px solid var(--gold-faint); }
-.closing h2 { max-width: 700px; margin: 16px auto 20px; font-style: italic; }
-.closing p  { max-width: 520px; margin: 0 auto; font-size: 16px; color: var(--muted); line-height: 1.85; }
 
 /* ═══════════════════════════════════
    FOOTER
@@ -487,14 +401,10 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
   .nav-menu-btn { display: none; }
 }
 @media (max-width: 1039px) {
-  .intro-split  { grid-template-columns: 1fr; }
   .pathways     { grid-template-columns: 1fr; }
   .pathway-card { min-height: 400px; }
   .path-stages  { grid-template-columns: repeat(2, 1fr); }
   .chapter      { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
-  .rain-section { grid-template-columns: 1fr; }
-  .rain-visual  { min-height: 300px; }
-  .rain-text    { padding: 64px 32px; }
   .founder-inner { grid-template-columns: 1fr; }
   .founder-portrait { max-width: 320px; }
   .who-head { grid-template-columns: 1fr; gap: 24px; }
@@ -506,20 +416,17 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
   .footer-cols  { grid-template-columns: repeat(2, 1fr); }
   .footer-brand { flex-direction: column; }
   .upcoming     { padding: 80px 32px; }
-  .programs, .founder, .who, .path-dark, .wisdom-banner { padding-left: 32px; padding-right: 32px; }
+  .programs, .founder, .who, .path-dark { padding-left: 32px; padding-right: 32px; }
 }
 @media (max-width: 767px) {
   .nav { padding: 0 20px; height: 60px; }
   .hero-inner { padding: 0 20px; }
   .scroll-cue { right: 20px; }
-  .quote-strip, .guide, .closing, .footer { padding-left: 24px; padding-right: 24px; }
-  .programs, .founder, .who, .upcoming, .path-dark, .wisdom-banner { padding: 72px 24px; }
+  .quote-strip, .guide, .footer { padding-left: 24px; padding-right: 24px; }
+  .programs, .founder, .who, .upcoming, .path-dark { padding: 72px 24px; }
   .path-stages { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   .who-head { grid-template-columns: 1fr; }
-  .intro-left { padding: 72px 24px; }
-  .intro-portrait { min-height: 240px; }
-  .intro-quote-box { padding: 40px 24px; }
   .pathway-card { min-height: 360px; }
   .pathway-card-content { padding: 32px 24px; }
   .program-grid { grid-template-columns: 1fr; }
@@ -602,13 +509,11 @@ body { min-width: 320px; }
   <div class="hero-inner">
     <span class="label label-light">A sanctuary for inner wisdom</span>
     <h1>Awaken Your<br>Inner Wisdom.</h1>
-    <p class="hero-sub">Walk the Path of Healing, Spirit, and Conscious Living.</p>
-    <p class="hero-copy">Sacred Wisdom School is a sanctuary for those who feel called to explore the deeper dimensions of life — healing, consciousness, spirituality, and the sacred intelligence within every human being.</p>
+    <p class="hero-sub">Where ancient wisdom meets the depth of modern healing.</p>
     <div class="btns">
       <a class="btn btn-gold" href="healing-v4.html">Explore the Sacred Healing Programs</a>
       <a class="btn btn-ghost" href="free-guide-v4.html">Receive the Free Guide</a>
     </div>
-    <p class="hero-note">The Four Stages of Spiritual Awakening — complimentary</p>
   </div>
   <div class="scroll-cue">
     <div class="scroll-cue-bar"></div>
@@ -624,30 +529,7 @@ body { min-width: 320px; }
   </blockquote>
 </div>
 
-<!-- 3. INTRO SPLIT — questions + Rain -->
-<section class="intro-split">
-  <div class="intro-left">
-    <span class="label">The quiet question</span>
-    <h2>Many spiritual journeys begin with a quiet question.</h2>
-    <p class="intro-q">Why do certain patterns repeat in my life?</p>
-    <p class="intro-q">What is the deeper purpose of my existence?</p>
-    <p class="intro-q">Is there more to life than what I see on the surface?</p>
-    <p class="intro-body">These questions are invitations — to look inward, to explore life more deeply, and to reconnect with the wisdom that already lives within.<br><br>Sacred Wisdom School exists as a space where that exploration can unfold.</p>
-  </div>
-  <div class="intro-right">
-    <div class="intro-portrait">
-      <p class="intro-portrait-label">Portrait — Reverend Dr. Rain Lim</p>
-      <h3>Founder · Sacred Wisdom School</h3>
-    </div>
-    <div class="intro-quote-box">
-      <div class="intro-pull">"The wisdom is ancient. The remembering is yours."</div>
-      <span class="intro-sig">— Rain</span>
-      <a class="tlink" href="about-v4.html">Read Rain's Journey</a>
-    </div>
-  </div>
-</section>
-
-<!-- 4. THREE PATHWAY CARDS -->
+<!-- 3. THREE PATHWAY CARDS -->
 <section class="pathways">
   <div class="pathway-card">
     <div class="pathway-card-bg pathway-card-bg-teachings"></div>
@@ -681,7 +563,7 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 5. SACRED WISDOM PATH — dark cosmic -->
+<!-- 4. SACRED WISDOM PATH — dark cosmic -->
 <section class="path-dark">
   <span class="label label-light">The Sacred Wisdom Path</span>
   <h2>A living path of awakening, healing,<br>integration, and embodiment.</h2>
@@ -721,12 +603,12 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 6. SACRED HEALING PROGRAMS -->
+<!-- 5. SACRED HEALING PROGRAMS -->
 <section class="programs">
   <div class="programs-head">
     <span class="label">Sacred Healing Programs</span>
     <h2>The Sacred Healing Path</h2>
-    <p>Healing is a journey of remembering the deeper intelligence within ourselves. The programs guide participants through a progressive path of personal healing, intuitive development, and spiritual awareness.</p>
+    <p>The programs guide participants through a progressive path of personal healing, intuitive development, and spiritual awareness.</p>
   </div>
   <div class="chapter">
     <div class="chapter-level">
@@ -747,7 +629,7 @@ body { min-width: 320px; }
     </div>
     <div class="chapter-body">
       <h3>Inner Child Healing</h3>
-      <p>A compassionate journey of reconnecting with the emotional experiences and younger parts of the self that continue to influence adult life. Gentle, grounded, and deeply personal.</p>
+      <p>A compassionate journey of reconnecting with the emotional experiences and younger parts of the self that continue to influence adult life.</p>
       <a class="tlink" href="inner-child-v4.html">Explore Inner Child Healing</a>
     </div>
   </div>
@@ -765,44 +647,7 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 7. A WORD FROM RAIN -->
-<section class="rain-section">
-  <div class="rain-visual">
-    <span class="label label-light">Portrait — Reverend Dr. Rain Lim</span>
-    <p>Founder · Sacred Wisdom School</p>
-  </div>
-  <div class="rain-text">
-    <span class="label">A word from Rain</span>
-    <h2>A Word from Rain</h2>
-    <div class="rain-pull">"The wisdom is ancient. The remembering is yours."</div>
-    <p>It began in childhood, with experiences I could sense long before I had words for them.</p>
-    <p>Over the years, healing, spiritual study, sacred pilgrimage, ceremony, and the guidance of profound teachers shaped the path I now carry.</p>
-    <p>Sacred Wisdom School is the fruit of that journey. It is a place where the wisdom you already carry gets room to breathe.</p>
-    <div class="rain-sig">— Rain</div>
-    <div class="btns" style="margin-top:28px">
-      <a class="btn btn-outline" href="about-v4.html" style="min-height:40px;padding:0 22px">Read Rain's Journey</a>
-    </div>
-  </div>
-</section>
-
-<!-- 8. WISDOM BANNER — atmospheric dark -->
-<section class="wisdom-banner">
-  <div class="wisdom-banner-ornament">
-    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <circle cx="40" cy="40" r="36" stroke="rgba(200,165,90,0.5)" stroke-width="1"/>
-      <circle cx="40" cy="40" r="20" stroke="rgba(200,165,90,0.3)" stroke-width="1"/>
-      <circle cx="40" cy="40" r="4" fill="rgba(200,165,90,0.6)"/>
-      <line x1="40" y1="4" x2="40" y2="76" stroke="rgba(200,165,90,0.15)" stroke-width="1"/>
-      <line x1="4" y1="40" x2="76" y2="40" stroke="rgba(200,165,90,0.15)" stroke-width="1"/>
-    </svg>
-  </div>
-  <h2>The Wisdom We Seek<br>Already Exists Within Us</h2>
-  <p>Sacred Wisdom School is founded on a simple understanding: the wisdom we seek already exists within us. Spiritual growth is not about acquiring something new — it is about seeing life more clearly.</p>
-  <p>Through healing, reflection, direct experience, and conscious awareness, individuals rediscover their authentic nature and reconnect with the deeper intelligence that guides life.</p>
-  <div class="wisdom-rule"></div>
-</section>
-
-<!-- 9. MEET THE FOUNDER -->
+<!-- 6. MEET THE FOUNDER -->
 <section class="founder">
   <div class="founder-inner">
     <div class="founder-portrait">
@@ -814,17 +659,12 @@ body { min-width: 320px; }
       <h2>Reverend Dr. Rain Lim</h2>
       <span class="founder-title">International Spiritual Teacher · Intuitive Healer · Founder of Sacred Wisdom School</span>
       <p>Rain's work bridges spirituality, emotional healing, personal transformation, intuition, and conscious living.</p>
-      <p>Her journey began with spiritual sensitivity in childhood and deepened through decades of healing, study, sacred pilgrimage, ceremony, direct experience, and teachings received through sacred connection.</p>
-      <p>Alongside her spiritual work, Rain holds a Ph.D. in Entrepreneurship and has built and led transformational programs across Asia, Canada, and beyond.</p>
-      <div class="founder-quote">"Everything I teach began as something I needed to learn."</div>
-      <div class="btns">
-        <a class="btn btn-dark" href="about-v4.html">Discover Rain's Story</a>
-      </div>
+      <a class="tlink" href="about-v4.html" style="margin-top:28px">Meet Dr. Rain Lim</a>
     </div>
   </div>
 </section>
 
-<!-- 10. WHO IT'S FOR — icon grid -->
+<!-- 7. WHO IT'S FOR — icon grid -->
 <section class="who">
   <div class="who-head">
     <div>
@@ -879,7 +719,7 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 11. SACRED JOURNEYS -->
+<!-- 8. SACRED JOURNEYS -->
 <section class="journeys">
   <div class="journeys-visual">
     <span class="label label-light">Sacred landscape</span>
@@ -895,7 +735,6 @@ body { min-width: 320px; }
     <span class="label">Sacred Journeys</span>
     <h2>Step Beyond the Rhythms of Daily Life.</h2>
     <p>Sacred Journeys are retreats, pilgrimages, sacred travel, and immersive experiences held in nature and spiritually significant locations.</p>
-    <p>In sacred spaces — in nature, stillness, ceremony, and ancient lands — participants reconnect with what matters most and discover what the ordinary world rarely allows.</p>
     <div class="btns" style="margin-top:32px">
       <a class="btn btn-dark" href="journeys-v4.html">Explore Sacred Journeys</a>
       <a class="btn btn-outline" href="upcoming-v4.html">Register Interest</a>
@@ -903,7 +742,7 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 12. UPCOMING PROGRAMS -->
+<!-- 9. UPCOMING PROGRAMS -->
 <section class="upcoming">
   <div class="upcoming-head">
     <div>
@@ -983,7 +822,7 @@ body { min-width: 320px; }
   </div>
 </section>
 
-<!-- 13. FREE GUIDE -->
+<!-- 10. FREE GUIDE -->
 <section class="guide">
   <div class="guide-inner">
     <span class="label label-light">Complimentary</span>
@@ -996,17 +835,6 @@ body { min-width: 320px; }
       <button type="submit" class="btn btn-gold">Receive the Free Guide</button>
     </form>
     <p class="guide-note">No spam. Unsubscribe at any time.</p>
-  </div>
-</section>
-
-<!-- 14. CLOSING -->
-<section class="closing">
-  <span class="label">Begin here</span>
-  <h2>Every spiritual journey begins with a single step inward.</h2>
-  <p>Sacred Wisdom School invites you to explore the deeper dimensions of healing, consciousness, spiritual wisdom, and conscious living.</p>
-  <div class="btns btns-c" style="margin-top:40px">
-    <a class="btn btn-dark" href="healing-v4.html">Explore the Sacred Healing Programs</a>
-    <a class="btn btn-outline" href="index.html">Discover Sacred Wisdom School</a>
   </div>
 </section>
 
