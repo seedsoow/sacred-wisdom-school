@@ -43,8 +43,34 @@ a { color: inherit; text-decoration: none; }
 .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; }
 .nav.scrolled .nav-links a { color: var(--muted); }
 .nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold); }
-.nav-explore { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; color: rgba(255,255,255,0.85); white-space: nowrap; transition: all 0.2s; align-self: center; min-height: auto; }
-.nav.scrolled .nav-explore { border-color: var(--purple); color: var(--white); background: var(--purple); }
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dd-trigger { cursor: default; }
+.nav-dd-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: rgba(6,9,26,0.97);
+  border: 1px solid rgba(200,165,90,0.15);
+  backdrop-filter: blur(14px);
+  min-width: 190px;
+  padding: 8px 0;
+  z-index: 250;
+}
+.nav-dropdown:hover .nav-dd-menu { display: block; }
+.nav-dd-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-dd-menu a:first-child { color: var(--gold); border-bottom: 1px solid rgba(200,165,90,0.1); padding-bottom: 12px; margin-bottom: 4px; }
+.nav-dd-menu a:hover { color: var(--gold); }
 .nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
 .nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
 .drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--parchment); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
@@ -170,15 +196,25 @@ body { min-width: 320px; }
   <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
   <nav class="nav-links">
     <a href="teachings-v4.html">Sacred Teachings</a>
-    <a href="healing-v4.html">Sacred Healing</a>
-    <a href="certified-healers-v4.html">Certified Healers</a>
+    <div class="nav-dropdown">
+      <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
+      <div class="nav-dd-menu">
+        <a href="healing-v4.html">Sacred Healing</a>
+        <a href="foundation-v4.html">Foundation</a>
+        <a href="inner-child-v4.html">Inner Child</a>
+        <a href="advanced-v4.html">Advanced</a>
+        <a href="breathwork-v4.html">Breathwork</a>
+        <a href="spirit-dance-v4.html">Spirit Dance</a>
+        <a href="constellations-v4.html">Constellations</a>
+      </div>
+    </div>
     <a href="journeys-v4.html">Sacred Journeys</a>
     <a href="about-school-v4.html">About</a>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
+    <a href="certified-healers-v4.html">Certified Healers</a>
     <a href="contact-v4.html">Contact</a>
   </nav>
-  <a class="nav-explore btn btn-ghost" href="healing-v4.html">Explore Programs</a>
   <button class="nav-menu-btn" id="menuBtn">Menu</button>
 </header>
 
@@ -186,12 +222,18 @@ body { min-width: 320px; }
   <button class="drawer-close" id="drawerClose">Close</button>
   <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
-  <a href="certified-healers-v4.html">Certified Healers</a>
+  <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
+  <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
+  <a href="advanced-v4.html" style="font-size:22px">Advanced</a>
+  <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
+  <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
+  <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
-  <a href="#">Contact</a>
+  <a href="certified-healers-v4.html">Certified Healers</a>
+  <a href="contact-v4.html">Contact</a>
 </div>
 
 <main>
