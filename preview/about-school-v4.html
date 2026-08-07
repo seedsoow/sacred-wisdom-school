@@ -116,7 +116,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
     radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent),
     radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.25), transparent),
     linear-gradient(148deg, rgba(46,26,94,0.25) 0%, rgba(6,9,26,0.25) 50%, rgba(107,53,168,0.25) 100%),
-    url('https://images.unsplash.com/photo-1682097597790-1f381102e162?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+    url('images/hero-about-school.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -194,23 +194,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
 /* TEAM */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .team-card { border: 1px solid var(--gold-faint); overflow: hidden; background: var(--cream-alt); }
-.team-portrait { height: 240px; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
-.team-portrait-1 {
-  background:
-    radial-gradient(ellipse 65% 55% at 40% 55%, rgba(91,45,142,0.6), transparent),
-    linear-gradient(148deg, #2e1a5e 0%, #4a2080 55%, #7b4fa8 100%);
-}
-.team-portrait-2 {
-  background:
-    radial-gradient(ellipse 65% 55% at 42% 58%, rgba(110,35,130,0.6), transparent),
-    linear-gradient(148deg, #280e44 0%, #501878 55%, #7530a0 100%);
-}
-.team-portrait-3 {
-  background:
-    radial-gradient(ellipse 65% 55% at 38% 55%, rgba(74,32,128,0.6), transparent),
-    linear-gradient(148deg, #1a0e38 0%, #3a1868 50%, #5b2d8e 100%);
-}
-.team-initials { width: 56px; height: 56px; border: 1px solid rgba(200,165,90,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 300; color: var(--gold-light); }
+.team-portrait { height: 300px; background-size: cover; background-position: center top; overflow: hidden; }
 .team-info { padding: 24px 28px 32px; }
 .team-name { font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 400; color: var(--ink); margin-bottom: 4px; }
 .team-role { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 14px; display: block; }
@@ -417,6 +401,64 @@ body { min-width: 320px; }
   </div>
 </section>
 
+<!-- MEET THE TEAM -->
+<section class="s-white">
+  <div class="inner">
+    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
+      <span class="label">The People Behind the School</span>
+      <h2 style="margin-top:16px">Meet the Team</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-portrait" style="background-image: url('images/team-rain.jpg'); background-size: cover; background-position: center top;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Reverend Dr. Rain Lim</div>
+          <span class="team-role">Founder &amp; Lead Teacher</span>
+          <p class="team-bio">International spiritual teacher, intuitive healer, and transformational guide. Rain founded Sacred Wisdom School to offer the sanctuary she wished she had found at the beginning of her own journey.</p>
+        </div>
+      </div>
+
+      <a href="ichi-v4.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="team-card">
+        <div class="team-portrait" style="background-image: url('images/team-ichi.jpg'); background-size: cover; background-position: center top;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Ichi Lim</div>
+          <span class="team-role">Partner &amp; Faculty · Holistic Healer · Spirit Channeler · Transformational Life Coach</span>
+          <p class="team-bio">Founder of Ichi Sanctuary, Ichi guides others back to themselves through spirit channeling, inner child healing, Sacred Rainbow Energy Healing, and transformational coaching — creating grounded spaces rooted in safety and compassionate presence.</p>
+        </div>
+      </div>
+      </a>
+
+      <a href="eywa-v4.html" style="text-decoration:none;color:inherit;display:block;">
+      <div class="team-card">
+        <div class="team-portrait" style="background-image: url('images/team-eywa.jpg'); background-size: cover; background-position: center top;">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Eywa</div>
+          <span class="team-role">Partner &amp; Faculty · Intuitive Guide · Energy Healer · Tarot Practitioner</span>
+          <p class="team-bio">Eywa's work is rooted in self-remembrance — helping others reconnect with who they are beneath conditioning through intuitive guidance, Tarot, energy healing, and sacred ceremonies.</p>
+        </div>
+      </div>
+      </a>
+
+      <div class="team-card">
+        <div class="team-portrait" style="background: linear-gradient(155deg, #0d1530 0%, #162040 100%); display:flex; align-items:center; justify-content:center;">
+          <div style="width:72px;height:72px;border:1px solid rgba(200,165,90,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(200,165,90,0.6);">C</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Catherine</div>
+          <span class="team-role">Faculty Member</span>
+          <p class="team-bio">Profile coming soon.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- FOUR STAGES — dark cosmic -->
 <section class="s-dark">
   <div class="stages-center">
@@ -479,52 +521,6 @@ body { min-width: 320px; }
         <p>Sacred retreats and spiritual travel that step outside the rhythms of daily life. In sacred spaces — in nature, stillness, and ancient lands — participants reconnect with what matters most.</p>
         <a class="tlink" href="#">Explore Sacred Journeys</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- MEET THE TEAM -->
-<section class="s-white">
-  <div class="inner">
-    <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
-      <span class="label">The People Behind the School</span>
-      <h2 style="margin-top:16px">Meet the Team</h2>
-    </div>
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="team-portrait team-portrait-1">
-          <div class="team-initials">IL</div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Ichi Lim</h3>
-          <span class="team-role">Role · Title Placeholder</span>
-          <p class="team-bio">Bio coming soon — Ichi's profile will be shared here shortly.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-portrait team-portrait-2">
-          <div class="team-initials">EL</div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Eywa Lim</h3>
-          <span class="team-role">Role · Title Placeholder</span>
-          <p class="team-bio">Bio coming soon — Eywa's profile will be shared here shortly.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-portrait team-portrait-3">
-          <div class="team-initials">CK</div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Catherine Khoo</h3>
-          <span class="team-role">Role · Title Placeholder</span>
-          <p class="team-bio">Bio coming soon — Catherine's profile will be shared here shortly.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
