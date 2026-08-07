@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eywa | Sacred Wisdom School</title>
+  <meta name="description" content="Eywa is a partner and faculty member of Sacred Wisdom School — an intuitive guide, energy healer, Tarot practitioner, and spiritual facilitator supporting students on the path of self-remembrance.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eywa | Sacred Wisdom School">
+  <meta property="og:description" content="Eywa is a partner and faculty member of Sacred Wisdom School — an intuitive guide, energy healer, and Tarot practitioner.">
+  <meta property="og:site_name" content="Sacred Wisdom School">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+
+:root {
+  --cream:      #0d1530;
+  --cream-alt:  #162040;
+  --white:      #e8edf5;
+  --parchment:  #06091a;
+  --ink:        #e8edf5;
+  --text:       #b0bcd8;
+  --muted:      #7a8aaa;
+  --gold:       #c8a55a;
+  --gold-warm:  #d4ae5a;
+  --gold-light: #f0dba8;
+  --gold-faint: rgba(200,165,90,0.15);
+  --gold-mid:   rgba(74,155,170,0.15);
+  --gold-rule:  rgba(74,155,170,0.2);
+  --purple:     #3d1a6e;
+  --amethyst:   #4a9baa;
+  --hero-bg:    #06091a;
+  --footer-bg:  #030611;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
+.nav.scrolled .nav-brand { color: var(--ink); }
+.nav-links { display: none; gap: 28px; }
+.nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.nav.scrolled .nav-links a { color: var(--muted); }
+.nav-links a:hover, .nav.scrolled .nav-links a:hover { color: var(--gold-warm); }
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dd-trigger { cursor: default; }
+.nav-dd-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(6,9,26,0.97);
+  border: 1px solid rgba(200,165,90,0.15);
+  backdrop-filter: blur(14px);
+  min-width: 270px;
+  padding: 14px 0;
+  z-index: 250;
+}
+.nav-dropdown:hover .nav-dd-menu { display: block; }
+.nav-dd-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-dd-menu a:hover { color: var(--gold); }
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+.nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
+.nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
+.drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
+.drawer.open { opacity: 1; pointer-events: all; }
+.drawer a { font-family: "Cormorant Garamond", serif; font-size: 38px; font-weight: 300; color: var(--ink); }
+.drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+
+.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label-light { color: var(--gold-light); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 8vw, 86px); font-weight: 300; line-height: 1.04; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(32px, 5vw, 54px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
+.btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
+.btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.section       { padding: 100px 72px; background: var(--cream); }
+.section-alt   { background: var(--cream-alt); }
+.border-top    { border-top: 1px solid var(--gold-faint); }
+.border-bottom { border-bottom: 1px solid var(--gold-faint); }
+
+.footer { background: var(--footer-bg); padding: 80px 72px 48px; }
+.footer-top { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-wordmark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 400; color: var(--white); display: block; margin-bottom: 10px; }
+.footer-tagline { font-family: "Cormorant Garamond", serif; font-size: 15px; font-style: italic; color: rgba(187,162,123,0.55); max-width: 240px; line-height: 1.5; }
+.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(187,162,123,0.6); margin-bottom: 18px; }
+.footer-col nav { display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-col a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 36px; }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a, .footer-bottom > span { font-size: 11px; color: rgba(255,255,255,0.22); }
+.footer-legal a:hover { color: rgba(255,255,255,0.5); }
+
+@media (min-width: 1040px) { .nav-links { display: flex; } .nav-menu-btn { display: none; } }
+@media (max-width: 1039px) {
+  .nav, .section, .footer { padding-left: 40px; padding-right: 40px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 767px) {
+  .nav { padding: 0 20px; height: 60px; }
+  .section, .footer { padding-left: 24px; padding-right: 24px; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* SCROLL REVEAL */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+.btn { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(91,45,142,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+body { min-width: 320px; }
+
+/* ── EYWA PAGE STYLES ── */
+
+/* Hero */
+.eywa-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(6,9,26,0.55) 0%, rgba(6,9,26,0.45) 60%, rgba(6,9,26,0.7) 100%), url('images/team-eywa.jpg') center top / cover no-repeat;
+  padding: 100px 24px 80px;
+}
+.eywa-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(56px, 10vw, 80px);
+  font-weight: 300;
+  color: var(--gold-light);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.eywa-hero-tagline {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Portrait */
+.eywa-portrait-section {
+  background: var(--parchment);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+.eywa-portrait-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-image: url('images/team-eywa.jpg');
+  background-size: cover;
+  background-position: center top;
+  border: 1px solid rgba(200,165,90,0.3);
+  margin: 0 auto;
+}
+
+/* Bio */
+.eywa-bio-section {
+  background: var(--cream-alt);
+  padding: 80px 20px;
+}
+.eywa-bio-inner {
+  max-width: 740px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.9;
+}
+.eywa-bio-inner p + p {
+  margin-top: 24px;
+}
+
+/* Role */
+.eywa-role-section {
+  background: var(--cream);
+  padding: 60px 20px;
+}
+.eywa-role-inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.eywa-role-label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.eywa-role-inner p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Expertise */
+.eywa-expertise-section {
+  background: var(--cream-alt);
+  padding: 60px 20px;
+  text-align: center;
+}
+.eywa-expertise-section h2 {
+  margin-bottom: 32px;
+}
+.eywa-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.eywa-tag {
+  display: inline-block;
+  border: 1px solid rgba(200,165,90,0.3);
+  padding: 6px 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 4px;
+}
+
+/* Quote */
+.eywa-quote-section {
+  background: var(--cream);
+  padding: 80px 20px;
+}
+.eywa-quote-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.eywa-quote-inner blockquote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  border-left: 3px solid rgba(200,165,90,0.3);
+  padding-left: 30px;
+  line-height: 1.45;
+  margin-bottom: 40px;
+}
+.eywa-back-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s;
+}
+.eywa-back-link:hover {
+  color: var(--gold);
+}
+
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="home-v4.html">Sacred Wisdom School</a>
+  <nav class="nav-links">
+    <a href="teachings-v4.html">Sacred Teachings</a>
+    <div class="nav-dropdown">
+      <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
+      <div class="nav-dd-menu">
+        <a href="foundation-v4.html">Sacred Healing Foundation</a>
+        <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
+        <a href="breathwork-v4.html">Sacred Breathwork</a>
+        <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
+        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+      </div>
+    </div>
+    <a href="journeys-v4.html">Sacred Journeys</a>
+    <a href="about-school-v4.html">About</a>
+    <a href="about-v4.html">Dr. Rain Lim</a>
+    <a href="upcoming-v4.html">Upcoming Programs</a>
+    <a href="certified-healers-v4.html">Certified Healers</a>
+    <a href="contact-v4.html">Contact</a>
+  </nav>
+  <button class="nav-menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">Close</button>
+  <a href="teachings-v4.html">Sacred Teachings</a>
+  <a href="healing-v4.html">Sacred Healing</a>
+  <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
+  <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
+  <a href="advanced-v4.html" style="font-size:22px">Advanced</a>
+  <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
+  <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
+  <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="journeys-v4.html">Sacred Journeys</a>
+  <a href="about-school-v4.html">About</a>
+  <a href="about-v4.html">Dr. Rain Lim</a>
+  <a href="upcoming-v4.html">Upcoming Programs</a>
+  <a href="certified-healers-v4.html">Certified Healers</a>
+  <a href="contact-v4.html">Contact</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="eywa-hero">
+  <h1>Eywa</h1>
+  <p class="eywa-hero-tagline">Partner &amp; Faculty &nbsp;·&nbsp; Intuitive Guide &nbsp;·&nbsp; Energy Healer &nbsp;·&nbsp; Tarot Practitioner &nbsp;·&nbsp; Spiritual Facilitator</p>
+</section>
+
+<!-- PORTRAIT -->
+<section class="eywa-portrait-section">
+  <div class="eywa-portrait-circle"></div>
+</section>
+
+<!-- BIO -->
+<section class="eywa-bio-section">
+  <div class="eywa-bio-inner">
+    <p>Eywa's work is rooted in self-remembrance — the journey of reconnecting with who we are beneath conditioning and learning to live with greater authenticity, clarity, and self-trust.</p>
+    <p>Her spiritual path began through her own healing journey. During a period of anxiety and emotional overwhelm, she reached a turning point that invited her to begin finding her way home to herself.</p>
+    <p>Within the community of Sacred Wisdom School, Eywa gradually rediscovered what brought her joy, what felt true to her, and what her heart was calling her towards. This experience continues to shape the way she holds space for others — with compassion, sensitivity, honesty, and grounded presence.</p>
+    <p>Through intuitive guidance, Tarot, energy healing, ceremonies, and workshops, Eywa creates experiential spaces where individuals can deepen their relationship with themselves and reconnect with their inner wisdom.</p>
+  </div>
+</section>
+
+<!-- ROLE -->
+<section class="eywa-role-section">
+  <div class="eywa-role-inner">
+    <span class="eywa-role-label">Her Role at Sacred Wisdom School</span>
+    <p>As a partner and faculty member of Sacred Wisdom School, Eywa contributes to the growth and development of the school while supporting students in deepening self-awareness, strengthening intuition, and bringing spiritual wisdom into everyday life. She believes meaningful transformation begins through a deeper relationship with ourselves.</p>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="eywa-expertise-section">
+  <h2>Areas of Expertise</h2>
+  <div class="eywa-tags">
+    <span class="eywa-tag">Intuitive Development</span>
+    <span class="eywa-tag">Tarot Reading</span>
+    <span class="eywa-tag">Energy Healing</span>
+    <span class="eywa-tag">Spiritual Ceremonies</span>
+    <span class="eywa-tag">Personal Growth</span>
+    <span class="eywa-tag">Mindfulness</span>
+    <span class="eywa-tag">Spiritual Guidance</span>
+    <span class="eywa-tag">Conscious Living</span>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="eywa-quote-section">
+  <div class="eywa-quote-inner">
+    <blockquote>"The journey is not about finding every answer outside of ourselves. It is about remembering who we are, listening to our inner wisdom, and allowing that wisdom to guide the way we live."</blockquote>
+    <a class="eywa-back-link" href="about-school-v4.html">← Back to Our Team</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="footer-wordmark">Sacred Wisdom School</span>
+      <p class="footer-tagline">"Wisdom already lives within you. We simply create the space for it to be heard."</p>
+    </div>
+    <div class="footer-col">
+      <h4>School</h4>
+      <nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Reverend Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Teachings</h4>
+      <nav><a href="teachings-v4.html">Sacred Teachings</a><a href="teachings-v4.html">Consciousness</a><a href="teachings-v4.html">Intuition</a><a href="teachings-v4.html">Self-Realization</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Healing</h4>
+      <nav><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a><a href="breathwork-v4.html">Sacred Breathwork</a><a href="spirit-dance-v4.html">Sacred Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav>
+    </div>
+    <div class="footer-col">
+      <h4>Sacred Journeys</h4>
+      <nav><a href="journeys-v4.html">Sacred Journeys</a><a href="journeys-v4.html">Retreats</a><a href="journeys-v4.html">Pilgrimages</a><a href="journeys-v4.html">Spiritual Travel</a></nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Malaysia · Canada · Selected Online Programs</span>
+    <div class="footer-legal">
+      <a href="#">© 2025 Sacred Wisdom School</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  var sel = '.section h2, .discipline-row';
+  var dly = ['d1','d2','d3','d4'], n = 0;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll(sel).forEach(function(el){
+    if(el.getBoundingClientRect().top > window.innerHeight){
+      el.classList.add('reveal', dly[n++ % 4]);
+      obs.observe(el);
+    }
+  });
+})();
+</script>
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 56); }, { passive: true });
+  const drawer = document.getElementById('drawer');
+  const menuBtn = document.getElementById('menuBtn');
+  const closeBtn = document.getElementById('drawerClose');
+  menuBtn.addEventListener('click', () => drawer.classList.add('open'));
+  closeBtn.addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+</script>
+</body>
+</html>
