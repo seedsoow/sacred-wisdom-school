@@ -52,13 +52,13 @@ a { color: inherit; text-decoration: none; }
 .nav-dd-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 0;
   background: rgba(6,9,26,0.97);
   border: 1px solid rgba(200,165,90,0.15);
   backdrop-filter: blur(14px);
-  min-width: 190px;
-  padding: 8px 0;
+  min-width: 270px;
+  padding: 14px 0;
   z-index: 250;
 }
 .nav-dropdown:hover .nav-dd-menu { display: block; }
@@ -73,8 +73,15 @@ a { color: inherit; text-decoration: none; }
   transition: color 0.2s;
   white-space: nowrap;
 }
-.nav-dd-menu a:first-child { color: var(--gold); border-bottom: 1px solid rgba(200,165,90,0.1); padding-bottom: 12px; margin-bottom: 4px; }
 .nav-dd-menu a:hover { color: var(--gold); }
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
 .nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
 .nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
 .drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
@@ -91,7 +98,7 @@ h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(32px, 5vw, 54px)
 .btn-outline { background: transparent; color: var(--purple); border-color: var(--purple); }
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.4), transparent), linear-gradient(148deg, #2e1a5e 0%, var(--hero-bg) 50%, #6b35a8 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
+.page-hero { min-height: 56vh; background: linear-gradient(to bottom, rgba(6,9,26,0.55) 0%, rgba(6,9,26,0.3) 50%, rgba(6,9,26,0.6) 100%), url('https://images.unsplash.com/photo-1514241516423-6c0a5e031aa2?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); top: 50%; right: 10%; transform: translateY(-50%); pointer-events: none; }
 .page-hero h1 { max-width: 800px; }
 .page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(15px, 2vw, 20px); font-weight: 300; color: rgba(255,255,255,0.5); margin-top: 14px; max-width: 640px; line-height: 1.6; letter-spacing: 0.04em; }
@@ -106,7 +113,7 @@ h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(32px, 5vw, 54px)
 .border-bottom { border-bottom: 1px solid var(--gold-faint); }
 
 .portrait-split { display: grid; grid-template-columns: 360px 1fr; gap: 80px; align-items: start; }
-.portrait-card { background: radial-gradient(ellipse 70% 55% at 55% 40%, rgba(123,79,168,0.4), transparent), linear-gradient(155deg, #2e1a5e 0%, var(--hero-bg) 60%, #6b35a8 100%); aspect-ratio: 3/4; border-radius: 2px; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+.portrait-card { aspect-ratio: 3/4; border-radius: 2px; overflow: hidden; background-size: cover; background-position: center top; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
 .portrait-card p { font-family: "Cormorant Garamond", serif; font-size: 16px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.38); line-height: 1.5; margin-top: 6px; }
 .pull-quote { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--ink); border-left: 2px solid var(--gold); padding-left: 24px; line-height: 1.32; margin-bottom: 32px; }
 .pull-quote cite { display: block; font-family: Inter, sans-serif; font-size: 11px; font-style: normal; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-warm); margin-top: 14px; }
@@ -188,13 +195,11 @@ body { min-width: 320px; }
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
-        <a href="healing-v4.html">Sacred Healing</a>
-        <a href="foundation-v4.html">Foundation</a>
-        <a href="inner-child-v4.html">Inner Child</a>
-        <a href="advanced-v4.html">Advanced</a>
-        <a href="breathwork-v4.html">Breathwork</a>
-        <a href="spirit-dance-v4.html">Spirit Dance</a>
-        <a href="constellations-v4.html">Constellations</a>
+        <a href="foundation-v4.html">Sacred Healing Foundation</a>
+        <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
+        <a href="breathwork-v4.html">Sacred Breathwork</a>
+        <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
+        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
       </div>
     </div>
     <a href="journeys-v4.html">Sacred Journeys</a>
@@ -242,9 +247,7 @@ body { min-width: 320px; }
 <!-- OPENING + PORTRAIT -->
 <section class="section border-top">
   <div class="portrait-split">
-    <div class="portrait-card">
-      <span class="label label-light" style="margin-bottom:6px">Portrait placeholder</span>
-      <p>Rain in natural light or a teaching setting</p>
+    <div class="portrait-card" style="background-image: url('images/team-rain.jpg'); background-size: cover; background-position: center top; min-height: 480px;">
     </div>
     <div class="portrait-text">
       <span class="label" style="margin-bottom:20px">Who she is</span>
