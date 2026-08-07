@@ -52,13 +52,13 @@ a { color: inherit; text-decoration: none; }
 .nav-dd-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 0;
   background: rgba(6,9,26,0.97);
   border: 1px solid rgba(200,165,90,0.15);
   backdrop-filter: blur(14px);
-  min-width: 190px;
-  padding: 8px 0;
+  min-width: 270px;
+  padding: 14px 0;
   z-index: 250;
 }
 .nav-dropdown:hover .nav-dd-menu { display: block; }
@@ -73,8 +73,15 @@ a { color: inherit; text-decoration: none; }
   transition: color 0.2s;
   white-space: nowrap;
 }
-.nav-dd-menu a:first-child { color: var(--gold); border-bottom: 1px solid rgba(200,165,90,0.1); padding-bottom: 12px; margin-bottom: 4px; }
 .nav-dd-menu a:hover { color: var(--gold); }
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
 .nav-menu-btn { background: none; border: 1px solid rgba(255,255,255,0.28); border-radius: 2px; color: rgba(255,255,255,0.75); font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 14px; cursor: pointer; }
 .nav.scrolled .nav-menu-btn { border-color: var(--gold-faint); color: var(--ink); }
 .drawer { display: flex; position: fixed; inset: 0; z-index: 300; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 36px; overflow-y: auto; padding: 80px 40px; opacity: 0; pointer-events: none; transition: opacity 0.28s cubic-bezier(0.16,1,0.3,1); }
@@ -84,11 +91,11 @@ a { color: inherit; text-decoration: none; }
 .drawer-close { position: absolute; top: 20px; right: 32px; background: none; border: none; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
 
 /* TYPE */
-.label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-warm); }
+.label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold-warm); }
 .label-light { color: var(--gold-light); }
-h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 7vw, 76px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; color: var(--white); }
-h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4.5vw, 48px); font-weight: 300; line-height: 1.1; color: var(--ink); }
-h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.2; color: var(--ink); }
+h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(40px, 7vw, 76px); font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; color: var(--white); }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4.5vw, 48px); font-weight: 400; line-height: 1.1; color: var(--ink); }
+h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 32px); font-weight: 500; font-style: italic; line-height: 1.2; color: var(--ink); }
 .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; border-radius: 1px; border: 1px solid transparent; white-space: nowrap; }
 .btn-gold    { background: var(--gold); color: #06091a; border-color: var(--gold); }
 .btn-dark    { background: var(--purple); color: var(--white); border-color: var(--purple); }
@@ -213,13 +220,11 @@ body { min-width: 320px; }
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
-        <a href="healing-v4.html">Sacred Healing</a>
-        <a href="foundation-v4.html">Foundation</a>
-        <a href="inner-child-v4.html">Inner Child</a>
-        <a href="advanced-v4.html">Advanced</a>
-        <a href="breathwork-v4.html">Breathwork</a>
-        <a href="spirit-dance-v4.html">Spirit Dance</a>
-        <a href="constellations-v4.html">Constellations</a>
+        <a href="foundation-v4.html">Sacred Healing Foundation</a>
+        <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
+        <a href="breathwork-v4.html">Sacred Breathwork</a>
+        <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
+        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
       </div>
     </div>
     <a href="journeys-v4.html">Sacred Journeys</a>
@@ -276,8 +281,6 @@ body { min-width: 320px; }
   <h2 style="max-width:720px;margin-bottom:36px">Three interconnected pathways that deepen spiritual growth, emotional resilience, and holistic well-being.</h2>
   <div class="prose-section">
     <p>At the Sacred Healing Program Advanced Level, participants step into three sacred arts of healing and awakening.</p>
-    <p>Sacred Breathwork, Sacred Spirit Dance, and Sacred Integrative Constellations are offered as a harmonious package — three interconnected pathways that together support the deepening of spiritual growth, emotional resilience, and holistic well-being.</p>
-    <p>This path works directly with the body and the emotions. Participants release what has been held for years, see ancestral patterns clearly for the first time, and recover a sense of wholeness that the ordinary world rarely allows.</p>
   </div>
   <div class="btns" style="margin-top:36px">
     <a class="btn btn-dark" href="#program-details">View Program Details</a>
@@ -299,9 +302,6 @@ body { min-width: 320px; }
     <div class="module-body">
       <div>
         <p>Sacred Breathwork is a powerful inner journey that uses conscious breathing, sound, and somatic awareness to activate the body's natural healing intelligence.</p>
-        <p>Breath is one of the most direct bridges between the body, mind, and emotions. Through intentional breathing patterns combined with sound and guided awareness, participants enter a deeper state of consciousness where the body can release tension, emotions, and energetic blockages that may have been held for many years.</p>
-        <p>As the breath deepens and the mind quiets, individuals may access deeper layers of emotional memory and subconscious material stored within the body. In this expanded state of awareness, the body begins to restore balance and release what it has been holding.</p>
-        <p>Sacred Breathwork creates a safe and supportive space where participants reconnect with the intelligence of their own body and allow healing and insight to arise naturally from within.</p>
         <a class="tlink" href="breathwork-v4.html">Explore Sacred Breathwork</a>
       </div>
       <div class="module-unique">
@@ -331,10 +331,6 @@ body { min-width: 320px; }
     <div class="module-body">
       <div>
         <p>Sacred Spirit Dance is a movement-based healing practice that invites participants to reconnect with the intelligence of the body through music, rhythm, and intuitive expression.</p>
-        <p>The body carries memories, emotions, and experiences sometimes beyond words. Through conscious movement and guided music journeys, Sacred Spirit Dance creates a safe and supportive space where the body can release tension, express emotions, and restore energetic flow.</p>
-        <p>Sacred Spirit Dance invites intuitive movement — the body expressing itself naturally, following its own rhythm. Participants are invited to move freely, allowing the body to respond naturally to rhythm, sound, and inner sensation.</p>
-        <p>Through music, breath, and sustained movement, participants may naturally enter expanded states of consciousness — trance-like states where the mind becomes quieter and the body moves with greater freedom and intuition, allowing emotions, insights, and inner experiences to surface.</p>
-        <p>All bodies are welcome. Participants are invited to move in the way that feels natural for them.</p>
         <a class="tlink" href="spirit-dance-v4.html">Explore Sacred Spirit Dance</a>
       </div>
       <div class="module-unique">
@@ -365,15 +361,11 @@ body { min-width: 320px; }
     <div class="module-body">
       <div>
         <p>Sacred Integrative Constellations is a powerful healing modality that reveals and transforms hidden dynamics within family systems, ancestral lineages, and unconscious emotional patterns.</p>
-        <p>Many of the challenges people experience in relationships, emotional well-being, and life decisions are connected to unresolved dynamics within the wider family system.</p>
-        <p>Events such as loss, trauma, exclusion, or unresolved conflicts within a family system can echo through generations, influencing how individuals experience life today. Sacred Integrative Constellations creates a space where these deeper systemic influences can be observed and understood.</p>
-        <p>By acknowledging what has been unseen or unspoken within a family system, the natural movement toward balance and healing can begin.</p>
         <a class="tlink" href="constellations-v4.html">Explore Sacred Integrative Constellations</a>
       </div>
       <div class="module-unique">
         <h4>Expanding the Traditional Approach</h4>
         <p style="font-size:14px;color:var(--muted);line-height:1.72;margin-bottom:16px">Sacred Integrative Constellations is inspired by the foundational work of German psychotherapist Bert Hellinger. Dr. Rain Lim expands upon this work by integrating emotional release and somatic awareness — allowing participants to understand the dynamics within their system and to release the emotional and energetic imprints still held within the body.</p>
-        <p style="font-size:14px;color:var(--muted);line-height:1.72;margin-bottom:16px">The work also allows space for deeper exploration, including ancestral influences, past life experiences, health or illness patterns, and multidimensional aspects of the self.</p>
         <div class="who-inline">
           <span class="who-tag">Family dynamics</span>
           <span class="who-tag">Ancestral patterns</span>
