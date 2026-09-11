@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Family Constellations with Dr. Rain Lim at Sacred Wisdom School — explore generational healing, restore family soul order, and free yourself from inherited patterns.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sacred Integrative Constellations | Sacred Wisdom School">
+  <meta property="og:title" content="Sacred Integral Constellation | Sacred Wisdom School">
   <meta property="og:description" content="Family Constellations with Dr. Rain Lim — explore generational healing, restore family soul order, and free yourself from inherited patterns.">
   <meta property="og:site_name" content="Sacred Wisdom School">
   <link rel="canonical" href="https://sacredwisdomschool.com/sacred-integrative-constellations">
-  <title>Sacred Integrative Constellations | Sacred Wisdom School</title>
+  <title>Sacred Integral Constellation | Sacred Wisdom School</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; }
 body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -103,12 +103,12 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28p
 .btns-c { justify-content: center; }
 
 .page-hero {
-  min-height: 72vh;
+  min-height: 56vh;
   background:
-    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(91,45,142,0.5), transparent),
-    radial-gradient(ellipse 40% 35% at 78% 22%, rgba(123,79,168,0.35), transparent),
-    linear-gradient(148deg, rgba(14,8,32,0.45) 0%, rgba(42,20,88,0.45) 38%, rgba(74,32,128,0.45) 65%, rgba(101,53,160,0.45) 100%),
-    url('https://images.unsplash.com/photo-1498611291069-aa296192f1e4?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(91,45,142,0.25), transparent),
+    radial-gradient(ellipse 40% 35% at 78% 22%, rgba(123,79,168,0.25), transparent),
+    linear-gradient(148deg, rgba(14,8,32,0.55) 0%, rgba(42,20,88,0.50) 38%, rgba(74,32,128,0.50) 65%, rgba(101,53,160,0.50) 100%),
+    url('images/hero-milkyway.jpg') center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 100px 72px 72px; position: relative; overflow: hidden;
 }
@@ -231,14 +231,14 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28p
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -246,11 +246,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -261,7 +267,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -269,8 +274,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -281,9 +288,9 @@ body { min-width: 320px; }
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="breadcrumb"><a href="#">Home</a><span>/</span><a href="#">Sacred Healing</a><span>/</span>Sacred Integrative Constellations</div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="healing-v4.html">Sacred Healing</a><span>/</span>Sacred Integral Constellation</div>
   <p class="page-hero-badge">Level 3 Advanced Healing Art</p>
-  <h1>Sacred Integrative Constellations</h1>
+  <h1>Sacred Integral Constellation</h1>
   <p class="page-hero-sub">We arrive in this life connected — to family, to lineage, to those who came before. What has been carried can be set down.</p>
 </section>
 
@@ -294,11 +301,11 @@ body { min-width: 320px; }
       <div>
         <span class="label">What Constellations Work Is</span>
         <h2>Revealing the Hidden Patterns That Shape Our Lives</h2>
-        <p>Sacred Integrative Constellations is a powerful healing modality that reveals and transforms hidden dynamics within family systems, ancestral lineages, and unconscious emotional patterns.</p>
+        <p>Sacred Integral Constellation is a powerful healing modality that reveals and transforms hidden dynamics within family systems, ancestral lineages, and unconscious emotional patterns.</p>
       </div>
       <div>
         <p class="open-tagline">"By acknowledging what has been unseen or unspoken within a family system, the natural movement toward balance and healing can begin."</p>
-        <p style="font-size:16px;color:var(--muted);line-height:1.85">Sacred Integrative Constellations creates a space where these deeper systemic influences can be observed, understood, and released — bringing a quality of clarity and freedom that can transform the trajectory of a life.</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.85">Sacred Integral Constellation creates a space where these deeper systemic influences can be observed, understood, and released — bringing a quality of clarity and freedom that can transform the trajectory of a life.</p>
       </div>
     </div>
   </div>
@@ -334,13 +341,13 @@ body { min-width: 320px; }
     <div class="approach-split">
       <div>
         <span class="label label-light">Expanding the Tradition</span>
-        <h2 style="color:var(--white)">Sacred Integrative Constellations — Dr. Rain Lim's Approach</h2>
-        <p style="color:rgba(255,255,255,0.58)">Sacred Integrative Constellations is inspired by the foundational work of German psychotherapist Bert Hellinger. Dr. Rain Lim expands upon this tradition by weaving in emotional release, somatic awareness, and multidimensional exploration.</p>
+        <h2 style="color:var(--white)">Sacred Integral Constellation — Dr. Rain Lim's Approach</h2>
+        <p style="color:rgba(255,255,255,0.58)">Sacred Integral Constellation is inspired by the foundational work of German psychotherapist Bert Hellinger. Dr. Rain Lim expands upon this tradition by weaving in emotional release, somatic awareness, and multidimensional exploration.</p>
         <p style="color:rgba(255,255,255,0.58);margin-top:16px">Participants are supported to both understand the dynamics within their system and to release the emotional and energetic imprints still held within the body — moving beyond intellectual insight into genuine, embodied transformation.</p>
       </div>
       <div class="expand-card">
         <h3>Expanded Dimensions of Exploration</h3>
-        <p>Sacred Integrative Constellations allows space for deeper exploration beyond classical family systems work — including ancestral influences, past life experiences, health or illness patterns, and multidimensional aspects of the self.</p>
+        <p>Sacred Integral Constellation allows space for deeper exploration beyond classical family systems work — including ancestral influences, past life experiences, health or illness patterns, shamanic healing, and multidimensional aspects of the self.</p>
       </div>
     </div>
   </div>
@@ -379,12 +386,12 @@ body { min-width: 320px; }
   <div class="inner">
     <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
       <span class="label">What Sets It Apart</span>
-      <h2 style="margin-top:16px">What Makes Sacred Integrative Constellations Unique</h2>
+      <h2 style="margin-top:16px">What Makes Sacred Integral Constellation Unique</h2>
     </div>
     <div class="unique-grid">
       <div class="unique-card">
         <h3>Somatic and Emotional Integration</h3>
-        <p>Unlike purely cognitive approaches, Sacred Integrative Constellations works with both the understanding of systemic dynamics and the emotional and energetic release held within the body — creating transformation that is felt, not just understood.</p>
+        <p>Unlike purely cognitive approaches, Sacred Integral Constellation works with both the understanding of systemic dynamics and the emotional and energetic release held within the body — creating transformation that is felt, not just understood.</p>
       </div>
       <div class="unique-card">
         <h3>Multidimensional Exploration</h3>
@@ -392,7 +399,11 @@ body { min-width: 320px; }
       </div>
       <div class="unique-card">
         <h3>Beyond Bert Hellinger</h3>
-        <p>Rooted in the foundational work of Bert Hellinger, Sacred Integrative Constellations expands this tradition with spiritual awareness and somatic healing — honoring the original teaching while going deeper.</p>
+        <p>Rooted in the foundational work of Bert Hellinger, Sacred Integral Constellation expands this tradition with spiritual awareness and somatic healing — honoring the original teaching while going deeper.</p>
+      </div>
+      <div class="unique-card">
+        <h3>Shamanic Healing</h3>
+        <p>Where the work calls for it, Sacred Integral Constellation opens into the realm of shamanic healing — working with spirit field dynamics, soul retrieval, and the presence of ancestral and spiritual energies that influence the living. This dimension honors the full depth and mystery of each person's healing journey.</p>
       </div>
       <div class="unique-card">
         <h3>A Sacred Container</h3>
@@ -408,11 +419,11 @@ body { min-width: 320px; }
     <div class="who-two">
       <div>
         <span class="label">Is This for You?</span>
-        <h2>Who Sacred Integrative Constellations Is For</h2>
-        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:16px">Sacred Integrative Constellations welcomes anyone who senses that deeper systemic or ancestral influences are at play in their life — and who is ready to see and release them.</p>
+        <h2>Who Sacred Integral Constellation Is For</h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:16px">Sacred Integral Constellation welcomes anyone who senses that deeper systemic or ancestral influences are at play in their life — and who is ready to see and release them.</p>
         <div class="btns">
-          <a class="btn btn-dark" href="#">Register for Level 3</a>
-          <a class="btn btn-outline" href="#">Begin with Level 1</a>
+          <a class="btn btn-dark" href="contact-v4.html">Join the Waitlist for 2028</a>
+          <a class="btn btn-outline" href="foundation-v4.html">Begin with Level 1</a>
         </div>
       </div>
       <ul class="who-list">
@@ -432,25 +443,25 @@ body { min-width: 320px; }
   <div class="inner">
     <div style="text-align:center; max-width:560px; margin: 0 auto 48px;">
       <span class="label">Program Details</span>
-      <h2 style="margin-top:16px">Sacred Integrative Constellations at a Glance</h2>
+      <h2 style="margin-top:16px">Sacred Integral Constellation at a Glance</h2>
     </div>
     <div class="details-card">
       <div class="details-header">
-        <h3>Sacred Integrative Constellations — Level 3 Advanced Module</h3>
+        <h3>Sacred Integral Constellation — Level 3 Advanced Module</h3>
         <p>Part of the Sacred Healing Advanced Modules · Offered with Sacred Breathwork and Sacred Spirit Dance</p>
       </div>
       <dl class="details-body">
         <div class="details-row"><dt>Program</dt><dd>Sacred Healing Program — Level 3 (Advanced Modules)</dd></div>
         <div class="details-row"><dt>Prerequisite</dt><dd>Level 1 Foundation Program</dd></div>
         <div class="details-row"><dt>Format</dt><dd>In-person (Malaysia · Canada) · Selected online formats</dd></div>
-        <div class="details-row"><dt>Status</dt><dd>Open for registration</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Waitlist — Next intake: 2028</dd></div>
         <div class="details-row"><dt>Group Size</dt><dd>Limited — intimate group setting</dd></div>
         <div class="details-row"><dt>Bundled With</dt><dd>Sacred Breathwork · Sacred Spirit Dance</dd></div>
       </dl>
     </div>
     <div class="btns btns-c" style="margin-top:36px">
-      <a class="btn btn-dark" href="#">Register for Level 3</a>
-      <a class="btn btn-outline" href="#">Ask a Question</a>
+      <a class="btn btn-dark" href="contact-v4.html">Join the Waitlist for 2028</a>
+      <a class="btn btn-outline" href="contact-v4.html">Ask a Question</a>
     </div>
   </div>
 </section>
@@ -459,16 +470,26 @@ body { min-width: 320px; }
 <section class="s-purple">
   <div class="cta-center">
     <span class="label label-light">Begin the Journey</span>
-    <h2>Ready to Explore Sacred Integrative Constellations?</h2>
-    <p>Sacred Integrative Constellations is offered as part of the Level 3 Advanced Healing program alongside Sacred Breathwork and Sacred Spirit Dance. Begin with the Foundation Program if you are new to the sacred healing path.</p>
+    <h2>Ready to Explore Sacred Integral Constellation?</h2>
+    <p>Sacred Integral Constellation is currently on waitlist. Join the waitlist to be notified when the next intake opens in 2028.</p>
     <div class="btns btns-c">
-      <a class="btn btn-gold" href="#">Register for Level 3</a>
-      <a class="btn btn-ghost" href="#">Explore the Full Healing Path</a>
+      <a class="btn btn-gold" href="contact-v4.html">Join the Waitlist for 2028</a>
+      <a class="btn btn-ghost" href="healing-v4.html">Explore the Full Healing Path</a>
     </div>
   </div>
 </section>
 
 </main>
+
+<!-- HEALING CIRCLES CALLOUT -->
+<section style="background: var(--parchment); padding: 48px 72px;">
+  <div style="max-width: 720px; margin: 0 auto; border: 1px solid var(--gold); padding: 40px 48px; background: var(--cream-alt);">
+    <span style="display:block; font-size:11px; font-weight:700; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold-warm); margin-bottom:12px">Now Open</span>
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:clamp(20px,2.5vw,28px); font-weight:400; color:var(--ink); margin-bottom:14px;">Sacred Integral Constellation Healing Circles</h3>
+    <p style="font-size:16px; color:var(--text); line-height:1.85; margin-bottom:28px;">While the Level 3 program is fully booked, the Sacred Integral Constellation Healing Circles are currently open — join us on <strong style="color:var(--ink)">October 24</strong> or <strong style="color:var(--ink)">November 14, 2026</strong> for an intimate group constellation experience.</p>
+    <a class="btn btn-dark" href="upcoming-v4.html">View Upcoming Healing Circles</a>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-brand">
@@ -478,11 +499,12 @@ body { min-width: 320px; }
     </div>
   </div>
   <div class="footer-cols">
-    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="#">Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav></div>
-    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="#">Overview</a><a href="#">Foundation Program</a><a href="#">Inner Child Healing</a><a href="#">Advanced Modules</a></nav></div>
-    <div class="footer-col"><h4>Advanced Arts</h4><nav><a href="#">Sacred Breathwork</a><a href="#">Sacred Spirit Dance</a><a href="#">Constellations</a></nav></div>
+    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav></div>
+    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="healing-v4.html">Overview</a><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a></nav></div>
+    <div class="footer-col"><h4>Advanced Arts</h4><nav><a href="breathwork-v4.html">Sacred Breathwork</a><a href="spirit-dance-v4.html">Sacred Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav></div>
     <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <span>© 2026 Sacred Wisdom School</span>
