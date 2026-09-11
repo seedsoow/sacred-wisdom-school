@@ -40,7 +40,7 @@ body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 
 a { color: inherit; text-decoration: none; }
 
 /* NAV */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -106,7 +106,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
 .tlink::after { content: '→'; }
 
 /* PAGE HERO */
-.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.4), transparent), linear-gradient(148deg, rgba(46,26,94,0.45) 0%, rgba(6,9,26,0.45) 50%, rgba(107,53,168,0.45) 100%), url('https://images.unsplash.com/photo-1496008889433-9b938d8ac880?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
+.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.25), transparent), linear-gradient(148deg, rgba(46,26,94,0.55) 0%, rgba(6,9,26,0.50) 50%, rgba(107,53,168,0.50) 100%), url('images/hero-healing-hands.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); top: 50%; right: 10%; transform: translateY(-50%); pointer-events: none; }
 .page-hero h1 { max-width: 800px; }
 .page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(16px, 2.2vw, 22px); font-weight: 300; color: rgba(255,255,255,0.55); margin-top: 14px; max-width: 640px; line-height: 1.6; }
@@ -253,15 +253,15 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -269,11 +269,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -284,7 +290,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -292,8 +297,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -375,7 +382,7 @@ body { min-width: 320px; }
       <div class="pathway-body">
         <h3>Level 3 — Advanced Sacred Healing Arts</h3>
         <p>Three sacred arts of healing and awakening — working directly with the body, emotions, ancestry, and the field of life itself. Offered as an interconnected package of three modules.</p>
-        <p class="pathway-mods">Sacred Breathwork · Sacred Spirit Dance · Sacred Integrative Constellations</p>
+        <p class="pathway-mods">Sacred Breathwork · Sacred Spirit Dance · Sacred Integral Constellation</p>
         <a class="tlink" href="advanced-v4.html">Explore the Advanced Modules</a>
       </div>
     </div>
@@ -448,7 +455,7 @@ body { min-width: 320px; }
   <p>The Foundation Program is the recommended starting point for all new participants. Those with prior healing experience are welcome to enquire about placement.</p>
   <div class="btns" style="justify-content:center;margin-top:36px">
     <a class="btn btn-dark"    href="foundation-v4.html">Begin with Level 1 Foundation</a>
-    <a class="btn btn-outline" href="upcoming-v4.html">View Upcoming Programs</a>
+    <a class="btn btn-ghost" href="upcoming-v4.html">View Upcoming Programs</a>
   </div>
 </section>
 
@@ -478,6 +485,7 @@ body { min-width: 320px; }
       <nav><a href="journeys-v4.html">Sacred Journeys</a><a href="journeys-v4.html">Retreats</a><a href="journeys-v4.html">Pilgrimages</a><a href="journeys-v4.html">Spiritual Travel</a></nav>
     </div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <div class="footer-legal">
