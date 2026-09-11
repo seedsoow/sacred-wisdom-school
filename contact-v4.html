@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -96,7 +96,7 @@ h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4vw, 44px)
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .page-hero {
-  min-height: 50vh;
+  min-height: 56vh;
   background:
     radial-gradient(ellipse 55% 45% at 25% 65%, rgba(91,45,142,0.5), transparent),
     radial-gradient(ellipse 40% 35% at 75% 25%, rgba(123,79,168,0.35), transparent),
@@ -204,14 +204,14 @@ body { min-width: 320px; }
 .form-success p { color: var(--muted); }
 .field-error { border-color: rgba(180,40,40,0.5) !important; }
 .field-msg { font-size: 11px; color: rgba(180,40,40,0.8); margin-top: 4px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -219,11 +219,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -234,7 +240,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -242,8 +247,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -255,7 +262,7 @@ body { min-width: 320px; }
 <section class="page-hero">
   <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
   <h1>Get in Touch</h1>
-  <p class="page-hero-sub">We are here to help you find the right path. Reach out and we will respond with care.</p>
+  <p class="page-hero-sub">We are here to support you in finding the right path. Reach out and we will respond with care.</p>
 </section>
 
 <section class="s-white">
@@ -266,7 +273,7 @@ body { min-width: 320px; }
       <div class="contact-info">
         <span class="label">Reach Out</span>
         <h2>We Would Love to Hear from You</h2>
-        <p>Whether you have a question about a program, a Sacred Journey, or are not yet sure where to begin — we are happy to help guide you.</p>
+        <p>Whether you have a question about a program, a Sacred Journey, or are not yet sure where to begin — we are here to support and guide you.</p>
 
         <dl class="contact-items">
           <div class="contact-item">
@@ -275,7 +282,7 @@ body { min-width: 320px; }
             </div>
             <div>
               <dt>Email</dt>
-              <dd>rainheartwisdom@gmail.com</dd>
+              <dd>service@sacredwisdomschool.org</dd>
             </div>
           </div>
           <div class="contact-item">
@@ -299,7 +306,7 @@ body { min-width: 320px; }
         </dl>
 
         <div class="contact-note">
-          <p>"Every journey begins with a conversation. We are here to help you find your way."</p>
+          <p>"Every journey begins with a conversation. We are here to support you every step of the way."</p>
         </div>
       </div>
 
@@ -344,10 +351,10 @@ body { min-width: 320px; }
                 <option>Level 3 — Advanced Modules</option>
                 <option>Sacred Breathwork</option>
                 <option>Sacred Spirit Dance</option>
-                <option>Sacred Integrative Constellations</option>
-                <option>Sacred Journeys — Bali</option>
+                <option>Sacred Integral Constellation</option>
+                <option>Sacred Journeys — Turkey</option>
                 <option>Sacred Journeys — Malaysia</option>
-                <option>Sacred Journeys — Nepal</option>
+                <option>Sacred Journeys — Egypt</option>
                 <option>Sacred Teachings</option>
                 <option>General Enquiry</option>
               </select>
@@ -409,6 +416,7 @@ body { min-width: 320px; }
     <div class="footer-col"><h4>Offerings</h4><nav><a href="teachings-v4.html">Sacred Teachings</a><a href="journeys-v4.html">Sacred Journeys</a><a href="breathwork-v4.html">Breathwork</a><a href="spirit-dance-v4.html">Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav></div>
     <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <span>© 2026 Sacred Wisdom School</span>
