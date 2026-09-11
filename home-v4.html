@@ -250,6 +250,8 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 3vw, 32px)
   justify-content: flex-end;
   padding: 28px;
   border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
 .founder-portrait .label { margin-bottom: 4px; }
 .founder-portrait-note { font-family: "Cormorant Garamond", serif; font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.4); font-style: italic; }
@@ -650,8 +652,9 @@ body { min-width: 320px; }
 <section class="founder">
   <div class="founder-inner">
     <div class="founder-portrait">
-      <span class="label label-light">Portrait placeholder</span>
-      <p class="founder-portrait-note">Reverend Dr. Rain Lim</p>
+      <img src="images/team-rain.jpg" alt="Reverend Dr. Rain Lim" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:2px;z-index:0;">
+      <span class="label label-light" style="position:relative;z-index:1;">Founder</span>
+      <p class="founder-portrait-note" style="position:relative;z-index:1;">Reverend Dr. Rain Lim</p>
     </div>
     <div class="founder-text">
       <span class="label">Meet the Founder</span>
