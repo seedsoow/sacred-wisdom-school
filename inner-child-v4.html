@@ -39,7 +39,7 @@ body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 
 a { color: inherit; text-decoration: none; }
 
 /* NAV */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -104,7 +104,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.6vw, 26p
 .tlink::after { content: '→'; }
 
 /* PAGE HERO */
-.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.4), transparent), linear-gradient(148deg, #2e1a5e 0%, var(--hero-bg) 50%, #6b35a8 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
+.page-hero { min-height: 56vh; background: linear-gradient(to bottom, rgba(6,9,26,0.55) 0%, rgba(6,9,26,0.3) 50%, rgba(6,9,26,0.6) 100%), url('images/hero-inner-child.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
 .page-hero h1 { max-width: 820px; }
 .page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(16px, 2.2vw, 22px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.55); margin-top: 14px; max-width: 620px; line-height: 1.6; }
 .breadcrumb { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
@@ -220,15 +220,34 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.6vw, 26p
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  /* ── TESTIMONIALS ───────────────────────────────────── */
+  .t-section { background: var(--cream); padding: 100px 72px; border-top: 1px solid var(--gold-faint); text-align: center; }
+  .t-heading { max-width: 520px; margin: 12px auto 56px; font-style: italic; }
+  .t-wrap { position: relative; max-width: 740px; margin: 0 auto; }
+  .t-card { display: none; }
+  .t-card.t-on { display: block; animation: tFade 0.65s ease; }
+  @keyframes tFade { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .t-mark { font-family: "Cormorant Garamond", serif; font-size: 72px; line-height: 0.55; color: var(--gold); opacity: 0.45; display: block; margin-bottom: 10px; }
+  .t-quote { font-family: "Cormorant Garamond", serif; font-size: clamp(18px, 2.3vw, 26px); font-style: italic; font-weight: 300; color: var(--ink); line-height: 1.6; }
+  .t-attr { margin-top: 32px; }
+  .t-name { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm); }
+  .t-role { display: block; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .t-dots { display: flex; justify-content: center; gap: 10px; margin-top: 44px; flex-wrap: wrap; }
+  .t-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(200,165,90,0.18); border: 1px solid rgba(200,165,90,0.38); cursor: pointer; padding: 0; transition: background 0.3s, border-color 0.3s; }
+  .t-dot.t-on { background: var(--gold); border-color: var(--gold); }
+  .t-photo { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--gold); box-shadow: 0 6px 18px rgba(45, 27, 78, 0.14); display: block; margin: 0 auto 6px; }
+  .t-long { font-size: clamp(15px, 1.8vw, 20px) !important; line-height: 1.75 !important; }
+  @media(max-width:768px){ .t-section { padding: 72px 40px; } }
+  @media(max-width:480px){ .t-section { padding: 64px 24px; } }
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav" id="nav">
-  <a class="nav-brand" href="home-v4.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="home-v4.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -236,11 +255,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -251,7 +276,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -259,8 +283,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -444,6 +470,48 @@ body { min-width: 320px; }
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="t-section">
+  <span class="label">Voices from the Journey</span>
+  <h2 class="t-heading">What participants carry with them.</h2>
+  <div class="t-wrap" id="tc-ic">
+    <div class="t-card t-on">
+      <img class="t-photo" src="images/testimonial-kahyi.jpg" alt="Kah Yi">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">I became the best friend of my own Inner Child after learning what Inner Child Healing is.
+Through this program, I was able to learn more about what the Inner Child is, how our childhood experiences can shape our beliefs, behaviours, and patterns as adults, and our childhood experiences that still feel incomplete can continue to show up in our lives.
+The program also provides a lot of hands-on practices, which allowed me to experience Inner Child Healing for myself — not only as a client, where I get to heal my own Inner Child, but also as a healer, where I learn how to hold space and facilitate Inner Child Healing for others, with a strong foundation in the theories taught in the program.
+What I love most about the program is that Dr. Rain teaches Inner Child Healing in a holistic way. We are guided to explore how the childhood traumas, experiences, and events we went through may have planted the seeds that later shaped our beliefs, behaviours, and patterns as adults.
+By understanding where these patterns come from, we are able to recognise them, heal them, and facilitate Inner Child Healing in a more holistic way.
+The program gave me not only the knowledge and theories of Inner Child Healing, but also the space to practise, experience, explore, connect with my Inner Child, and develop my own way of facilitating healing.
+Now, I provide Inner Child Healing sessions to support others in connecting with their Inner Child.
+Inner Child Healing is such a powerful modality.
+Whether you would like to connect with your Inner Child, or learn how to facilitate healing for others, I truly feel that this program can support you and guide you towards your own path.</p>
+      <div class="t-attr"><span class="t-name">Kah Yi</span><span class="t-role">Sacred Inner Child Healing Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-joanne.jpg" alt="Joanne Teng">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">Initially, I thought Inner Child Healing was simply guiding clients through meditation to meet their inner child. After attending the programme, I realised there is so much more to it.
+The programme combines theory and practical sessions, allowing us to practise with classmates, build our skills, and also apply what we learned to ourselves when life gets tough.
+What I love most about this modality is how empowering it can be. It helps clients reconnect with their strength, recognise their gifts, and embrace themselves as the beautiful souls they are.
+I'm truly glad I learned this modality. It has not only changed the way I support others, but also changed my own life.</p>
+      <div class="t-attr"><span class="t-name">Joanne Teng</span><span class="t-role">Sacred Inner Child Healing Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-elia.jpg" alt="Elia Ng">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">I've always felt a quiet pull to support people through their emotional healing, but I never had the tools or confidence to do it well — until this program. What stood out most was learning how to build a genuine, strong connection with my own inner child first, because I truly believe you can't hold space for someone else's healing until you've done that work yourself. From there, I learned how to actually hold a safe space for others — how to let them express and release emotions vulnerably, without rushing them or trying to fix anything. I released my own seed of self-invalidation along the way and planted something far more powerful: real self-trust, both in myself and in my ability to guide others. Now, when I sit with someone doing this work, I offer them the same love and compassion I once needed myself. This program didn't just teach me a modality — it gave me the confidence to become a practitioner who can hold that space for others. If you feel called to support people who are ready to reconnect with their pure essence, this program will give you both the depth and the skill to do it well.</p>
+      <div class="t-attr"><span class="t-name">Elia Ng</span><span class="t-role">Sacred Inner Child Healing Graduate</span></div>
+    </div>
+  </div>
+  <div class="t-dots" id="td-ic">
+    <button class="t-dot t-on" aria-label="1"></button>
+    <button class="t-dot" aria-label="2"></button>
+    <button class="t-dot" aria-label="3"></button>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
   <span class="label" style="display:block;text-align:center;margin-bottom:16px">Your next step</span>
@@ -481,6 +549,7 @@ body { min-width: 320px; }
       <nav><a href="journeys-v4.html">Sacred Journeys</a><a href="journeys-v4.html">Retreats</a><a href="journeys-v4.html">Pilgrimages</a></nav>
     </div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <div class="footer-legal">
@@ -516,6 +585,27 @@ body { min-width: 320px; }
   menuBtn.addEventListener('click', () => drawer.classList.add('open'));
   closeBtn.addEventListener('click', () => drawer.classList.remove('open'));
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+</script>
+<script>
+(function(){
+  function initT(wrapId, dotsId) {
+    var cards = document.querySelectorAll('#'+wrapId+' .t-card');
+    var dots  = document.querySelectorAll('#'+dotsId+' .t-dot');
+    var cur = 0;
+    function go(n) {
+      cards[cur].classList.remove('t-on');
+      dots[cur].classList.remove('t-on');
+      cur = ((n % cards.length) + cards.length) % cards.length;
+      cards[cur].classList.add('t-on');
+      dots[cur].classList.add('t-on');
+    }
+    for (var i = 0; i < dots.length; i++) {
+      (function(idx){ dots[idx].addEventListener('click', function(){ go(idx); }); })(i);
+    }
+    setInterval(function(){ go(cur + 1); }, 9000);
+  }
+  initT('tc-ic','td-ic');
+})();
 </script>
 </body>
 </html>
