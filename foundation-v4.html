@@ -38,7 +38,7 @@ body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 
 a { color: inherit; text-decoration: none; }
 
 /* ── NAV ──────────────────────────────────────────── */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(187,162,123,0.3); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: var(--white); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -106,7 +106,7 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.8vw, 28p
 .tlink::after { content: '→'; }
 
 /* ── PAGE HERO ────────────────────────────────────── */
-.page-hero { min-height: 56vh; background: radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent), radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.4), transparent), linear-gradient(148deg, #2e1a5e 0%, var(--hero-bg) 50%, #6b35a8 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
+.page-hero { min-height: 56vh; background: linear-gradient(to bottom, rgba(6,9,26,0.55) 0%, rgba(6,9,26,0.3) 50%, rgba(6,9,26,0.6) 100%), url('images/hero-healing-foundation.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 100px 72px 72px; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; width: 440px; height: 440px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); top: 50%; right: 8%; transform: translateY(-50%); pointer-events: none; }
 .page-hero h1 { max-width: 820px; }
 .page-hero-sub { font-family: "Cormorant Garamond", serif; font-size: clamp(16px, 2.2vw, 22px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.52); margin-top: 14px; max-width: 600px; line-height: 1.6; }
@@ -252,15 +252,34 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.8vw, 28p
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  /* ── TESTIMONIALS ───────────────────────────────────── */
+  .t-section { background: var(--cream); padding: 100px 72px; border-top: 1px solid var(--gold-faint); text-align: center; }
+  .t-heading { max-width: 520px; margin: 12px auto 56px; font-style: italic; }
+  .t-wrap { position: relative; max-width: 740px; margin: 0 auto; }
+  .t-card { display: none; }
+  .t-card.t-on { display: block; animation: tFade 0.65s ease; }
+  @keyframes tFade { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .t-mark { font-family: "Cormorant Garamond", serif; font-size: 72px; line-height: 0.55; color: var(--gold); opacity: 0.45; display: block; margin-bottom: 10px; }
+  .t-quote { font-family: "Cormorant Garamond", serif; font-size: clamp(18px, 2.3vw, 26px); font-style: italic; font-weight: 300; color: var(--ink); line-height: 1.6; }
+  .t-attr { margin-top: 32px; }
+  .t-name { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm); }
+  .t-role { display: block; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .t-dots { display: flex; justify-content: center; gap: 10px; margin-top: 44px; flex-wrap: wrap; }
+  .t-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(200,165,90,0.18); border: 1px solid rgba(200,165,90,0.38); cursor: pointer; padding: 0; transition: background 0.3s, border-color 0.3s; }
+  .t-dot.t-on { background: var(--gold); border-color: var(--gold); }
+  .t-photo { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--gold); box-shadow: 0 6px 18px rgba(45, 27, 78, 0.14); display: block; margin: 0 auto 6px; }
+  .t-long { font-size: clamp(15px, 1.8vw, 20px) !important; line-height: 1.75 !important; }
+  @media(max-width:768px){ .t-section { padding: 72px 40px; } }
+  @media(max-width:480px){ .t-section { padding: 64px 24px; } }
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav" id="nav">
-  <a class="nav-brand" href="home-v4.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="home-v4.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -268,11 +287,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -283,7 +308,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -291,8 +315,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -314,7 +340,7 @@ body { min-width: 320px; }
   <h1>Sacred Healing Program<br>Foundation Level</h1>
   <p class="page-hero-sub">An Introduction to the Art and Nature of Sacred Healing</p>
   <div class="hero-btns">
-    <a class="btn btn-gold" href="#program-details">Reserve Your Spot</a>
+    <a class="btn btn-gold" href="upcoming-v4.html">Reserve Your Spot</a>
     <a class="btn btn-ghost" href="#program-details">Program Details</a>
   </div>
 </section>
@@ -402,15 +428,15 @@ body { min-width: 320px; }
   <p class="statement-quote">"The Foundation is not simply a training in healing techniques — it is an opening into a new way of relating to life itself."</p>
   <p class="statement-sub">Personal transformation is not a byproduct of this program. It is the ground from which all healing ability grows.</p>
   <div class="statement-rule"></div>
-  <a class="btn btn-gold" href="#program-details" style="margin:0 auto">Reserve Your Spot</a>
+  <a class="btn btn-gold" href="upcoming-v4.html" style="margin:0 auto">Reserve Your Spot</a>
 </section>
 
 <!-- 5. DEEPER PRINCIPLES — white -->
 <section class="s-white">
-  <div class="principles-intro">
+  <div style="margin-bottom:52px;">
     <span class="label" style="margin-bottom:16px">Understanding the Deeper Principles</span>
     <h2>Beyond technique — the inner art of healing.</h2>
-    <p style="margin-top:12px">Alongside the healing modalities, participants explore the principles that shape conscious healing work.</p>
+    <p style="margin-top:12px; font-size:16px; color:var(--muted); line-height:1.85;">Alongside the healing modalities, participants explore the principles that shape conscious healing work.</p>
   </div>
   <div class="principles-grid">
     <div class="principle-item">
@@ -504,11 +530,11 @@ body { min-width: 320px; }
       </div>
       <div class="details-row">
         <span class="details-label">Next Intake</span>
-        <span class="details-value">To be announced<small>Register to be notified of the next intake date</small></span>
+        <span class="details-value">May 13–16, 2027<small>Open for registration</small></span>
       </div>
       <div class="details-row">
         <span class="details-label">Venue</span>
-        <span class="details-value">Mutiara Bukit Jalil, Kuala Lumpur<small>Exact location confirmed on registration</small></span>
+        <span class="details-value">To Be Announced<small>Venue details will be confirmed on registration</small></span>
       </div>
       <div class="details-row">
         <span class="details-label">Program Fee</span>
@@ -533,6 +559,68 @@ body { min-width: 320px; }
         <a class="tlink" href="contact-v4.html">Have a question? Contact us</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="t-section">
+  <span class="label">Voices from the Journey</span>
+  <h2 class="t-heading">What participants carry with them.</h2>
+  <div class="t-wrap" id="tc-f">
+    <div class="t-card t-on">
+      <img class="t-photo" src="images/testimonial-kahyi.jpg" alt="Kah Yi">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">After joining the Sacred Healing Program, I finally found my path, my passion, and my purpose.
+I am now a full-time healer, providing different healing modalities that I learned through this program to the public.
+One of the things I love about this program is that it provides scientific evidence behind energy and healing. This gave me a deeper understanding of energy and healing, while also allowing me to build my knowledge on a foundation of scientific evidence.
+The program also provides a lot of hands-on practices that we can experience and practise directly. Through these practices, I was able to understand and experience different healing modalities, which supported me in connecting with myself on a much deeper level.
+What I love most about this program is that the facilitators encourage us to practise and perform the modalities intuitively, while still providing a clear structure and foundation.
+We are encouraged to listen to our intuition, trust what we feel, and notice the different sensations and experiences that arise within us during the practices.
+This really supported me in becoming more aware of my own feelings, senses, and intuition, and helped me build greater trust in myself.
+Whether you are looking to understand what healing truly is, to heal yourself, or to facilitate healing for others, I truly feel that this is a program that can support you and guide you towards your own path.
+For me, the Sacred Healing Program didn't just teach me healing modalities.
+It helped me discover who I am, what I love, and what I am here to do.</p>
+      <div class="t-attr"><span class="t-name">Kah Yi</span><span class="t-role">Sacred Healing Foundation Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-joanne.jpg" alt="Joanne Teng">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">I personally gained so much from this programme. It laid a strong foundation for me in the world of spirituality and healing. It helped me understand what healing is truly about, what qualities and values are important for a healer to embody, and introduced me to different healing modalities.
+One of the modalities I loved the most was Inner Child Healing. I was able to see how powerful this modality can be — witnessing clients become more empowered to face and embrace their emotions, reconnect with their inner strength, and experience meaningful transformation in their day-to-day lives.
+If you're curious about what healing is really about and want to explore different healing modalities in one programme to discover what resonates with you the most, I would definitely recommend the Sacred Healing Programme!</p>
+      <div class="t-attr"><span class="t-name">Joanne Teng</span><span class="t-role">Sacred Healing Foundation Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-ashley.jpg" alt="Ashley Ng">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">Sacred Healing Foundation Level 1 has been a meaningful journey of self-discovery for me. Beyond learning different healing modalities, I became more aware of my body, emotions, energy and inner knowing.
+The programme taught me to trust the process, allow whatever needs to show up, and honour the client's intention rather than trying to follow a planned outcome. Through the practices, I've developed a deeper trust in myself and more confidence in my intuition.
+Most importantly, the facilitators created a safe space for me to learn, explore and trust my intuition. This programme has helped me understand that sometimes, the most meaningful work happens when we simply stay present, listen, and allow.
+It is a beautiful foundation to begin your own self-healing journey while learning to hold space for others.</p>
+      <div class="t-attr"><span class="t-name">Ashley Ng</span><span class="t-role">Sacred Healing Foundation Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-elia.jpg" alt="Elia Ng">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">I'll be honest — I walked into this program feeling a little silly, like I was finally admitting a secret I'd hidden since childhood. But from the very first session, I felt something shift. I learned that healing power isn't reserved for a chosen few — it lives in all of us, waiting to be unlocked. And what surprised me most was realizing that energy healing isn't some far-off mystical secret — it's simply an act of love, an ability we're all born with. We just forget how to use it. Through the power of intention, I started noticing changes I couldn't ignore: clearer thoughts, calmer days, a quieter mind. And when we worked on voice frequency, I actually felt my own voice — literally and figuratively — become something I trusted. This program didn't just teach me magic. It gave me permission to stop hiding mine, and reminded me that the most powerful healing comes from love — mine, and everyone else's.</p>
+      <div class="t-attr"><span class="t-name">Elia Ng</span><span class="t-role">Sacred Healing Foundation Graduate</span></div>
+    </div>
+    <div class="t-card">
+      <img class="t-photo" src="images/testimonial-shuang.jpg" alt="Shuang">
+      <span class="t-mark">&ldquo;</span>
+      <p class="t-quote t-long">Aside from learning different healing modalities, what I truly appreciate about this program is how it develops not only our ability to work with energy, but also who we are as a person.
+The program doesn't simply teach us different modalities — it actually helps us grow. It encourages us to explore our own ways of tapping into energy and intuition, while recognising that everyone experiences and works with energy differently. This has been an eye-opening experience for me. It has broadened my understanding of energy work beyond the techniques and modalities themselves, allowing me to develop a much deeper and more personal relationship with the work.
+What I also deeply appreciate is the way the program is carried out — with warmth, nurturing, and at the same time, depth. Rain brings a caring, empowering and grounded presence that creates a safe space for every student to explore and discover who they are, not only in relation to energy work, but also in relation to life itself.
+I truly appreciate how, within just four days, learning, healing, self-discovery, and life transformation can happen together. It is much more than a program for learning healing modalities — it is really an amazing experience that helps us grow into ourselves.</p>
+      <div class="t-attr"><span class="t-name">Shuang</span><span class="t-role">Sacred Healing Foundation Graduate</span></div>
+    </div>
+  </div>
+  <div class="t-dots" id="td-f">
+    <button class="t-dot t-on" aria-label="1"></button>
+    <button class="t-dot" aria-label="2"></button>
+    <button class="t-dot" aria-label="3"></button>
+    <button class="t-dot" aria-label="4"></button>
+    <button class="t-dot" aria-label="5"></button>
   </div>
 </section>
 
@@ -598,6 +686,7 @@ body { min-width: 320px; }
       </nav>
     </div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <div class="footer-legal">
@@ -631,6 +720,27 @@ body { min-width: 320px; }
   document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.add('open'));
   document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+</script>
+<script>
+(function(){
+  function initT(wrapId, dotsId) {
+    var cards = document.querySelectorAll('#'+wrapId+' .t-card');
+    var dots  = document.querySelectorAll('#'+dotsId+' .t-dot');
+    var cur = 0;
+    function go(n) {
+      cards[cur].classList.remove('t-on');
+      dots[cur].classList.remove('t-on');
+      cur = ((n % cards.length) + cards.length) % cards.length;
+      cards[cur].classList.add('t-on');
+      dots[cur].classList.add('t-on');
+    }
+    for (var i = 0; i < dots.length; i++) {
+      (function(idx){ dots[idx].addEventListener('click', function(){ go(idx); }); })(i);
+    }
+    setInterval(function(){ go(cur + 1); }, 9000);
+  }
+  initT('tc-f','td-f');
+})();
 </script>
 </body>
 </html>
