@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -99,7 +99,7 @@ h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4vw, 44px)
 .btns-c { justify-content: center; }
 
 .page-hero {
-  min-height: 48vh;
+  min-height: 56vh;
   background:
     radial-gradient(ellipse 55% 45% at 30% 65%, rgba(91,45,142,0.48), transparent),
     radial-gradient(ellipse 40% 35% at 72% 25%, rgba(123,79,168,0.32), transparent),
@@ -192,17 +192,17 @@ h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 4vw, 44px)
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Sacred Wisdom School?","acceptedAnswer":{"@type":"Answer","text":"Sacred Wisdom School is a sanctuary for healing, spiritual teachings, and conscious living, founded by Reverend Dr. Rain Lim. It offers a progressive path of sacred healing programs, spiritual teachings, and transformational journeys — in Malaysia, Canada, and online."}},{"@type":"Question","name":"Do I need prior experience to join?","acceptedAnswer":{"@type":"Answer","text":"No prior experience is needed to begin. The Foundation Program (Level 1) is designed for those at the very beginning of their healing or spiritual journey — as well as for experienced practitioners looking to deepen their understanding. All are welcome."}},{"@type":"Question","name":"How much does the Foundation Program cost?","acceptedAnswer":{"@type":"Answer","text":"The Foundation Program (Level 1) is RM 4,998 + applicable tax in Malaysia. Full payment, 4-monthly, and 8-monthly payment plan options are available."}},{"@type":"Question","name":"What are Sacred Journeys?","acceptedAnswer":{"@type":"Answer","text":"Sacred Journeys are transformational retreats and spiritual travel experiences guided by Dr. Rain Lim — to destinations including Bali, Malaysia, and Nepal. They combine sacred ceremony, healing practices, pilgrimage, and community."}},{"@type":"Question","name":"Is this a religious school?","acceptedAnswer":{"@type":"Answer","text":"No. Sacred Wisdom School is not affiliated with any religion or belief system. Participants come from all backgrounds and all faiths — or none."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Sacred Wisdom School?","acceptedAnswer":{"@type":"Answer","text":"Sacred Wisdom School is a sanctuary for healing, spiritual teachings, and conscious living, founded by Reverend Dr. Rain Lim. It offers a progressive path of sacred healing programs, spiritual teachings, and transformational journeys — in Malaysia, Canada, and online."}},{"@type":"Question","name":"Do I need prior experience to join?","acceptedAnswer":{"@type":"Answer","text":"No prior experience is needed to begin. The Foundation Program (Level 1) is designed for those at the very beginning of their healing or spiritual journey — as well as for experienced practitioners looking to deepen their understanding. All are welcome."}},{"@type":"Question","name":"How much does the Foundation Program cost?","acceptedAnswer":{"@type":"Answer","text":"The Foundation Program (Level 1) is RM 4,998 + applicable tax in Malaysia. Full payment, 4-monthly, and 8-monthly payment plan options are available."}},{"@type":"Question","name":"What are Sacred Journeys?","acceptedAnswer":{"@type":"Answer","text":"Sacred Journeys are transformational retreats and spiritual travel experiences guided by Dr. Rain Lim — to destinations including Turkey, Egypt, and Greece. They combine sacred ceremony, healing practices, pilgrimage, and community."}},{"@type":"Question","name":"Is this a religious school?","acceptedAnswer":{"@type":"Answer","text":"No. Sacred Wisdom School is not affiliated with any religion or belief system. Participants come from all backgrounds and all faiths — or none."}}]}
 </script>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -210,11 +210,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -225,7 +231,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -233,8 +238,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -244,7 +251,7 @@ body { min-width: 320px; }
 <main>
 
 <section class="page-hero">
-  <div class="breadcrumb"><a href="#">Home</a><span>/</span>FAQ</div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>FAQ</div>
   <h1>Frequently Asked Questions</h1>
   <p class="page-hero-sub">Answers to the questions we hear most often. Still unsure? We are happy to help.</p>
 </section>
@@ -285,7 +292,7 @@ body { min-width: 320px; }
           </div>
           <div class="faq-item">
             <button class="faq-q">Where are programs offered?<span class="faq-q-icon">+</span></button>
-            <div class="faq-a"><p>Programs are primarily offered in Malaysia (Kuala Lumpur) and Canada. Selected programs are available in online formats. Sacred Journeys are held internationally — including Bali, Malaysia, and Nepal.</p></div>
+            <div class="faq-a"><p>Programs are primarily offered in Malaysia (Kuala Lumpur) and Canada. Selected programs are available in online formats. Sacred Journeys are held internationally — including Turkey, Egypt, and Greece.</p></div>
           </div>
         </div>
 
@@ -294,7 +301,7 @@ body { min-width: 320px; }
 
           <div class="faq-item">
             <button class="faq-q">What programs does Sacred Wisdom School offer?<span class="faq-q-icon">+</span></button>
-            <div class="faq-a"><p>Sacred Wisdom School offers three pillars of programs: Sacred Teachings (exploring consciousness, wisdom, and spiritual development), Sacred Healing (a three-level progressive healing path), and Sacred Journeys (transformational retreats and spiritual travel).</p></div>
+            <div class="faq-a"><p>Sacred Wisdom School offers three pillars of programs: Sacred Healing (a three-level progressive healing path), Sacred Teachings (exploring consciousness, wisdom, and spiritual development), and Sacred Journeys (transformational retreats and spiritual travel).</p></div>
           </div>
           <div class="faq-item">
             <button class="faq-q">Do I need prior experience to join?<span class="faq-q-icon">+</span></button>
@@ -327,7 +334,7 @@ body { min-width: 320px; }
           </div>
           <div class="faq-item">
             <button class="faq-q">When is the next intake?<span class="faq-q-icon">+</span></button>
-            <div class="faq-a"><p>The next intake date for the Foundation Program will be announced soon. Register your interest or contact us to be notified as soon as dates are confirmed. Level 3 is currently open for registration.</p></div>
+            <div class="faq-a"><p>The Sacred Healing Foundation Program is open for registration for May 13–16, 2027. The current Level 3 Advanced program is full. Join the waitlist to be notified when the next Advanced intake opens in 2028.</p></div>
           </div>
           <div class="faq-item">
             <button class="faq-q">What is your cancellation or refund policy?<span class="faq-q-icon">+</span></button>
@@ -357,7 +364,7 @@ body { min-width: 320px; }
 
           <div class="faq-item">
             <button class="faq-q">What are Sacred Journeys?<span class="faq-q-icon">+</span></button>
-            <div class="faq-a"><p>Sacred Journeys are transformational retreats and spiritual travel experiences guided by Dr. Rain Lim — to destinations including Bali, Malaysia, and Nepal. They combine sacred ceremony, healing practices, pilgrimage, and community in a space that steps entirely outside the rhythms of everyday life.</p></div>
+            <div class="faq-a"><p>Sacred Journeys are transformational retreats and spiritual travel experiences guided by Dr. Rain Lim — to destinations including Turkey, Egypt, and Greece. They combine sacred ceremony, healing practices, pilgrimage, and community in a space that steps entirely outside the rhythms of everyday life.</p></div>
           </div>
           <div class="faq-item">
             <button class="faq-q">Do I need to have completed a program to join a journey?<span class="faq-q-icon">+</span></button>
@@ -365,7 +372,7 @@ body { min-width: 320px; }
           </div>
           <div class="faq-item">
             <button class="faq-q">When is the next Sacred Journey?<span class="faq-q-icon">+</span></button>
-            <div class="faq-a"><p>Journey dates are announced throughout the year. The Malaysia Sacred Journey is currently open for enquiries. Bali and Nepal dates will be announced soon. Register your interest on the Sacred Journeys page to be notified first.</p></div>
+            <div class="faq-a"><p>Journey dates are announced throughout the year. Current upcoming destinations include Turkey, Egypt, and Greece — with dates being confirmed. Register your interest on the Sacred Journeys page to be notified first.</p></div>
           </div>
         </div>
 
@@ -379,10 +386,10 @@ body { min-width: 320px; }
   <div class="inner">
     <div class="still-q">
       <h3>Still Have a Question?</h3>
-      <p>We are happy to help you find the right program or answer any questions you have about the school, the programs, or the journey. Reach out — we will respond with care.</p>
+      <p>We are here to support you in finding the right program or answering any questions you have about the school, the programs, or the journey. Reach out — we will respond with care.</p>
       <div class="btns btns-c">
-        <a class="btn btn-dark" href="#">Contact Us</a>
-        <a class="btn btn-outline" href="#">Explore Programs</a>
+        <a class="btn btn-dark" href="contact-v4.html">Contact Us</a>
+        <a class="btn btn-ghost" href="upcoming-v4.html">Explore Programs</a>
       </div>
     </div>
   </div>
@@ -395,8 +402,8 @@ body { min-width: 320px; }
     <h2>Ready to Take the First Step?</h2>
     <p>Sacred Wisdom School invites you to explore the deeper dimensions of healing, consciousness, and spiritual wisdom — wherever you are on your journey.</p>
     <div class="btns btns-c">
-      <a class="btn btn-gold" href="#">Explore Programs</a>
-      <a class="btn btn-ghost" href="#">Receive the Free Guide</a>
+      <a class="btn btn-gold" href="upcoming-v4.html">Explore Programs</a>
+      <a class="btn btn-ghost" href="free-guide-v4.html">Receive the Free Guide</a>
     </div>
   </div>
 </section>
@@ -409,11 +416,12 @@ body { min-width: 320px; }
     <p class="footer-tagline">"Wisdom already lives within you."</p>
   </div>
   <div class="footer-cols">
-    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="#">Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav></div>
-    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="#">Foundation Program</a><a href="#">Inner Child Healing</a><a href="#">Advanced Modules</a></nav></div>
-    <div class="footer-col"><h4>Offerings</h4><nav><a href="#">Sacred Teachings</a><a href="#">Sacred Journeys</a><a href="#">Breathwork</a><a href="#">Spirit Dance</a><a href="#">Constellations</a></nav></div>
+    <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav></div>
+    <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a></nav></div>
+    <div class="footer-col"><h4>Offerings</h4><nav><a href="teachings-v4.html">Sacred Teachings</a><a href="journeys-v4.html">Sacred Journeys</a><a href="#">Breathwork</a><a href="#">Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav></div>
     <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <span>© 2026 Sacred Wisdom School</span>
