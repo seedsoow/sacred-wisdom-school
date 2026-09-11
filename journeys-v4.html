@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sacred healing journeys to Bali, Malaysia, and Nepal led by Dr. Rain Lim. Combine ancient wisdom practices with transformative travel experiences at Sacred Wisdom School.">
+  <meta name="description" content="Sacred healing journeys to Türkiye, Egypt, and Greece led by Dr. Rain Lim. Combine ancient wisdom practices with transformative travel experiences at Sacred Wisdom School.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sacred Journeys | Sacred Wisdom School">
-  <meta property="og:description" content="Sacred healing journeys to Bali, Malaysia, and Nepal led by Dr. Rain Lim. Combine ancient wisdom practices with transformative travel experiences.">
+  <meta property="og:description" content="Sacred healing journeys to Türkiye, Egypt, and Greece led by Dr. Rain Lim. Combine ancient wisdom practices with transformative travel experiences.">
   <meta property="og:site_name" content="Sacred Wisdom School">
   <link rel="canonical" href="https://sacredwisdomschool.com/sacred-journeys">
   <title>Sacred Journeys | Sacred Wisdom School</title>
@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.85; color: var(--text); background: var(--parchment); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -100,13 +100,13 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28p
 .btns-c { justify-content: center; }
 
 .page-hero {
-  min-height: 75vh;
+  min-height: 56vh;
   background:
-    radial-gradient(ellipse 60% 50% at 35% 65%, rgba(91,45,142,0.55), transparent),
-    radial-gradient(ellipse 45% 40% at 75% 25%, rgba(123,79,168,0.35), transparent),
+    radial-gradient(ellipse 60% 50% at 35% 65%, rgba(91,45,142,0.25), transparent),
+    radial-gradient(ellipse 45% 40% at 75% 25%, rgba(123,79,168,0.25), transparent),
     radial-gradient(ellipse 35% 30% at 55% 45%, rgba(187,162,123,0.08), transparent),
-    linear-gradient(148deg, rgba(26,14,56,0.45) 0%, rgba(58,26,110,0.45) 40%, rgba(6,9,26,0.45) 68%, rgba(107,53,168,0.45) 100%),
-    url('https://images.unsplash.com/photo-1661878915254-f3163e91d870?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+    linear-gradient(148deg, rgba(26,14,56,0.55) 0%, rgba(58,26,110,0.50) 40%, rgba(6,9,26,0.50) 68%, rgba(107,53,168,0.50) 100%),
+    url('images/sws-journeys.jpg') center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 100px 72px 72px; position: relative; overflow: hidden;
 }
@@ -159,6 +159,25 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28p
     radial-gradient(ellipse 45% 38% at 70% 28%, rgba(91,45,142,0.5), transparent),
     linear-gradient(148deg, #0e0820 0%, #2c1458 38%, #4a2080 65%, #6535a0 100%);
 }
+.dest-card-turkey .dest-bg {
+  background:
+    radial-gradient(ellipse 65% 55% at 40% 58%, rgba(140,50,110,0.65), transparent),
+    radial-gradient(ellipse 45% 38% at 68% 28%, rgba(110,40,160,0.5), transparent),
+    linear-gradient(148deg, #1e0828 0%, #4a1060 38%, #7a1888 65%, #9a2898 100%);
+}
+.dest-card-egypt .dest-bg {
+  background:
+    radial-gradient(ellipse 70% 60% at 38% 60%, rgba(200,165,90,0.28), transparent),
+    radial-gradient(ellipse 50% 40% at 70% 28%, rgba(91,45,142,0.6), transparent),
+    linear-gradient(148deg, #160c02 0%, #2e1808 36%, #4a2814 58%, #3a1a6e 100%);
+}
+.dest-card-greece .dest-bg {
+  background:
+    radial-gradient(ellipse 65% 55% at 35% 62%, rgba(74,100,200,0.55), transparent),
+    radial-gradient(ellipse 45% 38% at 72% 30%, rgba(91,45,142,0.55), transparent),
+    linear-gradient(148deg, #080e28 0%, #1c2858 38%, #2a3880 60%, #4a2080 100%);
+}
+.badge-waitlist { background: rgba(91,45,142,0.12); color: var(--amethyst); border: 1px solid rgba(91,45,142,0.25); }
 .dest-content { position: relative; z-index: 1; }
 .dest-region { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-light); opacity: 0.7; display: block; margin-bottom: 8px; }
 .dest-card h3 { font-family: "Cormorant Garamond", serif; font-size: 32px; font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
@@ -236,14 +255,14 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.5vw, 28p
 .btn:active { transform: translateY(0); box-shadow: none; }
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -251,11 +270,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -266,7 +291,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -274,8 +298,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -321,31 +347,31 @@ body { min-width: 320px; }
       <h2 style="color:var(--white); margin-top:16px">Ancient Lands, Sacred Ceremony, Stillness</h2>
     </div>
     <div class="dest-grid">
-      <div class="dest-card dest-card-bali">
+      <div class="dest-card dest-card-turkey">
         <div class="dest-bg"></div>
         <div class="dest-content">
-          <span class="dest-region">Southeast Asia</span>
-          <h3>Bali</h3>
-          <p>The Island of the Gods — ancient temples, sacred water ceremonies, and a culture saturated with spiritual awareness. Bali holds a living spiritual frequency that few places in the world can match.</p>
-          <span class="dest-tag">Sacred Retreat</span>
+          <span class="dest-region">Middle East · Mediterranean</span>
+          <h3>Türkiye</h3>
+          <p>Ancient Anatolia — where civilizations layered upon civilizations, where sacred fire once burned in temples, and where the land itself carries the memory of deep spiritual lineage.</p>
+          <span class="dest-tag">Sacred Journey</span>
         </div>
       </div>
-      <div class="dest-card dest-card-malaysia">
+      <div class="dest-card dest-card-egypt">
         <div class="dest-bg"></div>
         <div class="dest-content">
-          <span class="dest-region">Southeast Asia</span>
-          <h3>Malaysia</h3>
-          <p>Ancient rainforests, highland sanctuaries, and sacred sites held by indigenous wisdom keepers. Malaysia offers a quality of stillness and rootedness that opens something deep within.</p>
-          <span class="dest-tag">Sacred Sanctuary</span>
+          <span class="dest-region">North Africa</span>
+          <h3>Egypt</h3>
+          <p>The cradle of mystery — pyramids, temples, and a sacred tradition spanning millennia. Egypt holds a transmission that awakens something ancient within those who journey here with open hearts.</p>
+          <span class="dest-tag">Sacred Initiation</span>
         </div>
       </div>
-      <div class="dest-card dest-card-nepal">
+      <div class="dest-card dest-card-greece">
         <div class="dest-bg"></div>
         <div class="dest-content">
-          <span class="dest-region">Himalaya</span>
-          <h3>Nepal</h3>
-          <p>The roof of the world — monasteries, pilgrimage trails, and a spiritual lineage that stretches back thousands of years. Dr. Rain Lim received a profound blessing here that remains central to her work.</p>
-          <span class="dest-tag">Sacred Pilgrimage</span>
+          <span class="dest-region">Mediterranean</span>
+          <h3>Greece</h3>
+          <p>Sacred islands, ancient oracles, and sites of timeless wisdom. Greece holds the memory of the great mystery schools — a land that continues to call seekers home to their inner truth.</p>
+          <span class="dest-tag">Sacred Mystery</span>
         </div>
       </div>
     </div>
@@ -390,32 +416,22 @@ body { min-width: 320px; }
     <div class="journey-cards">
       <div class="journey-card">
         <div class="journey-card-header">
-          <h3>Sacred Journey to Bali</h3>
-          <span class="journey-card-loc">Bali, Indonesia</span>
+          <h3>Sacred Journey to Türkiye &amp; Egypt</h3>
+          <span class="journey-card-loc">Türkiye · Egypt</span>
         </div>
         <div class="journey-card-body">
-          <p>Temples, water ceremonies, and the living spiritual field of Bali. A week of healing, ceremony, and sacred connection guided by Dr. Rain Lim.</p>
-          <span class="status-badge badge-tba">Date Announced Soon</span>
+          <p>An ancient lands pilgrimage — from sacred sites in Anatolia to the temples and mysteries of Egypt. Apr 19 – May 2, 2027. Egypt extension to be confirmed.</p>
+          <span class="status-badge badge-waitlist">Waitlist</span>
         </div>
       </div>
       <div class="journey-card">
         <div class="journey-card-header">
-          <h3>Sacred Journey to Malaysia</h3>
-          <span class="journey-card-loc">Malaysia</span>
+          <h3>Sacred Journey to Greece</h3>
+          <span class="journey-card-loc">Greece</span>
         </div>
         <div class="journey-card-body">
-          <p>Ancient rainforests, highland sanctuary, and sacred ceremony in Rain's home country — where the roots of Sacred Wisdom School run deepest.</p>
-          <span class="status-badge badge-open">Enquire Now</span>
-        </div>
-      </div>
-      <div class="journey-card">
-        <div class="journey-card-header">
-          <h3>Sacred Journey to Nepal</h3>
-          <span class="journey-card-loc">Himalaya, Nepal</span>
-        </div>
-        <div class="journey-card-body">
-          <p>Pilgrimage to the sacred high country — monasteries, Grandmother blessings, and the transformational field of the Himalayas.</p>
-          <span class="status-badge badge-tba">Date Announced Soon</span>
+          <p>Sacred islands and ancient mystery school sites — a journey into the spiritual heart of the Mediterranean guided by Dr. Rain Lim.</p>
+          <span class="status-badge badge-waitlist">Waitlist</span>
         </div>
       </div>
     </div>
@@ -452,11 +468,12 @@ body { min-width: 320px; }
   <div class="footer-cols">
     <div class="footer-col"><h4>School</h4><nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav></div>
     <div class="footer-col"><h4>Sacred Healing</h4><nav><a href="healing-v4.html">Overview</a><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a></nav></div>
-    <div class="footer-col"><h4>Sacred Journeys</h4><nav><a href="journeys-v4.html">Bali</a><a href="journeys-v4.html">Malaysia</a><a href="journeys-v4.html">Nepal</a><a href="upcoming-v4.html">Register Interest</a></nav></div>
+    <div class="footer-col"><h4>Sacred Journeys</h4><nav><a href="journeys-v4.html">Türkiye &amp; Egypt</a><a href="journeys-v4.html">Greece</a><a href="upcoming-v4.html">Register Interest</a></nav></div>
     <div class="footer-col"><h4>Legal</h4><nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav></div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
-    <span>Malaysia · Canada · Bali · Nepal</span>
+    <span>Malaysia · Canada · Online</span>
     <span>© 2026 Sacred Wisdom School</span>
   </div>
 </footer>
