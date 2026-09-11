@@ -41,7 +41,7 @@ body { font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 
 a { color: inherit; text-decoration: none; }
 
 /* NAV */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; transition: background 0.35s, box-shadow 0.35s; background: linear-gradient(to bottom, rgba(3,6,17,0.62), transparent); }
 .nav.scrolled { background: rgba(6,9,26,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(200,165,90,0.15); }
 .nav-brand { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 500; letter-spacing: 0.03em; color: rgba(255,255,255,0.9); transition: color 0.3s; flex-shrink: 0; }
 .nav.scrolled .nav-brand { color: var(--ink); }
@@ -111,12 +111,12 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
 
 /* PAGE HERO */
 .page-hero {
-  min-height: 62vh;
+  min-height: 56vh;
   background:
     radial-gradient(ellipse 50% 40% at 70% 60%, rgba(187,162,123,0.1), transparent),
     radial-gradient(ellipse 40% 35% at 20% 30%, rgba(123,79,168,0.25), transparent),
-    linear-gradient(148deg, rgba(46,26,94,0.25) 0%, rgba(6,9,26,0.25) 50%, rgba(107,53,168,0.25) 100%),
-    url('https://images.unsplash.com/photo-1682097597790-1f381102e162?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+    linear-gradient(148deg, rgba(46,26,94,0.58) 0%, rgba(6,9,26,0.42) 50%, rgba(107,53,168,0.52) 100%),
+    url('images/hero-about-school.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -276,7 +276,8 @@ h3 { font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 3vw, 30px)
 /* HARDEN */
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 body { min-width: 320px; }
-  </style>
+  .footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.28); text-align: center; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; padding: 0 20px; }
+</style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"EducationalOrganization","name":"Sacred Wisdom School","description":"Sacred Wisdom School offers transformative healing education through breathwork, spirit dance, and family constellations, founded by Reverend Dr. Rain Lim.","founder":{"@type":"Person","name":"Dr. Rain Lim","honorificPrefix":"Rev. Dr.","jobTitle":"Founder & Lead Facilitator"},"teaches":["Sacred Breathwork","Spirit Dance","Family Constellations"],"url":"https://sacredwisdomschool.com"}
   </script>
@@ -284,9 +285,8 @@ body { min-width: 320px; }
 <body>
 
 <header class="nav" id="nav">
-  <a class="nav-brand" href="index.html">Sacred Wisdom School</a>
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:12px;"><img src="images/logo-sws.png" alt="" style="height:44px;width:auto;display:block;">Sacred Wisdom School</a>
   <nav class="nav-links">
-    <a href="teachings-v4.html">Sacred Teachings</a>
     <div class="nav-dropdown">
       <a href="healing-v4.html" class="nav-dd-trigger">Sacred Healing ▾</a>
       <div class="nav-dd-menu">
@@ -294,11 +294,17 @@ body { min-width: 320px; }
         <a href="inner-child-v4.html">Sacred Inner Child Healing</a>
         <a href="breathwork-v4.html">Sacred Breathwork</a>
         <a href="spirit-dance-v4.html">Sacred Spirit Dance</a>
-        <a href="constellations-v4.html">Sacred Integrative Constellations</a>
+        <a href="constellations-v4.html">Sacred Integral Constellation</a>
       </div>
     </div>
+    <a href="teachings-v4.html">Sacred Teachings</a>
     <a href="journeys-v4.html">Sacred Journeys</a>
-    <a href="about-school-v4.html">About</a>
+    <div class="nav-dropdown">
+      <a href="about-school-v4.html" class="nav-dd-trigger">About &#9662;</a>
+      <div class="nav-dd-menu">
+        <a href="faq-v4.html">FAQ</a>
+      </div>
+    </div>
     <a href="about-v4.html">Dr. Rain Lim</a>
     <a href="upcoming-v4.html">Upcoming Programs</a>
     <a href="certified-healers-v4.html">Certified Healers</a>
@@ -309,7 +315,6 @@ body { min-width: 320px; }
 
 <div class="drawer" id="drawer">
   <button class="drawer-close" id="drawerClose">Close</button>
-  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="healing-v4.html">Sacred Healing</a>
   <a href="foundation-v4.html" style="font-size:22px">Foundation</a>
   <a href="inner-child-v4.html" style="font-size:22px">Inner Child</a>
@@ -317,8 +322,10 @@ body { min-width: 320px; }
   <a href="breathwork-v4.html" style="font-size:22px">Breathwork</a>
   <a href="spirit-dance-v4.html" style="font-size:22px">Spirit Dance</a>
   <a href="constellations-v4.html" style="font-size:22px">Constellations</a>
+  <a href="teachings-v4.html">Sacred Teachings</a>
   <a href="journeys-v4.html">Sacred Journeys</a>
   <a href="about-school-v4.html">About</a>
+  <a href="faq-v4.html" style="font-size:22px">FAQ</a>
   <a href="about-v4.html">Dr. Rain Lim</a>
   <a href="upcoming-v4.html">Upcoming Programs</a>
   <a href="certified-healers-v4.html">Certified Healers</a>
@@ -329,7 +336,7 @@ body { min-width: 320px; }
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="breadcrumb"><a href="#">Home</a><span>/</span>About the School</div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>About the School</div>
   <h1>A Living Sanctuary for Wisdom, Healing, and Consciousness</h1>
   <p class="page-hero-sub">Sacred Wisdom School is a space where ancient wisdom and modern understanding meet — and where the deeper intelligence within every human being is invited to be heard.</p>
 </section>
@@ -353,7 +360,6 @@ body { min-width: 320px; }
         <div class="why-pull">
           <blockquote>"Sacred Wisdom School is the fruit of all of it. A place where the wisdom you already carry gets room to breathe."</blockquote>
           <cite>— Reverend Dr. Rain Lim, Founder</cite>
-          <p class="sub-note">Founded with the intention that every student who enters leaves carrying more of their own light than when they arrived.</p>
         </div>
       </div>
     </div>
@@ -410,16 +416,19 @@ body { min-width: 320px; }
     </div>
     <div class="team-grid">
 
+      <a href="about-v4.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="team-card">
         <div class="team-portrait" style="background-image: url('images/team-rain.jpg'); background-size: cover; background-position: center top;">
         </div>
         <div class="team-info">
           <div class="team-name">Reverend Dr. Rain Lim</div>
-          <span class="team-role">Founder &amp; Lead Teacher</span>
+          <span class="team-role">Founder &amp; Spiritual Teacher</span>
           <p class="team-bio">International spiritual teacher, intuitive healer, and transformational guide. Rain founded Sacred Wisdom School to offer the sanctuary she wished she had found at the beginning of her own journey.</p>
         </div>
       </div>
+      </a>
 
+      <a href="ichi-v4.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="team-card">
         <div class="team-portrait" style="background-image: url('images/team-ichi.jpg'); background-size: cover; background-position: center top;">
         </div>
@@ -429,7 +438,9 @@ body { min-width: 320px; }
           <p class="team-bio">Founder of Ichi Sanctuary, Ichi guides others back to themselves through spirit channeling, inner child healing, Sacred Rainbow Energy Healing, and transformational coaching — creating grounded spaces rooted in safety and compassionate presence.</p>
         </div>
       </div>
+      </a>
 
+      <a href="eywa-v4.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="team-card">
         <div class="team-portrait" style="background-image: url('images/team-eywa.jpg'); background-size: cover; background-position: center top;">
         </div>
@@ -437,6 +448,18 @@ body { min-width: 320px; }
           <div class="team-name">Eywa</div>
           <span class="team-role">Partner &amp; Faculty · Intuitive Guide · Energy Healer · Tarot Practitioner</span>
           <p class="team-bio">Eywa's work is rooted in self-remembrance — helping others reconnect with who they are beneath conditioning through intuitive guidance, Tarot, energy healing, and sacred ceremonies.</p>
+        </div>
+      </div>
+      </a>
+
+      <div class="team-card">
+        <div class="team-portrait" style="background: linear-gradient(155deg, #0d1530 0%, #162040 100%); display:flex; align-items:center; justify-content:center;">
+          <div style="width:72px;height:72px;border:1px solid rgba(200,165,90,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:rgba(200,165,90,0.6);">C</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Catherine</div>
+          <span class="team-role">Faculty Member</span>
+          <p class="team-bio">Profile coming soon.</p>
         </div>
       </div>
 
@@ -484,19 +507,19 @@ body { min-width: 320px; }
     <div class="pillars-grid">
       <div class="pillar-item">
         <div class="pillar-icon">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="var(--amethyst)" stroke-width="1.2"/><circle cx="22" cy="22" r="6" fill="rgba(123,79,168,0.25)" stroke="var(--amethyst)" stroke-width="1"/><line x1="22" y1="6" x2="22" y2="38" stroke="rgba(123,79,168,0.2)" stroke-width="1"/><line x1="6" y1="22" x2="38" y2="22" stroke="rgba(123,79,168,0.2)" stroke-width="1"/></svg>
-        </div>
-        <h3>Sacred Teachings</h3>
-        <p>Exploring consciousness, spiritual wisdom, intuition, and self-realization. Through reflection, dialogue, and contemplative practice, students encounter the living wisdom that has always resided within them.</p>
-        <a class="tlink" href="#">Explore Sacred Teachings</a>
-      </div>
-      <div class="pillar-item">
-        <div class="pillar-icon">
           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><path d="M22 6 C22 6 10 18 22 38 C34 18 22 6 22 6Z" stroke="var(--amethyst)" stroke-width="1.2" fill="rgba(123,79,168,0.1)"/><circle cx="22" cy="22" r="5" fill="rgba(123,79,168,0.3)" stroke="var(--amethyst)" stroke-width="1"/></svg>
         </div>
         <h3>Sacred Healing</h3>
         <p>A progressive path across three levels — from foundational energy and intuition work, through inner child healing, into the advanced sacred arts of breathwork, sacred movement, and constellation work.</p>
-        <a class="tlink" href="#">Explore Sacred Healing</a>
+        <a class="tlink" href="healing-v4.html">Explore Sacred Healing</a>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-icon">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="var(--amethyst)" stroke-width="1.2"/><circle cx="22" cy="22" r="6" fill="rgba(123,79,168,0.25)" stroke="var(--amethyst)" stroke-width="1"/><line x1="22" y1="6" x2="22" y2="38" stroke="rgba(123,79,168,0.2)" stroke-width="1"/><line x1="6" y1="22" x2="38" y2="22" stroke="rgba(123,79,168,0.2)" stroke-width="1"/></svg>
+        </div>
+        <h3>Sacred Teachings</h3>
+        <p>Exploring consciousness, spiritual wisdom, intuition, and self-realization. Through reflection, dialogue, and contemplative practice, students encounter the living wisdom that has always resided within them.</p>
+        <a class="tlink" href="teachings-v4.html">Explore Sacred Teachings</a>
       </div>
       <div class="pillar-item">
         <div class="pillar-icon">
@@ -504,7 +527,7 @@ body { min-width: 320px; }
         </div>
         <h3>Sacred Journeys</h3>
         <p>Sacred retreats and spiritual travel that step outside the rhythms of daily life. In sacred spaces — in nature, stillness, and ancient lands — participants reconnect with what matters most.</p>
-        <a class="tlink" href="#">Explore Sacred Journeys</a>
+        <a class="tlink" href="journeys-v4.html">Explore Sacred Journeys</a>
       </div>
     </div>
   </div>
@@ -520,7 +543,7 @@ body { min-width: 320px; }
         <p>Sacred Wisdom School believes that real understanding comes through direct experience — not through information alone.</p>
         <p>Each program is designed to engage the whole person: the mind, the emotions, the body, and the spirit. Learning happens through practice, reflection, and the wisdom that arises in the space between people.</p>
         <div style="margin-top:32px">
-          <a class="btn btn-dark" href="#">Explore the Programs</a>
+          <a class="btn btn-dark" href="upcoming-v4.html">Explore the Programs</a>
         </div>
       </div>
       <ul class="approach-list">
@@ -571,8 +594,8 @@ body { min-width: 320px; }
     <h2>Every Journey Begins with a Single Step Inward</h2>
     <p>Sacred Wisdom School invites you to explore the deeper dimensions of healing, consciousness, and spiritual wisdom — wherever you are on your journey.</p>
     <div class="btns btns-c">
-      <a class="btn btn-gold" href="#">Explore the Sacred Healing Programs</a>
-      <a class="btn btn-ghost" href="#">Meet Dr. Rain Lim</a>
+      <a class="btn btn-gold" href="healing-v4.html">Explore the Sacred Healing Programs</a>
+      <a class="btn btn-ghost" href="about-v4.html">Meet Dr. Rain Lim</a>
     </div>
   </div>
 </section>
@@ -589,21 +612,22 @@ body { min-width: 320px; }
   <div class="footer-cols">
     <div class="footer-col">
       <h4>School</h4>
-      <nav><a href="#">About the School</a><a href="#">Dr. Rain Lim</a><a href="#">Upcoming Programs</a><a href="#">FAQ</a><a href="#">Contact</a></nav>
+      <nav><a href="about-school-v4.html">About the School</a><a href="about-v4.html">Dr. Rain Lim</a><a href="upcoming-v4.html">Upcoming Programs</a><a href="faq-v4.html">FAQ</a><a href="contact-v4.html">Contact</a></nav>
     </div>
     <div class="footer-col">
       <h4>Sacred Healing</h4>
-      <nav><a href="#">Overview</a><a href="#">Foundation Program</a><a href="#">Inner Child Healing</a><a href="#">Advanced Modules</a></nav>
+      <nav><a href="healing-v4.html">Overview</a><a href="foundation-v4.html">Foundation Program</a><a href="inner-child-v4.html">Inner Child Healing</a><a href="advanced-v4.html">Advanced Modules</a></nav>
     </div>
     <div class="footer-col">
       <h4>Offerings</h4>
-      <nav><a href="#">Sacred Teachings</a><a href="#">Sacred Journeys</a><a href="#">Sacred Breathwork</a><a href="#">Sacred Spirit Dance</a><a href="#">Constellations</a></nav>
+      <nav><a href="teachings-v4.html">Sacred Teachings</a><a href="journeys-v4.html">Sacred Journeys</a><a href="breathwork-v4.html">Sacred Breathwork</a><a href="spirit-dance-v4.html">Sacred Spirit Dance</a><a href="constellations-v4.html">Constellations</a></nav>
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
       <nav><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav>
     </div>
   </div>
+    <p class="footer-disclaimer">Sacred Wisdom School programs are for spiritual growth and personal development.<br>They are not a substitute for professional medical or psychological care.</p>
   <div class="footer-bottom">
     <span>Malaysia · Canada · Selected Online Programs</span>
     <span>© 2026 Sacred Wisdom School</span>
